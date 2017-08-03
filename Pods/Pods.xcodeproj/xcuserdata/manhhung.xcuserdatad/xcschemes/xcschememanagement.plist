@@ -59,20 +59,20 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Zip.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>03CA5E0B7D600AFB773638206138F4B0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>0828CC9B285D10F2F6C2CB96B6CE5E0B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>46F7AC324AD1B5A82502D7A954A6EA35</key>
+		<key>584FE0A3843787F38EE5A352EB67FDB2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,17 +82,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7CF56A65D4BDC7569BCFE6C2AF8938A6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>92E5D1F55C4B4340FD5421D33AD40359</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A22C01187865FD7D61E7980B5A90CF2B</key>
+		<key>9E3DEA0CEBFB944AE1B421A420CA7407</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -102,7 +92,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>B0E923BDD2CF083E2A3D8A113443F5C7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BC65B404EB4DA7EBA2914C3B20174D36</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>BE10B5C5C2AF092AD4235EDA134302F1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C8F36A4A29FA37507102BD6A6B3FF75A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -112,7 +117,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FB4B71FEB56EBDFC62B37F971232B4FE</key>
+		<key>F7F534D6A41EABDC71031C9F3203FB59</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FFC84A7947575839C7FCBFEF702F4281</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -12,12 +12,13 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let defaults:UserDefaults = UserDefaults.standard
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
+//        defaults.set(true, forKey: "first")
         Utility.copyFile(fileName: "dbCameraTranslater.sqlite")
-        Utility.downloadTessData()
+//        Utility.downloadTessData()
+        
         return true
     }
 

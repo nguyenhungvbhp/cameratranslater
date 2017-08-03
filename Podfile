@@ -13,4 +13,5 @@ pod 'GrowingTextView'
 pod 'GrowingTextViewHandler'
 pod 'Toaster'
 pod 'GRDB.swift'
+pod 'Zip'
 end

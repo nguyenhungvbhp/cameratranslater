@@ -58,6 +58,7 @@ class Utility :NSObject{
         let session = URLSession(configuration: sessionConfig)
         
         let request = URLRequest(url:fileURL!)
+        
         let task = session.downloadTask(with: request) { (tempLocalUrl, response, error) in
             if let tempLocalUrl = tempLocalUrl, error == nil {
                 // Success

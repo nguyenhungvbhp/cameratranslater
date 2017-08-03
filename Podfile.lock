@@ -9,6 +9,7 @@ PODS:
   - SwiftyJSON (3.1.4)
   - TesseractOCRiOS (4.0.0)
   - Toaster (2.0.4)
+  - Zip (0.7.0)
 
 DEPENDENCIES:
   - ActionSheetPicker
@@ -21,6 +22,7 @@ DEPENDENCIES:
   - SwiftyJSON
   - TesseractOCRiOS (= 4.0.0)
   - Toaster
+  - Zip
 
 SPEC CHECKSUMS:
   ActionSheetPicker: cc5255a36aabaf34245b97a478059d26bac8cd84
@@ -33,7 +35,8 @@ SPEC CHECKSUMS:
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   TesseractOCRiOS: 90638afbe43d082433f2e76b384c7901d23956df
   Toaster: f13031c636ef065281bc11857be9a16c7659e04f
+  Zip: e34513299ac38c0686d5b24504da7ce343799ab9
 
-PODFILE CHECKSUM: ddfb86e9ad55e9ea6387061ffe92c45774811792
+PODFILE CHECKSUM: 2ce8c82ad8d01b1eb6e764f9a86290f565000187
 
 COCOAPODS: 1.2.1

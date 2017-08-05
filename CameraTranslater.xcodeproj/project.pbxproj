@@ -21,7 +21,6 @@
 		90C437331F0B3B8500FD7E83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C437321F0B3B8500FD7E83 /* AppDelegate.swift */; };
 		90C4373D1F0B3B8500FD7E83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90C4373B1F0B3B8500FD7E83 /* LaunchScreen.storyboard */; };
 		90C437451F0B3D8700FD7E83 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C437441F0B3D8700FD7E83 /* SettingsViewController.swift */; };
-		90C437471F0B3DA400FD7E83 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 90C437461F0B3DA400FD7E83 /* tessdata */; };
 		90C437491F0B3DBB00FD7E83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90C437481F0B3DBB00FD7E83 /* Main.storyboard */; };
 		90C4374B1F0B3E2900FD7E83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C4374A1F0B3E2900FD7E83 /* ViewController.swift */; };
 		90C4374D1F0B3E7900FD7E83 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C4374C1F0B3E7900FD7E83 /* HistoryViewController.swift */; };
@@ -31,6 +30,7 @@
 		90E645F31F1CABA60066F27E /* WordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E645F21F1CABA60066F27E /* WordTableViewCell.swift */; };
 		90E7465A1F0E38B60083578D /* settingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E746591F0E38B60083578D /* settingApp.swift */; };
 		90E7465C1F0E3B650083578D /* Translater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E7465B1F0E3B650083578D /* Translater.swift */; };
+		90F30C7D1F3487320021C4A9 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 90C437461F0B3DA400FD7E83 /* tessdata */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -249,11 +249,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90F30C7D1F3487320021C4A9 /* tessdata in Resources */,
 				90631F8D1F20A7B700C3A54D /* dbCameraTranslater.sqlite in Resources */,
 				90C4373D1F0B3B8500FD7E83 /* LaunchScreen.storyboard in Resources */,
 				90C437491F0B3DBB00FD7E83 /* Main.storyboard in Resources */,
 				90991EFE1F0C080800D74D2A /* Assets.xcassets in Resources */,
-				90C437471F0B3DA400FD7E83 /* tessdata in Resources */,
 				908FF26D1F0CA7AE002D1AC8 /* PEPhotoCropEditor.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -612,7 +612,7 @@
 
 /* Begin PBXFileReference section */
 		00176A61BDB9CBA9E49DEA59929A6A52 /* bmp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = bmp.h; path = TesseractOCR/include/leptonica/bmp.h; sourceTree = "<group>"; };
-		0037BF9D1F300E88292CE0F41DE775E0 /* ActionSheetPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ActionSheetPicker.modulemap; sourceTree = "<group>"; };
+		0037BF9D1F300E88292CE0F41DE775E0 /* ActionSheetPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ActionSheetPicker.modulemap; sourceTree = "<group>"; };
 		00EC608CDEE52A28E9759DE48BABC37E /* RawRepresentable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RawRepresentable.swift; path = GRDB/Core/Support/StandardLibrary/RawRepresentable.swift; sourceTree = "<group>"; };
 		0112497D3E007893BF178DF73AB7B927 /* colpartitiongrid.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = colpartitiongrid.h; path = TesseractOCR/include/tesseract/colpartitiongrid.h; sourceTree = "<group>"; };
 		0147A32286B8AD522DD46B3047DBFDEF /* char_samp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = char_samp.h; path = TesseractOCR/include/tesseract/char_samp.h; sourceTree = "<group>"; };
@@ -624,7 +624,7 @@
 		0478F2ED14A0240D9D661954C77783FC /* endianness.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = endianness.h; path = TesseractOCR/include/leptonica/endianness.h; sourceTree = "<group>"; };
 		0482AF5994BA96A2D0FD7A2F9AC119F0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0545941842776891ED0F082CCE42C40D /* quadlsq.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = quadlsq.h; path = TesseractOCR/include/tesseract/quadlsq.h; sourceTree = "<group>"; };
-		0569A3714E782602E0B6C2D203A8C859 /* ROGoogleTranslate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ROGoogleTranslate.framework; path = ROGoogleTranslate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0569A3714E782602E0B6C2D203A8C859 /* ROGoogleTranslate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ROGoogleTranslate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0641283EED9E2168647DAA446FC656F1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		0654E03CEF6250CD58C266EF1766DD68 /* intfeaturespace.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = intfeaturespace.h; path = TesseractOCR/include/tesseract/intfeaturespace.h; sourceTree = "<group>"; };
 		066ABE8F8D1E8168987104D13C61527B /* basedir.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = basedir.h; path = TesseractOCR/include/tesseract/basedir.h; sourceTree = "<group>"; };
@@ -635,7 +635,7 @@
 		08264480CCA8B8D082D39BFE8AEDB101 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		083AEDCD0B0B542ABD1DDB5C60203BB2 /* flexfx.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = flexfx.h; path = TesseractOCR/include/tesseract/flexfx.h; sourceTree = "<group>"; };
 		08F853337E14A7F6026F1F805BC6C155 /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetStringPicker.h; path = Pickers/ActionSheetStringPicker.h; sourceTree = "<group>"; };
-		096853C826C1976F419A5BBACA7DB291 /* GrowingTextViewHandler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GrowingTextViewHandler.framework; path = GrowingTextViewHandler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		096853C826C1976F419A5BBACA7DB291 /* GrowingTextViewHandler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GrowingTextViewHandler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0994F7AC3A133CC5E6CE3CE05F5D499C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A167AE413E3CCC2169696FBFCA6EBA8 /* sqlite3.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sqlite3.h; path = Support/sqlite3.h; sourceTree = "<group>"; };
 		0BCB9627E50BB590386D41191AD1A871 /* Migration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Migration.swift; path = GRDB/Migration/Migration.swift; sourceTree = "<group>"; };
@@ -676,7 +676,7 @@
 		172C3268D33435DA878579E780FC315B /* tessopt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tessopt.h; path = TesseractOCR/include/tesseract/tessopt.h; sourceTree = "<group>"; };
 		183AD3BD5480244A45DF8F5C4EFB3DC1 /* strcasestr.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = strcasestr.h; path = TesseractOCR/include/tesseract/strcasestr.h; sourceTree = "<group>"; };
 		183DA63ABF8DC363F4A8C733FFE2D7CE /* feature_base.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = feature_base.h; path = TesseractOCR/include/tesseract/feature_base.h; sourceTree = "<group>"; };
-		191DA28164BF55304DB6CDF3CB00811A /* GrowingTextView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GrowingTextView.modulemap; sourceTree = "<group>"; };
+		191DA28164BF55304DB6CDF3CB00811A /* GrowingTextView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = GrowingTextView.modulemap; sourceTree = "<group>"; };
 		1A09661044BAFA2A142FBD35A0EF35F5 /* bitvec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = bitvec.h; path = TesseractOCR/include/tesseract/bitvec.h; sourceTree = "<group>"; };
 		1A39E1C507CB659C4142575AB4AC8BC4 /* input_file_buffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = input_file_buffer.h; path = TesseractOCR/include/tesseract/input_file_buffer.h; sourceTree = "<group>"; };
 		1A415CAF7600A56D80C838217BB0D044 /* imageio.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imageio.h; path = TesseractOCR/include/leptonica/imageio.h; sourceTree = "<group>"; };
@@ -702,11 +702,11 @@
 		22D13CB135665C0C0D9CCDB119917AE1 /* FTS5Tokenizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS5Tokenizer.swift; path = GRDB/FTS/FTS5Tokenizer.swift; sourceTree = "<group>"; };
 		2319CF0FC4AF186BA0F5F19344A5240F /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
 		236F6DA906C5E3E4B1C91B5D31E09ECA /* blread.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = blread.h; path = TesseractOCR/include/tesseract/blread.h; sourceTree = "<group>"; };
-		242CA4A8DA484B7FCCA145BC63C87F12 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		242CA4A8DA484B7FCCA145BC63C87F12 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A00D4AE5BE0063B868BDF576FB9ED9 /* TableDefinition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TableDefinition.swift; path = GRDB/QueryInterface/TableDefinition.swift; sourceTree = "<group>"; };
 		24B66A55BF9164F92B779DEC179B79DA /* equationdetect.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = equationdetect.h; path = TesseractOCR/include/tesseract/equationdetect.h; sourceTree = "<group>"; };
 		253F1D17FA346388B2B48A150830539B /* cube_reco_context.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cube_reco_context.h; path = TesseractOCR/include/tesseract/cube_reco_context.h; sourceTree = "<group>"; };
-		262804A5E7096559D2D62DEE95CC4748 /* unzip.c */ = {isa = PBXFileReference; includeInIndex = 1; name = unzip.c; path = Zip/minizip/unzip.c; sourceTree = "<group>"; };
+		262804A5E7096559D2D62DEE95CC4748 /* unzip.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = unzip.c; path = Zip/minizip/unzip.c; sourceTree = "<group>"; };
 		26D3BD0B213C8349F6969E3A1C24B2BB /* DatabaseWriter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseWriter.swift; path = GRDB/Core/DatabaseWriter.swift; sourceTree = "<group>"; };
 		278F5DD5049A1CFC511F3010123B14CE /* linefind.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = linefind.h; path = TesseractOCR/include/tesseract/linefind.h; sourceTree = "<group>"; };
 		27C3F431ABDBAAAB34CF58C4BE18DE5E /* params_model.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = params_model.h; path = TesseractOCR/include/tesseract/params_model.h; sourceTree = "<group>"; };
@@ -718,7 +718,7 @@
 		2D3D440A0A1C5A0E51196C5453B51BD2 /* helpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = helpers.h; path = TesseractOCR/include/tesseract/helpers.h; sourceTree = "<group>"; };
 		2D4E31D57609F8C274F3789464E244B7 /* ReferenceConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReferenceConvertible.swift; path = GRDB/Core/Support/Foundation/ReferenceConvertible.swift; sourceTree = "<group>"; };
 		2D86675BF8AB2A2C900AB8793472FB9F /* SQLOperators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLOperators.swift; path = GRDB/QueryInterface/Support/SQLOperators.swift; sourceTree = "<group>"; };
-		2D99C24A384E0AF3A5B06207575EC10A /* Zip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Zip.framework; path = Zip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D99C24A384E0AF3A5B06207575EC10A /* Zip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Zip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D9C41A2C54A6EAA7FAACCBA7963AF46 /* errcode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = errcode.h; path = TesseractOCR/include/tesseract/errcode.h; sourceTree = "<group>"; };
 		2DD2AC36E24C52CD8FB25D44A274F612 /* FTS5CustomTokenizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS5CustomTokenizer.swift; path = GRDB/FTS/FTS5CustomTokenizer.swift; sourceTree = "<group>"; };
 		2F024A2E1913E523CB533EB7EE13EE3B /* GrowingTextViewHandler.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GrowingTextViewHandler.xcconfig; sourceTree = "<group>"; };
@@ -729,16 +729,16 @@
 		3119123F7EA52569C71DF3C4685E56CC /* measure.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = measure.h; path = TesseractOCR/include/tesseract/measure.h; sourceTree = "<group>"; };
 		3279A391577E2EC880A9C6C1CD089181 /* tesseract_cube_combiner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tesseract_cube_combiner.h; path = TesseractOCR/include/tesseract/tesseract_cube_combiner.h; sourceTree = "<group>"; };
 		328F503F02690487E41FD190BFC48153 /* colfind.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = colfind.h; path = TesseractOCR/include/tesseract/colfind.h; sourceTree = "<group>"; };
-		32A0BA3FFF6F63F65455F9620CD91B67 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		32A0BA3FFF6F63F65455F9620CD91B67 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
 		32FB64A5250E2830538138CE8C4A256F /* opencl_device_selection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = opencl_device_selection.h; path = TesseractOCR/include/tesseract/opencl_device_selection.h; sourceTree = "<group>"; };
 		33006BAF0DFAA84FFBFAC7DBF5A742AB /* G8Constants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = G8Constants.h; path = TesseractOCR/G8Constants.h; sourceTree = "<group>"; };
 		33DA4909C5455D08EE27EF1F74A7B0C9 /* output.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = output.h; path = TesseractOCR/include/tesseract/output.h; sourceTree = "<group>"; };
 		33E511D7AE98F97BE753438C4E68CA25 /* SerializedDatabase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SerializedDatabase.swift; path = GRDB/Core/SerializedDatabase.swift; sourceTree = "<group>"; };
-		3410CAD282074F6237183387DD7DB9D0 /* Toaster.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Toaster.modulemap; sourceTree = "<group>"; };
-		34FE93F8BF154DBB3E25FE09C90D18DC /* SkyFloatingLabelTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SkyFloatingLabelTextField.modulemap; sourceTree = "<group>"; };
+		3410CAD282074F6237183387DD7DB9D0 /* Toaster.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Toaster.modulemap; sourceTree = "<group>"; };
+		34FE93F8BF154DBB3E25FE09C90D18DC /* SkyFloatingLabelTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SkyFloatingLabelTextField.modulemap; sourceTree = "<group>"; };
 		351449E23E2F246FA6E038B3C6B98753 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35A28A0FB3784791C26A94CACFA699C0 /* osdetect.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = osdetect.h; path = TesseractOCR/include/tesseract/osdetect.h; sourceTree = "<group>"; };
-		3620B80CABFA6291C1314881B5B8C38C /* Pods_CameraTranslater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CameraTranslater.framework; path = "Pods-CameraTranslater.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3620B80CABFA6291C1314881B5B8C38C /* Pods_CameraTranslater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CameraTranslater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36558570DEF3AF55C6B1CB88F9F9DA56 /* ActionSheetCustomPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetCustomPicker.m; path = Pickers/ActionSheetCustomPicker.m; sourceTree = "<group>"; };
 		366304DFE8B71E1F7690F4FC34BCED6D /* gradechop.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = gradechop.h; path = TesseractOCR/include/tesseract/gradechop.h; sourceTree = "<group>"; };
 		36AC67E8A6C306F2CD5E4DDDB2A78468 /* DatabaseReader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseReader.swift; path = GRDB/Core/DatabaseReader.swift; sourceTree = "<group>"; };
@@ -754,7 +754,7 @@
 		3A8C63090DF322E62EB2AE0D821EE36F /* SkyFloatingLabelTextField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SkyFloatingLabelTextField.xcconfig; sourceTree = "<group>"; };
 		3AC2661C5C484CB6D69526296DA2C0E9 /* cutil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cutil.h; path = TesseractOCR/include/tesseract/cutil.h; sourceTree = "<group>"; };
 		3AD43F34DE274B16D13D469AAEC1E2E4 /* Zip-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Zip-prefix.pch"; sourceTree = "<group>"; };
-		3B83F0C293FDE64644D8D3D75D748C0B /* TesseractOCRiOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TesseractOCRiOS.modulemap; sourceTree = "<group>"; };
+		3B83F0C293FDE64644D8D3D75D748C0B /* TesseractOCRiOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TesseractOCRiOS.modulemap; sourceTree = "<group>"; };
 		3C925D92853E904D9280452705A3D5BD /* G8TesseractParameters.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = G8TesseractParameters.h; path = TesseractOCR/G8TesseractParameters.h; sourceTree = "<group>"; };
 		3CBB202312F99DD02579DC291A480E05 /* Toaster.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Toaster.xcconfig; sourceTree = "<group>"; };
 		3CC4385E32AEB802469A71A564F0C929 /* plotedges.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = plotedges.h; path = TesseractOCR/include/tesseract/plotedges.h; sourceTree = "<group>"; };
@@ -774,7 +774,7 @@
 		431900A3B2235FA5BEC5DD0ACEAC7257 /* hashfn.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = hashfn.h; path = TesseractOCR/include/tesseract/hashfn.h; sourceTree = "<group>"; };
 		43C50FDBEF3DD74A875CE1D2F62E7FFC /* ToastWindow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToastWindow.swift; path = Sources/ToastWindow.swift; sourceTree = "<group>"; };
 		443410A30412F8E7AFDB23B3306ED1DA /* DatabaseMigrator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseMigrator.swift; path = GRDB/Migration/DatabaseMigrator.swift; sourceTree = "<group>"; };
-		446872C6ED4F58930B8695721EDD35F4 /* GRDB.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GRDB.swift.modulemap; sourceTree = "<group>"; };
+		446872C6ED4F58930B8695721EDD35F4 /* GRDB.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = GRDB.swift.modulemap; sourceTree = "<group>"; };
 		46AB58CF4299A857133488F148303345 /* GRDB-Bridging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GRDB-Bridging.h"; path = "Support/GRDB-Bridging.h"; sourceTree = "<group>"; };
 		478439CC9FAE3F53B58C492A7DA75426 /* Pool.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Pool.swift; path = GRDB/Utils/Pool.swift; sourceTree = "<group>"; };
 		480B761064685468EBA08156E15E2EAE /* ReadWriteBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReadWriteBox.swift; path = GRDB/Utils/ReadWriteBox.swift; sourceTree = "<group>"; };
@@ -849,7 +849,7 @@
 		623A30AE03A55CE87D72B61CB7E90B71 /* intmatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = intmatcher.h; path = TesseractOCR/include/tesseract/intmatcher.h; sourceTree = "<group>"; };
 		62D155C66452B780124EBCA96997C81F /* environ.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = environ.h; path = TesseractOCR/include/leptonica/environ.h; sourceTree = "<group>"; };
 		6382F1E6E1A840C665682BAD5F082D86 /* ActionSheetPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ActionSheetPicker-prefix.pch"; sourceTree = "<group>"; };
-		639AE933496063AF60945033912FDD5D /* Pods-CameraTranslater.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CameraTranslater.modulemap"; sourceTree = "<group>"; };
+		639AE933496063AF60945033912FDD5D /* Pods-CameraTranslater.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CameraTranslater.modulemap"; sourceTree = "<group>"; };
 		63A0DCABF86B75F1A19F5B89EF88D5D6 /* stepblob.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = stepblob.h; path = TesseractOCR/include/tesseract/stepblob.h; sourceTree = "<group>"; };
 		640F6400E095DE74F2A024F6A0147A01 /* ActionSheetCustomPickerDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ActionSheetCustomPickerDelegate.h; path = Pickers/ActionSheetCustomPickerDelegate.h; sourceTree = "<group>"; };
 		6499BA3C479341B8EB72292FF5FE9495 /* Pods-CameraTranslater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CameraTranslater.release.xcconfig"; sourceTree = "<group>"; };
@@ -891,7 +891,7 @@
 		763F056AF838E32735B925D094865619 /* arrayaccess.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = arrayaccess.h; path = TesseractOCR/include/leptonica/arrayaccess.h; sourceTree = "<group>"; };
 		766C5D2DCAB14F0C5E22E5DCF677F163 /* dewarp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dewarp.h; path = TesseractOCR/include/leptonica/dewarp.h; sourceTree = "<group>"; };
 		76B95E6DE15BF6D18C37FC9FFCCEAE08 /* makerow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = makerow.h; path = TesseractOCR/include/tesseract/makerow.h; sourceTree = "<group>"; };
-		76DFB1518720C91DE42559A26C40DA43 /* GrowingTextViewHandler.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GrowingTextViewHandler.modulemap; sourceTree = "<group>"; };
+		76DFB1518720C91DE42559A26C40DA43 /* GrowingTextViewHandler.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = GrowingTextViewHandler.modulemap; sourceTree = "<group>"; };
 		76FF7D71C213009699B0F33D2E2F7C83 /* mfoutline.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mfoutline.h; path = TesseractOCR/include/tesseract/mfoutline.h; sourceTree = "<group>"; };
 		7756267A500B8082346256CBA64A3A76 /* lm_state.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = lm_state.h; path = TesseractOCR/include/tesseract/lm_state.h; sourceTree = "<group>"; };
 		77DA97389AEBC616F4DF81FB6653807B /* ActionSheetDistancePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetDistancePicker.m; path = Pickers/ActionSheetDistancePicker.m; sourceTree = "<group>"; };
@@ -937,7 +937,7 @@
 		8A6543D9E3BFA4C4E65C368CF32C8973 /* intproto.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = intproto.h; path = TesseractOCR/include/tesseract/intproto.h; sourceTree = "<group>"; };
 		8B2DEEA97B644663CF34429EE60B0485 /* FTS3.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS3.swift; path = GRDB/FTS/FTS3.swift; sourceTree = "<group>"; };
 		8B3F2026DE4AFDBAEDA02C7513A6BDE4 /* globaloc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = globaloc.h; path = TesseractOCR/include/tesseract/globaloc.h; sourceTree = "<group>"; };
-		8BC036D6D3C2EC3C68EEF4FFE72D094B /* TesseractOCR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TesseractOCR.framework; path = TesseractOCRiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BC036D6D3C2EC3C68EEF4FFE72D094B /* TesseractOCR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TesseractOCR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D16F0F13DF84FCEA851B30954CDBC92 /* word_altlist.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = word_altlist.h; path = TesseractOCR/include/tesseract/word_altlist.h; sourceTree = "<group>"; };
 		8D63CA1C062B9BB10FB15FAA9FC013EC /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetDatePicker.m; path = Pickers/ActionSheetDatePicker.m; sourceTree = "<group>"; };
 		8E0D85A7A5BAEFF69CBC405E8E12C457 /* adaptive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = adaptive.h; path = TesseractOCR/include/tesseract/adaptive.h; sourceTree = "<group>"; };
@@ -954,7 +954,7 @@
 		935650A4257056D307A2E0B8422158CD /* normmatch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = normmatch.h; path = TesseractOCR/include/tesseract/normmatch.h; sourceTree = "<group>"; };
 		9366003F5F5176ADB63120B57FB7BC1D /* ActionSheetStringPicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ActionSheetStringPicker.m; path = Pickers/ActionSheetStringPicker.m; sourceTree = "<group>"; };
 		939DE23D90F1D3796ABD708C0654252F /* universalambigs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = universalambigs.h; path = TesseractOCR/include/tesseract/universalambigs.h; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		93ED7D35C7D214E0FF63D716D3206949 /* tessedit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tessedit.h; path = TesseractOCR/include/tesseract/tessedit.h; sourceTree = "<group>"; };
 		9415E461131BF034C19ACE760D628C99 /* SQLExpressible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLExpressible.swift; path = GRDB/QueryInterface/SQLExpressible.swift; sourceTree = "<group>"; };
 		94F7A3D48A59FFDFC189FE2AD1800E0A /* StandardLibrary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StandardLibrary.swift; path = GRDB/Core/Support/StandardLibrary/StandardLibrary.swift; sourceTree = "<group>"; };
@@ -970,7 +970,7 @@
 		99A94111AD10B7EA07BB5F564DB66688 /* zip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = zip.h; path = Zip/minizip/zip.h; sourceTree = "<group>"; };
 		9A0FD5277A2CDEE07CD9D1F555C7E704 /* word_list_lang_model.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = word_list_lang_model.h; path = TesseractOCR/include/tesseract/word_list_lang_model.h; sourceTree = "<group>"; };
 		9A1D5DFE50C983D33B36631820F71646 /* stderr.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = stderr.h; path = TesseractOCR/include/tesseract/stderr.h; sourceTree = "<group>"; };
-		9B89A89D9B5B8B693C00C8B1D9250386 /* G8Tesseract.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = G8Tesseract.mm; path = TesseractOCR/G8Tesseract.mm; sourceTree = "<group>"; };
+		9B89A89D9B5B8B693C00C8B1D9250386 /* G8Tesseract.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = G8Tesseract.mm; path = TesseractOCR/G8Tesseract.mm; sourceTree = "<group>"; };
 		9E582FF5F2F415A750BBF2EBD349D701 /* feature_bmp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = feature_bmp.h; path = TesseractOCR/include/tesseract/feature_bmp.h; sourceTree = "<group>"; };
 		9E644977B8A17C5480911487C851D0AF /* ndminx.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ndminx.h; path = TesseractOCR/include/tesseract/ndminx.h; sourceTree = "<group>"; };
 		A1816E76293AA090580256B72DA4850C /* tess_lang_model.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tess_lang_model.h; path = TesseractOCR/include/tesseract/tess_lang_model.h; sourceTree = "<group>"; };
@@ -994,12 +994,12 @@
 		A76DBD9A81225DEF8D69AAD3B147D891 /* DatabaseError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseError.swift; path = GRDB/Core/DatabaseError.swift; sourceTree = "<group>"; };
 		A7F08D852A5E8DE63C38E1F1602253B4 /* GrowingTextView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GrowingTextView-prefix.pch"; sourceTree = "<group>"; };
 		A8DB13491D36705BADE23CE6975FC098 /* Zip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Zip.h; path = Zip/Zip.h; sourceTree = "<group>"; };
-		A8FB91217BC9900A3A8A926FE3802D4F /* SkyFloatingLabelTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SkyFloatingLabelTextField.framework; path = SkyFloatingLabelTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8FB91217BC9900A3A8A926FE3802D4F /* SkyFloatingLabelTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SkyFloatingLabelTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A902424CE5D531040D9FC85D25582E70 /* crypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypt.h; path = Zip/minizip/crypt.h; sourceTree = "<group>"; };
 		A98D115C1C0F71D1C7A7F8C53A56F34B /* crakedge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crakedge.h; path = TesseractOCR/include/tesseract/crakedge.h; sourceTree = "<group>"; };
 		AA8FE7E4D776527D6ED07479A006AEF1 /* lsterr.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = lsterr.h; path = TesseractOCR/include/tesseract/lsterr.h; sourceTree = "<group>"; };
 		AAB877DB289F5D0293C8CA8525E222EF /* hpdsizes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = hpdsizes.h; path = TesseractOCR/include/tesseract/hpdsizes.h; sourceTree = "<group>"; };
-		AAF4D587AF42E6DBD39E13BFE7BA4D78 /* PEPhotoCropEditor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PEPhotoCropEditor.modulemap; sourceTree = "<group>"; };
+		AAF4D587AF42E6DBD39E13BFE7BA4D78 /* PEPhotoCropEditor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PEPhotoCropEditor.modulemap; sourceTree = "<group>"; };
 		ABD63C7FF40F159FB695615CD46421CC /* fileio.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fileio.h; path = TesseractOCR/include/tesseract/fileio.h; sourceTree = "<group>"; };
 		ABEB923281F44D66B9DD5BD3CF2E3996 /* DatabasePool.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabasePool.swift; path = GRDB/Core/DatabasePool.swift; sourceTree = "<group>"; };
 		AC057E2CB21115929CCBC633158518B3 /* regutils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = regutils.h; path = TesseractOCR/include/leptonica/regutils.h; sourceTree = "<group>"; };
@@ -1010,13 +1010,13 @@
 		ADA41E1BDFA0AB8EEC731C3253BAE509 /* ligature_table.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ligature_table.h; path = TesseractOCR/include/tesseract/ligature_table.h; sourceTree = "<group>"; };
 		AE62FAAD7191AE584F87833DC8E95F40 /* commandlineflags.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = commandlineflags.h; path = TesseractOCR/include/tesseract/commandlineflags.h; sourceTree = "<group>"; };
 		AFA29EE33888DD5EC051A049AF97D839 /* lang_mod_edge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = lang_mod_edge.h; path = TesseractOCR/include/tesseract/lang_mod_edge.h; sourceTree = "<group>"; };
-		AFCD7F33BBB0FF9D0BA4F5ADBF00C5D8 /* ioapi.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ioapi.c; path = Zip/minizip/ioapi.c; sourceTree = "<group>"; };
+		AFCD7F33BBB0FF9D0BA4F5ADBF00C5D8 /* ioapi.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = ioapi.c; path = Zip/minizip/ioapi.c; sourceTree = "<group>"; };
 		B02DFB5E64EBFFBFF2435F05F2360F9B /* structures.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = structures.h; path = TesseractOCR/include/tesseract/structures.h; sourceTree = "<group>"; };
 		B0B5C48255BD4C0B48E1E5904CDF95A6 /* elst2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = elst2.h; path = TesseractOCR/include/tesseract/elst2.h; sourceTree = "<group>"; };
 		B0C24D60F56C964DD9D4E509EFFC8D4D /* unicharmap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = unicharmap.h; path = TesseractOCR/include/tesseract/unicharmap.h; sourceTree = "<group>"; };
 		B169992C220440C83BA339059673C570 /* blobbox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = blobbox.h; path = TesseractOCR/include/tesseract/blobbox.h; sourceTree = "<group>"; };
 		B1AF2053E9E41E1D5AD0B91782D7DD3E /* tessbox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tessbox.h; path = TesseractOCR/include/tesseract/tessbox.h; sourceTree = "<group>"; };
-		B4B8F753F30830A7A0E1D63F945CAAA4 /* grdb_config.c */ = {isa = PBXFileReference; includeInIndex = 1; name = grdb_config.c; path = Support/grdb_config.c; sourceTree = "<group>"; };
+		B4B8F753F30830A7A0E1D63F945CAAA4 /* grdb_config.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = grdb_config.c; path = Support/grdb_config.c; sourceTree = "<group>"; };
 		B57BBB256017EB7D281C4D4208E5A04B /* SkyFloatingLabelTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SkyFloatingLabelTextField-umbrella.h"; sourceTree = "<group>"; };
 		B5E0FAA55D556572FF926AFE07B740F2 /* tabfind.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tabfind.h; path = TesseractOCR/include/tesseract/tabfind.h; sourceTree = "<group>"; };
 		B5EA1AD1C25976242AC509F58CE2EA12 /* SkyFloatingLabelTextFieldWithIcon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SkyFloatingLabelTextFieldWithIcon.swift; path = Sources/SkyFloatingLabelTextFieldWithIcon.swift; sourceTree = "<group>"; };
@@ -1031,7 +1031,7 @@
 		B7EB988D4AD2C20FA6DE30A183875F8A /* pango_font_info.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pango_font_info.h; path = TesseractOCR/include/tesseract/pango_font_info.h; sourceTree = "<group>"; };
 		B8A4A7D2BFEB74375D39F99A57E30F2B /* protos.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = protos.h; path = TesseractOCR/include/tesseract/protos.h; sourceTree = "<group>"; };
 		B8D46D22ADAB94BB6B237005661DEF1B /* ROGoogleTranslate-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ROGoogleTranslate-prefix.pch"; sourceTree = "<group>"; };
-		B8D9262DCD7B4E690AA0473EFACBBB83 /* ActionSheetPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ActionSheetPicker.framework; path = ActionSheetPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8D9262DCD7B4E690AA0473EFACBBB83 /* ActionSheetPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ActionSheetPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA9B8688B094F8DC670933ABEA8FB9D6 /* word_unigrams.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = word_unigrams.h; path = TesseractOCR/include/tesseract/word_unigrams.h; sourceTree = "<group>"; };
 		BB12A9E61E0684B010A80E2B687ADF02 /* unicity_table.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = unicity_table.h; path = TesseractOCR/include/tesseract/unicity_table.h; sourceTree = "<group>"; };
 		BB2A9CD3CBD9006EAEC0CA0EC269A458 /* FetchedRecordsController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FetchedRecordsController.swift; path = GRDB/Record/FetchedRecordsController.swift; sourceTree = "<group>"; };
@@ -1045,7 +1045,7 @@
 		BF6763B6E026F234BA6336E478B9A5FC /* DatabaseQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatabaseQueue.swift; path = GRDB/Core/DatabaseQueue.swift; sourceTree = "<group>"; };
 		BFF0A627FD000F7306CB2420F901CB1B /* Fixits-0.101.1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Fixits-0.101.1.swift"; path = "GRDB/Legacy/Fixits-0.101.1.swift"; sourceTree = "<group>"; };
 		C0B21442C430ABA1329B75B9A712F481 /* conv_net_classifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = conv_net_classifier.h; path = TesseractOCR/include/tesseract/conv_net_classifier.h; sourceTree = "<group>"; };
-		C0DDD73B18E7C55EFE118708FEC87B47 /* Zip.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Zip.modulemap; sourceTree = "<group>"; };
+		C0DDD73B18E7C55EFE118708FEC87B47 /* Zip.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Zip.modulemap; sourceTree = "<group>"; };
 		C0DDDC14A49C438951F5CF4FC0D87635 /* alignedblob.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = alignedblob.h; path = TesseractOCR/include/tesseract/alignedblob.h; sourceTree = "<group>"; };
 		C1C98BC9685318D13DC56F43B0337F82 /* Pods-CameraTranslater-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CameraTranslater-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C1CD03172F0895760D900CE4C0164CE0 /* TesseractOCRiOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TesseractOCRiOS-umbrella.h"; sourceTree = "<group>"; };
@@ -1082,7 +1082,7 @@
 		D32AE2472670842405A76B35E727266E /* cubeclassifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cubeclassifier.h; path = TesseractOCR/include/tesseract/cubeclassifier.h; sourceTree = "<group>"; };
 		D402BC3049B5638A490BEF9AF809B0C2 /* ocrrow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ocrrow.h; path = TesseractOCR/include/tesseract/ocrrow.h; sourceTree = "<group>"; };
 		D5F0C4B3A57E2ABD0F36BD4DAC225853 /* polyblk.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = polyblk.h; path = TesseractOCR/include/tesseract/polyblk.h; sourceTree = "<group>"; };
-		D70C1EFB380B2800A2F591FF51004083 /* PEPhotoCropEditor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PEPhotoCropEditor.framework; path = PEPhotoCropEditor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D70C1EFB380B2800A2F591FF51004083 /* PEPhotoCropEditor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PEPhotoCropEditor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D82691248E317BD99DD99EAE3C786E9A /* tprintf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tprintf.h; path = TesseractOCR/include/tesseract/tprintf.h; sourceTree = "<group>"; };
 		D83CF6AA500873587D5E653D4EF658E8 /* const.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = const.h; path = TesseractOCR/include/tesseract/const.h; sourceTree = "<group>"; };
 		D88D5A8ADF95B86F560325387BF6BBAB /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = GRDB/Utils/Utils.swift; sourceTree = "<group>"; };
@@ -1143,7 +1143,7 @@
 		EF2298D0ECB83840900D5A1571B303EA /* danerror.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = danerror.h; path = TesseractOCR/include/tesseract/danerror.h; sourceTree = "<group>"; };
 		EF75875D5FF20305F7811D109B48A110 /* fixspace.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fixspace.h; path = TesseractOCR/include/tesseract/fixspace.h; sourceTree = "<group>"; };
 		F05EB290BF9735AD0FE5F68D7B5E11BC /* normstrngs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = normstrngs.h; path = TesseractOCR/include/tesseract/normstrngs.h; sourceTree = "<group>"; };
-		F0BB85CB3138B8855DE11B0A1B6A879C /* GrowingTextView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GrowingTextView.framework; path = GrowingTextView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0BB85CB3138B8855DE11B0A1B6A879C /* GrowingTextView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GrowingTextView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1C37B55915924CE0C487D9FC3202316 /* scanutils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = scanutils.h; path = TesseractOCR/include/tesseract/scanutils.h; sourceTree = "<group>"; };
 		F1FD7C4EF61AF09F93A18B12A475F233 /* SQLFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLFunctions.swift; path = GRDB/QueryInterface/Support/SQLFunctions.swift; sourceTree = "<group>"; };
 		F31012D7C2832DF5BDCC98B368B7A0EB /* readbarcode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = readbarcode.h; path = TesseractOCR/include/leptonica/readbarcode.h; sourceTree = "<group>"; };
@@ -1156,7 +1156,7 @@
 		F4FC581288DC20330DBC56C63FDA5A01 /* FTS5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS5.swift; path = GRDB/FTS/FTS5.swift; sourceTree = "<group>"; };
 		F5C64431FCF9FFD95B205DCC64C57DA2 /* ptra.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ptra.h; path = TesseractOCR/include/leptonica/ptra.h; sourceTree = "<group>"; };
 		F79CAF91777C22D3D6516C8259BE6262 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = GRDB/Core/Request.swift; sourceTree = "<group>"; };
-		F7C6B1A2E17845D8CB6E84CB243270ED /* Toaster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Toaster.framework; path = Toaster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7C6B1A2E17845D8CB6E84CB243270ED /* Toaster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Toaster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F85457ECD0735E2F18334520683A3F92 /* NSNumber.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSNumber.swift; path = GRDB/Core/Support/Foundation/NSNumber.swift; sourceTree = "<group>"; };
 		F9048609ADBFF03CC28871FC8122860B /* topitch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = topitch.h; path = TesseractOCR/include/tesseract/topitch.h; sourceTree = "<group>"; };
 		F91A62E75CB59990C1C817EE855E1768 /* SQLExpression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLExpression.swift; path = GRDB/QueryInterface/SQLExpression.swift; sourceTree = "<group>"; };
@@ -1166,7 +1166,7 @@
 		FA2E73B51F13E3A6A3C77BC99986A6A9 /* heap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = heap.h; path = TesseractOCR/include/leptonica/heap.h; sourceTree = "<group>"; };
 		FAA6F28ABFD218434EBA94BCDC00A52F /* ambigs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ambigs.h; path = TesseractOCR/include/tesseract/ambigs.h; sourceTree = "<group>"; };
 		FAEB07FF877C3F5552D000750AAC1C2A /* Pods-CameraTranslater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CameraTranslater.debug.xcconfig"; sourceTree = "<group>"; };
-		FB2DD18F86923A6435630C3DDB9BF1FC /* zip.c */ = {isa = PBXFileReference; includeInIndex = 1; name = zip.c; path = Zip/minizip/zip.c; sourceTree = "<group>"; };
+		FB2DD18F86923A6435630C3DDB9BF1FC /* zip.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = zip.c; path = Zip/minizip/zip.c; sourceTree = "<group>"; };
 		FB3F52B2B6AB19D50302C541F7F8FAAB /* fileerr.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fileerr.h; path = TesseractOCR/include/tesseract/fileerr.h; sourceTree = "<group>"; };
 		FB6302B64B570C6BDF2F769C55477FBD /* extract.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = extract.h; path = TesseractOCR/include/tesseract/extract.h; sourceTree = "<group>"; };
 		FBCC27DE1DA98EFA81F1FAE0912AF025 /* polyaprx.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = polyaprx.h; path = TesseractOCR/include/tesseract/polyaprx.h; sourceTree = "<group>"; };
@@ -1175,10 +1175,10 @@
 		FCF15117D7855A62D97DFBA6E446DC46 /* lm_consistency.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = lm_consistency.h; path = TesseractOCR/include/tesseract/lm_consistency.h; sourceTree = "<group>"; };
 		FCF9C38350D651638D25B2ADED2AEB21 /* Persistable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Persistable.swift; path = GRDB/Record/Persistable.swift; sourceTree = "<group>"; };
 		FD1CD0A8C75A7EFAF81B30E9A548C06A /* sorthelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sorthelper.h; path = TesseractOCR/include/tesseract/sorthelper.h; sourceTree = "<group>"; };
-		FD8BA867418504F3E096A2FD50AF9EF0 /* GRDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GRDB.framework; path = GRDB.swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD8BA867418504F3E096A2FD50AF9EF0 /* GRDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GRDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD90BDF9B0FA60E82A3A243683FDEF2C /* drawtord.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = drawtord.h; path = TesseractOCR/include/tesseract/drawtord.h; sourceTree = "<group>"; };
 		FD9D46D96AFC79CBC17C740D4294F9F0 /* params_training_featdef.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = params_training_featdef.h; path = TesseractOCR/include/tesseract/params_training_featdef.h; sourceTree = "<group>"; };
-		FDE36F56C2E8084A8E9701DBA60DCED8 /* ROGoogleTranslate.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ROGoogleTranslate.modulemap; sourceTree = "<group>"; };
+		FDE36F56C2E8084A8E9701DBA60DCED8 /* ROGoogleTranslate.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ROGoogleTranslate.modulemap; sourceTree = "<group>"; };
 		FDEE7E62260AE97B6A596A2883A1A437 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
 		FE98059F293AE789531D4434FA042B61 /* lang_model.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = lang_model.h; path = TesseractOCR/include/tesseract/lang_model.h; sourceTree = "<group>"; };
 		FF019E73681A12CFE9090F7D948CB232 /* mfx.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mfx.h; path = TesseractOCR/include/tesseract/mfx.h; sourceTree = "<group>"; };
@@ -1330,7 +1330,6 @@
 				4E4BCB9990803CC7172E1CF620AD2094 /* UITextField+fixCaretPosition.swift */,
 				9063F393A53185FFFA00CD2F351CCD48 /* Support Files */,
 			);
-			name = SkyFloatingLabelTextField;
 			path = SkyFloatingLabelTextField;
 			sourceTree = "<group>";
 		};
@@ -1358,7 +1357,6 @@
 				421DF7ED4843016D7BA480FF19B74197 /* ZipUtilities.swift */,
 				F42091F9553971272C8FD9A398393009 /* Support Files */,
 			);
-			name = Zip;
 			path = Zip;
 			sourceTree = "<group>";
 		};
@@ -1369,7 +1367,6 @@
 				F9F2FECCE22B94C0B5151BAAC6DC2938 /* GrowingTextViewHandler.m */,
 				B2C5F9FF830AF640DAA0A5A7BE72774D /* Support Files */,
 			);
-			name = GrowingTextViewHandler;
 			path = GrowingTextViewHandler;
 			sourceTree = "<group>";
 		};
@@ -1405,7 +1402,6 @@
 				D1CA27C5A619757C6A4959D05302D52B /* SwiftyJSON.swift */,
 				E9B3FA39DCE5A9203F6AA49D74F9F9D2 /* Support Files */,
 			);
-			name = SwiftyJSON;
 			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
@@ -1432,7 +1428,6 @@
 				C7AA11BA5F34E46706885A52381AE708 /* SWActionSheet.m */,
 				82F39E0466E0647407821F8E92D39856 /* Support Files */,
 			);
-			name = ActionSheetPicker;
 			path = ActionSheetPicker;
 			sourceTree = "<group>";
 		};
@@ -1831,7 +1826,6 @@
 				5B07CE9857897E605BEA8F2A56A5A6E6 /* Frameworks */,
 				5EC030D8BCFA17EF6DEBED9AD0702813 /* Support Files */,
 			);
-			name = TesseractOCRiOS;
 			path = TesseractOCRiOS;
 			sourceTree = "<group>";
 		};
@@ -1933,7 +1927,6 @@
 				A4FAA1A1205860ECE498BC5629775762 /* VirtualTableModule.swift */,
 				BA0E31F7EC908977C2AEEF380793F87F /* Support Files */,
 			);
-			name = GRDB.swift;
 			path = GRDB.swift;
 			sourceTree = "<group>";
 		};
@@ -1969,7 +1962,6 @@
 				9921EFCB9163A53355784589D65190D2 /* GrowingTextView.swift */,
 				0373E5B89852D66AFF18B69DE7A47175 /* Support Files */,
 			);
-			name = GrowingTextView;
 			path = GrowingTextView;
 			sourceTree = "<group>";
 		};
@@ -2035,7 +2027,6 @@
 				365502025BFD056C785A3C07C535FCD2 /* Resources */,
 				038AB11B84DFD0EA61981C1CCB520E6F /* Support Files */,
 			);
-			name = PEPhotoCropEditor;
 			path = PEPhotoCropEditor;
 			sourceTree = "<group>";
 		};
@@ -2077,7 +2068,6 @@
 				65F2ED9ACA09BEDC503D8F2872E7C08C /* ROGoogleTranslate.swift */,
 				F284C835FC5CF66AA74741D3907199A5 /* Support Files */,
 			);
-			name = ROGoogleTranslate;
 			path = ROGoogleTranslate;
 			sourceTree = "<group>";
 		};
@@ -2091,7 +2081,6 @@
 				43C50FDBEF3DD74A875CE1D2F62E7FFC /* ToastWindow.swift */,
 				5B7C9472C884C1DB9E82D5F6F8D0C907 /* Support Files */,
 			);
-			name = Toaster;
 			path = Toaster;
 			sourceTree = "<group>";
 		};
@@ -3267,6 +3256,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/TesseractOCRiOS/TesseractOCRiOS-prefix.pch";
@@ -3300,6 +3290,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/TesseractOCRiOS/TesseractOCRiOS-prefix.pch";

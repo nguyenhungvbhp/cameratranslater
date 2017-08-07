@@ -10,9 +10,12 @@
 		8ACD7066E2932020E6467815 /* Pods_CameraTranslater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB1C5D9018DAA015948029CC /* Pods_CameraTranslater.framework */; };
 		901C6E051F1EFED600AEEAB1 /* DataBaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901C6E041F1EFED600AEEAB1 /* DataBaseHelper.swift */; };
 		901F7AA61F225F950095021B /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901F7AA51F225F950095021B /* Utility.swift */; };
+		90284C021F384CB500EFCC1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90284C011F384CB500EFCC1B /* ViewController.swift */; };
+		90284C051F384D1600EFCC1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90284C031F384D1600EFCC1B /* Main.storyboard */; };
+		90284C071F384D2100EFCC1B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90284C061F384D2100EFCC1B /* SettingsViewController.swift */; };
+		90284C091F384D6C00EFCC1B /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 90284C081F384D6C00EFCC1B /* tessdata */; };
 		9050FF101F1DFD25006D009C /* MyWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9050FF0F1F1DFD25006D009C /* MyWord.swift */; };
 		90631E921F2052AF00C3A54D /* GRDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90631E8C1F204A7C00C3A54D /* GRDB.framework */; };
-		90631F8D1F20A7B700C3A54D /* dbCameraTranslater.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 90631F111F20645A00C3A54D /* dbCameraTranslater.sqlite */; };
 		90785A551F2B28C40059DA3A /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90785A541F2B28C40059DA3A /* WebViewController.swift */; };
 		908C8A881F1337910049FF8A /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908C8A871F1337910049FF8A /* UIViewExtensions.swift */; };
 		908FF26D1F0CA7AE002D1AC8 /* PEPhotoCropEditor.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 908FF26C1F0CA7AE002D1AC8 /* PEPhotoCropEditor.bundle */; };
@@ -20,9 +23,6 @@
 		90A4A5EA1F2AD486000CFDFD /* BounceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A4A5E91F2AD486000CFDFD /* BounceButton.swift */; };
 		90C437331F0B3B8500FD7E83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C437321F0B3B8500FD7E83 /* AppDelegate.swift */; };
 		90C4373D1F0B3B8500FD7E83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90C4373B1F0B3B8500FD7E83 /* LaunchScreen.storyboard */; };
-		90C437451F0B3D8700FD7E83 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C437441F0B3D8700FD7E83 /* SettingsViewController.swift */; };
-		90C437491F0B3DBB00FD7E83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90C437481F0B3DBB00FD7E83 /* Main.storyboard */; };
-		90C4374B1F0B3E2900FD7E83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C4374A1F0B3E2900FD7E83 /* ViewController.swift */; };
 		90C4374D1F0B3E7900FD7E83 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C4374C1F0B3E7900FD7E83 /* HistoryViewController.swift */; };
 		90C437531F0B419C00FD7E83 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C437521F0B419C00FD7E83 /* TesseractOCR.framework */; };
 		90D29D951F2C295100BD1199 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D29D941F2C295100BD1199 /* Reachability.swift */; };
@@ -30,15 +30,18 @@
 		90E645F31F1CABA60066F27E /* WordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E645F21F1CABA60066F27E /* WordTableViewCell.swift */; };
 		90E7465A1F0E38B60083578D /* settingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E746591F0E38B60083578D /* settingApp.swift */; };
 		90E7465C1F0E3B650083578D /* Translater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E7465B1F0E3B650083578D /* Translater.swift */; };
-		90F30C7D1F3487320021C4A9 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 90C437461F0B3DA400FD7E83 /* tessdata */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		901C6E041F1EFED600AEEAB1 /* DataBaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBaseHelper.swift; sourceTree = "<group>"; };
 		901F7AA51F225F950095021B /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		90284C011F384CB500EFCC1B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		90284C041F384D1600EFCC1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		90284C061F384D2100EFCC1B /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		90284C081F384D6C00EFCC1B /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		90284C0A1F384D8700EFCC1B /* dbCameraTranslater.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = dbCameraTranslater.sqlite; path = CameraTranslater/dbCameraTranslater.sqlite; sourceTree = "<group>"; };
 		9050FF0F1F1DFD25006D009C /* MyWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWord.swift; sourceTree = "<group>"; };
 		90631E8C1F204A7C00C3A54D /* GRDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GRDB.framework; path = "../../../Library/Developer/Xcode/DerivedData/CameraTranslater-bnxtudranzmipxapgroxoiarlurh/Build/Products/Debug-iphoneos/GRDB.swift/GRDB.framework"; sourceTree = "<group>"; };
-		90631F111F20645A00C3A54D /* dbCameraTranslater.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = dbCameraTranslater.sqlite; path = ../../Data/dbCameraTranslater.sqlite; sourceTree = "<group>"; };
 		90631F801F209CA500C3A54D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		90631F821F209CC400C3A54D /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		90631F841F209CE500C3A54D /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
@@ -52,10 +55,6 @@
 		90C437321F0B3B8500FD7E83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90C4373C1F0B3B8500FD7E83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90C4373E1F0B3B8500FD7E83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		90C437441F0B3D8700FD7E83 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = ../../Camera/Camera/SettingsViewController.swift; sourceTree = "<group>"; };
-		90C437461F0B3DA400FD7E83 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = ../../Camera/Camera/tessdata; sourceTree = "<group>"; };
-		90C437481F0B3DBB00FD7E83 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../Camera/Camera/Main.storyboard; sourceTree = "<group>"; };
-		90C4374A1F0B3E2900FD7E83 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../Camera/Camera/ViewController.swift; sourceTree = "<group>"; };
 		90C4374C1F0B3E7900FD7E83 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		90C437521F0B419C00FD7E83 /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TesseractOCR.framework; path = "../../../Library/Developer/Xcode/DerivedData/CameraTranslater-bnxtudranzmipxapgroxoiarlurh/Build/Products/Debug-iphoneos/TesseractOCRiOS/TesseractOCR.framework"; sourceTree = "<group>"; };
 		90D29D941F2C295100BD1199 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -116,7 +115,7 @@
 		90631F131F2064A300C3A54D /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				90631F111F20645A00C3A54D /* dbCameraTranslater.sqlite */,
+				90284C0A1F384D8700EFCC1B /* dbCameraTranslater.sqlite */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -154,14 +153,14 @@
 		90C437311F0B3B8500FD7E83 /* CameraTranslater */ = {
 			isa = PBXGroup;
 			children = (
+				90284C081F384D6C00EFCC1B /* tessdata */,
+				90284C031F384D1600EFCC1B /* Main.storyboard */,
 				90E495F01F0EA109005E8362 /* LangConstants.swift */,
+				90284C061F384D2100EFCC1B /* SettingsViewController.swift */,
 				90E746591F0E38B60083578D /* settingApp.swift */,
 				90991EFD1F0C080800D74D2A /* Assets.xcassets */,
-				90C437461F0B3DA400FD7E83 /* tessdata */,
-				90C437441F0B3D8700FD7E83 /* SettingsViewController.swift */,
+				90284C011F384CB500EFCC1B /* ViewController.swift */,
 				90C437321F0B3B8500FD7E83 /* AppDelegate.swift */,
-				90C437481F0B3DBB00FD7E83 /* Main.storyboard */,
-				90C4374A1F0B3E2900FD7E83 /* ViewController.swift */,
 				90C4373B1F0B3B8500FD7E83 /* LaunchScreen.storyboard */,
 				90C4373E1F0B3B8500FD7E83 /* Info.plist */,
 				90C4374C1F0B3E7900FD7E83 /* HistoryViewController.swift */,
@@ -249,10 +248,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90F30C7D1F3487320021C4A9 /* tessdata in Resources */,
-				90631F8D1F20A7B700C3A54D /* dbCameraTranslater.sqlite in Resources */,
 				90C4373D1F0B3B8500FD7E83 /* LaunchScreen.storyboard in Resources */,
-				90C437491F0B3DBB00FD7E83 /* Main.storyboard in Resources */,
+				90284C091F384D6C00EFCC1B /* tessdata in Resources */,
+				90284C051F384D1600EFCC1B /* Main.storyboard in Resources */,
 				90991EFE1F0C080800D74D2A /* Assets.xcassets in Resources */,
 				908FF26D1F0CA7AE002D1AC8 /* PEPhotoCropEditor.bundle in Resources */,
 			);
@@ -327,19 +325,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				90C437331F0B3B8500FD7E83 /* AppDelegate.swift in Sources */,
-				90C4374B1F0B3E2900FD7E83 /* ViewController.swift in Sources */,
 				908C8A881F1337910049FF8A /* UIViewExtensions.swift in Sources */,
 				90E7465A1F0E38B60083578D /* settingApp.swift in Sources */,
 				90E645F31F1CABA60066F27E /* WordTableViewCell.swift in Sources */,
 				90E7465C1F0E3B650083578D /* Translater.swift in Sources */,
 				90A4A5EA1F2AD486000CFDFD /* BounceButton.swift in Sources */,
-				90C437451F0B3D8700FD7E83 /* SettingsViewController.swift in Sources */,
+				90284C071F384D2100EFCC1B /* SettingsViewController.swift in Sources */,
 				90D29D951F2C295100BD1199 /* Reachability.swift in Sources */,
 				9050FF101F1DFD25006D009C /* MyWord.swift in Sources */,
 				901F7AA61F225F950095021B /* Utility.swift in Sources */,
 				90C4374D1F0B3E7900FD7E83 /* HistoryViewController.swift in Sources */,
 				90785A551F2B28C40059DA3A /* WebViewController.swift in Sources */,
 				901C6E051F1EFED600AEEAB1 /* DataBaseHelper.swift in Sources */,
+				90284C021F384CB500EFCC1B /* ViewController.swift in Sources */,
 				90E495F11F0EA109005E8362 /* LangConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +345,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		90284C031F384D1600EFCC1B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90284C041F384D1600EFCC1B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		90C4373B1F0B3B8500FD7E83 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

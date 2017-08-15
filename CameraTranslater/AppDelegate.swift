@@ -17,7 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 //        defaults.set(true, forKey: "first")
         Utility.copyFile(fileName: "dbCameraTranslater.sqlite")
-//        Utility.downloadTessData()
+//        print("Test: ")
+//        print(Utility.getPathCopy(fileName: "tessdata"))
+//        print(Utility.pathToLanguageFile())
         
         return true
     }

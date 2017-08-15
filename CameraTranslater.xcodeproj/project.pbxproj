@@ -8,14 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		8ACD7066E2932020E6467815 /* Pods_CameraTranslater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB1C5D9018DAA015948029CC /* Pods_CameraTranslater.framework */; };
+		9015B4FA1F42AB62006B4418 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 90284C081F384D6C00EFCC1B /* tessdata */; };
 		901C6E051F1EFED600AEEAB1 /* DataBaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901C6E041F1EFED600AEEAB1 /* DataBaseHelper.swift */; };
 		901F7AA61F225F950095021B /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901F7AA51F225F950095021B /* Utility.swift */; };
 		90284C021F384CB500EFCC1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90284C011F384CB500EFCC1B /* ViewController.swift */; };
 		90284C051F384D1600EFCC1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90284C031F384D1600EFCC1B /* Main.storyboard */; };
 		90284C071F384D2100EFCC1B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90284C061F384D2100EFCC1B /* SettingsViewController.swift */; };
-		90284C091F384D6C00EFCC1B /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 90284C081F384D6C00EFCC1B /* tessdata */; };
 		9050FF101F1DFD25006D009C /* MyWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9050FF0F1F1DFD25006D009C /* MyWord.swift */; };
 		90631E921F2052AF00C3A54D /* GRDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90631E8C1F204A7C00C3A54D /* GRDB.framework */; };
+		906AF1901F43743B00E0414D /* dbCameraTranslater.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 906AF18F1F4373FC00E0414D /* dbCameraTranslater.sqlite */; };
+		906AF1941F437AD500E0414D /* libGoogle_TTS_ByShamsu_Universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 906AF1931F437AD500E0414D /* libGoogle_TTS_ByShamsu_Universal.a */; };
+		906AF1991F437EED00E0414D /* libGoogle_TTS_ByShamsu_Universal.a in Resources */ = {isa = PBXBuildFile; fileRef = 906AF1931F437AD500E0414D /* libGoogle_TTS_ByShamsu_Universal.a */; };
 		90785A551F2B28C40059DA3A /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90785A541F2B28C40059DA3A /* WebViewController.swift */; };
 		908C8A881F1337910049FF8A /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908C8A871F1337910049FF8A /* UIViewExtensions.swift */; };
 		908FF26D1F0CA7AE002D1AC8 /* PEPhotoCropEditor.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 908FF26C1F0CA7AE002D1AC8 /* PEPhotoCropEditor.bundle */; };
@@ -39,13 +42,16 @@
 		90284C041F384D1600EFCC1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		90284C061F384D2100EFCC1B /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		90284C081F384D6C00EFCC1B /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
-		90284C0A1F384D8700EFCC1B /* dbCameraTranslater.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = dbCameraTranslater.sqlite; path = CameraTranslater/dbCameraTranslater.sqlite; sourceTree = "<group>"; };
 		9050FF0F1F1DFD25006D009C /* MyWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWord.swift; sourceTree = "<group>"; };
 		90631E8C1F204A7C00C3A54D /* GRDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GRDB.framework; path = "../../../Library/Developer/Xcode/DerivedData/CameraTranslater-bnxtudranzmipxapgroxoiarlurh/Build/Products/Debug-iphoneos/GRDB.swift/GRDB.framework"; sourceTree = "<group>"; };
 		90631F801F209CA500C3A54D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		90631F821F209CC400C3A54D /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		90631F841F209CE500C3A54D /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		90631F861F209F7D00C3A54D /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		906AF18F1F4373FC00E0414D /* dbCameraTranslater.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = dbCameraTranslater.sqlite; sourceTree = "<group>"; };
+		906AF1921F437AD500E0414D /* Google_TTS_BySham.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Google_TTS_BySham.h; sourceTree = "<group>"; };
+		906AF1931F437AD500E0414D /* libGoogle_TTS_ByShamsu_Universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogle_TTS_ByShamsu_Universal.a; sourceTree = "<group>"; };
+		906AF1981F437B7A00E0414D /* CameraTranslater-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CameraTranslater-Bridging-Header.h"; sourceTree = "<group>"; };
 		90785A541F2B28C40059DA3A /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		908C8A871F1337910049FF8A /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		908FF26C1F0CA7AE002D1AC8 /* PEPhotoCropEditor.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PEPhotoCropEditor.bundle; sourceTree = "<group>"; };
@@ -74,6 +80,7 @@
 			files = (
 				90631E921F2052AF00C3A54D /* GRDB.framework in Frameworks */,
 				90C437531F0B419C00FD7E83 /* TesseractOCR.framework in Frameworks */,
+				906AF1941F437AD500E0414D /* libGoogle_TTS_ByShamsu_Universal.a in Frameworks */,
 				8ACD7066E2932020E6467815 /* Pods_CameraTranslater.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -115,9 +122,18 @@
 		90631F131F2064A300C3A54D /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				90284C0A1F384D8700EFCC1B /* dbCameraTranslater.sqlite */,
+				906AF18F1F4373FC00E0414D /* dbCameraTranslater.sqlite */,
 			);
 			name = Data;
+			sourceTree = "<group>";
+		};
+		906AF1911F437ACA00E0414D /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				906AF1921F437AD500E0414D /* Google_TTS_BySham.h */,
+				906AF1931F437AD500E0414D /* libGoogle_TTS_ByShamsu_Universal.a */,
+			);
+			name = libs;
 			sourceTree = "<group>";
 		};
 		90A4A5E81F2AD40B000CFDFD /* CustomButton */ = {
@@ -131,6 +147,7 @@
 		90C437261F0B3B8500FD7E83 = {
 			isa = PBXGroup;
 			children = (
+				906AF1911F437ACA00E0414D /* libs */,
 				90D29D931F2C28C600BD1199 /* Connect */,
 				90A4A5E81F2AD40B000CFDFD /* CustomButton */,
 				90631F131F2064A300C3A54D /* Data */,
@@ -153,6 +170,7 @@
 		90C437311F0B3B8500FD7E83 /* CameraTranslater */ = {
 			isa = PBXGroup;
 			children = (
+				906AF1981F437B7A00E0414D /* CameraTranslater-Bridging-Header.h */,
 				90284C081F384D6C00EFCC1B /* tessdata */,
 				90284C031F384D1600EFCC1B /* Main.storyboard */,
 				90E495F01F0EA109005E8362 /* LangConstants.swift */,
@@ -248,8 +266,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				906AF1991F437EED00E0414D /* libGoogle_TTS_ByShamsu_Universal.a in Resources */,
+				906AF1901F43743B00E0414D /* dbCameraTranslater.sqlite in Resources */,
+				9015B4FA1F42AB62006B4418 /* tessdata in Resources */,
 				90C4373D1F0B3B8500FD7E83 /* LaunchScreen.storyboard in Resources */,
-				90284C091F384D6C00EFCC1B /* tessdata in Resources */,
 				90284C051F384D1600EFCC1B /* Main.storyboard in Resources */,
 				90991EFE1F0C080800D74D2A /* Assets.xcassets in Resources */,
 				908FF26D1F0CA7AE002D1AC8 /* PEPhotoCropEditor.bundle in Resources */,

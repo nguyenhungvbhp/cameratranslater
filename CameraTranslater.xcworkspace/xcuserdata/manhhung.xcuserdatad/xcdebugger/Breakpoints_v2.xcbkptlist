@@ -13,5 +13,53 @@
             stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CameraTranslater/ViewController.swift"
+            timestampString = "524520259.155238"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1208"
+            endingLineNumber = "1208"
+            landmarkName = "urlSession(_:downloadTask:didFinishDownloadingTo:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CameraTranslater.ViewController.urlSession (__ObjC.URLSession, downloadTask : __ObjC.URLSessionDownloadTask, didFinishDownloadingTo : Foundation.URL) -&gt; ()"
+                  moduleName = "CameraTranslater"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/manhhung/Desktop/iOS%20Swift/CameraTranslater/CameraTranslater/ViewController.swift"
+                  timestampString = "524520259.61859"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1208"
+                  endingLineNumber = "1208"
+                  offsetFromSymbolStart = "7444">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CameraTranslater.ViewController.urlSession (__ObjC.URLSession, downloadTask : __ObjC.URLSessionDownloadTask, didFinishDownloadingTo : Foundation.URL) -&gt; ()"
+                  moduleName = "CameraTranslater"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/manhhung/Desktop/iOS%20Swift/CameraTranslater/CameraTranslater/ViewController.swift"
+                  timestampString = "524520259.620452"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1208"
+                  endingLineNumber = "1208"
+                  offsetFromSymbolStart = "12704">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

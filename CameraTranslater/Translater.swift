@@ -27,8 +27,10 @@ class Translater {
         do {
             let urlparse = URL(string: stringencoding!)
             let data = try Data(contentsOf: urlparse!, options: .alwaysMapped)
+            
     
             let swiftyJsonVar = JSON(data)
+            
             print(swiftyJsonVar)
             let value = swiftyJsonVar["sentences"].arrayValue.map({$0["trans"].stringValue})
             print(value)

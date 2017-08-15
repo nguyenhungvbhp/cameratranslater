@@ -26,21 +26,44 @@ class Utility :NSObject{
         let dbPath:String = getPathCopy(fileName: fileName as String)
         let fileManager = FileManager.default
         if !fileManager.fileExists(atPath: dbPath) {
+            
             let documentsURL = Bundle.main.resourceURL
             let fromPath = documentsURL?.appendingPathComponent(fileName)
-            var error:Error?
             do{
                 try fileManager.copyItem(atPath: (fromPath?.path)!, toPath: dbPath)
+                print("Copy success!")
         
-            }catch let errot1 as Error {
-                error = errot1
+            }catch {
+               print("Copy fail! : \(error.localizedDescription)")
             }
-            if error == nil {
-                print("Coppy suscees")
-            }else{
-                print("Copy failed!")
+            
+        }
+    }
+    
+    
+   class func pathToLanguageFile() -> String {
+        let documents = NSSearchPathForDirectoriesInDomains(.documentationDirectory, .userDomainMask, true)
+    let document = documents.first
+    let dataPath = document?.appending("/tessdata")
+//    print(dataPath)
+    copyFile(fileName: "tessdata")
+    let fileManager = FileManager.default
+    if !fileManager.fileExists(atPath: dataPath!) {
+        let bundlePath = Bundle.main.bundlePath
+        let tessdataPath = bundlePath.appending("/tessdata")
+        print(tessdataPath)
+        if !tessdataPath.isEmpty{
+            do{
+                print("Copy tessdata")
+                fileManager.createFile(atPath: dataPath!, contents: nil, attributes: nil)
+           try  fileManager.copyItem(atPath: tessdataPath, toPath: dataPath!)
+            }catch {
+                print(error.localizedDescription)
             }
         }
+    }
+    print(dataPath!)
+    return dataPath!
     }
     
     

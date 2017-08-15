@@ -17,6 +17,7 @@ import Toaster
 import Zip
 
 
+
 //UITextViewDelegate: Thực hiện lắng nghe sự kiện TextView
 //UIImagePickerControllerDelegate, UINavigationControllerDelegate: Thực hiện truy cập camera và gallery
 class ViewController: UIViewController,UINavigationControllerDelegate, UIActionSheetDelegate {
@@ -144,34 +145,21 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
     let databaseHelper = DataBaseHelper()
     
     let reachability = Reachability()!
-    
-    
-    let defaults:UserDefaults = UserDefaults.standard
-    var isFirst:Bool?
-//    var progressView:UIProgressView?
     var progressLabel: UILabel?
     var viewDownload:UIView?
     
-    let urlDownload:[URL] =
-        [URL(string: "https://www.dropbox.com/s/1od84sn1ywbzdpv/jpn.traineddata?dl=1")!]
-    
-//    var listURL:[String] = ["https://www.dropbox.com/s/2ipdlk4p6zsspsp/vie.traineddata.zip?dl=1"]
-    
-    let defaultUser = UserDefaults.standard
-    var i = 0
-    var listName:[String] = ["jpn.traineddata"]
+    let urlDownload = URL(string: "https://www.dropbox.com/sh/pw2o2caf7h8fou5/AACrFleQjxfCVPCBtSg0eKwQa?dl=1")!
 
+    
+    
+    
+    var listName = "tessdata"
     var downloadTask: URLSessionDownloadTask!
     var backgroundSession: URLSession!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       isFirst = defaults.bool(forKey: "first")
-//        if isFirst! {
            startDownload()
-            defaults.set(false, forKey: "first")
-//        }
-        
         //TODO: check network
         reachability.whenReachable = { _ in
             DispatchQueue.main.async {
@@ -248,6 +236,15 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
         if viewContainer1.isHidden {
             self.navigationController?.setNavigationBarHidden(true, animated: true)
             viewActionTop.isHidden = false
+        }
+        
+        let lauchedBefore = UserDefaults.standard.bool(forKey: "isSecondTime")
+        if lauchedBefore {
+            print("Not first time!")
+        } else {
+            startDownload()
+            print("First time, setting userDefault")
+            UserDefaults.standard.set(true, forKey: "isSecondTime")
         }
     }
     
@@ -407,14 +404,54 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
         addView()
     }
     
+//    func text() {
+//        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true);
+//        let documentsDirectory = paths.first
+////        let path = [documentsDirectory stringByAppendingPathComponent:@"file.mp3"];
+//        let path = documentsDirectory?.appending("file.mp3")
+//        
+//        let text = "Anh yêu em"; //@"You are one chromosome away from being a potato.";
+////        NSString *urlString = [NSString stringWithFormat:@"http://www.translate.google.com/translate_tts?tl=vie&q=%@",text];
+//        let urlString = "http://www.translate.google.com/translate_tts?tl=vie&q=" + text
+////        NSURL *url = [NSURL URLWithString:[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+//        let url = NSURL(fileURLWithPath: urlString.addingPercentEscapes(using: .utf8)!)
+////        let request = [[NSMutableURLRequest alloc] initWithURL:url] ;
+//        let request = NSMutableURLRequest.init(url: url as URL)
+//        request.setValue("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:2.0.1) Gecko/20100101 Firefox/4.0.1", forHTTPHeaderField: "User-Agent")
+////        [request setValue:@"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:2.0.1) Gecko/20100101 Firefox/4.0.1" forHTTPHeaderField:@"User-Agent"];
+//        let response = nil;
+//        let error = nil;
+//        let data = [NSURLConnection sendSynchronousRequest:request
+//        returningResponse:&response
+//        error:&error];
+//        [data writeToFile:path atomically:YES];
+//        
+//        SystemSoundID soundID;
+//        NSURL *url2 = [NSURL fileURLWithPath:path];
+//        
+//        AudioServicesCreateSystemSoundID((__bridge CFURLRef), <#T##outSystemSoundID: UnsafeMutablePointer<SystemSoundID>##UnsafeMutablePointer<SystemSoundID>#>)
+//        AudioServicesPlaySystemSound (soundID);
+//    }
+    
     @IBOutlet weak var btnSoundFromOutlet: UIButton!
 
     @IBAction func btnSoundFromAction(_ sender: Any) {
         print("Click button sound")
+        let google_TTS_BySham: Google_TTS_BySham = Google_TTS_BySham()
+        google_TTS_BySham.speak("Hello")
+
         if txtFromOutlet.text.isEmpty {
             return
         }
-        textToSpeech(languageCode: settingApp.shared.getsourceid(), text: txtFromOutlet.text)
+//        textToSpeech(languageCode: settingApp.shared.getsourceid(), text: txtFromOutlet.text)
+        
+//        @property (nonatomic,strong)Google_TTS_BySham *google_TTS_BySham;
+//        
+//        self.google_TTS_BySham = [[Google_TTS_BySham alloc] init];
+//        [self.google_TTS_BySham speak:@"This is a text to speech sample application By Sham"];
+        
+//        let google_TTS_BySham: Google_TTS_BySham = Google_TTS_BySham.init()
+//        google_TTS_BySham.speak("Anh yêu em")
         
     }
     
@@ -433,7 +470,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
     
     @IBOutlet weak var btnDocumentOutlet: UIButton!
     @IBAction func btnDocumentAction(_ sender: Any) {
-       
+       showAlert(title: "Read document", message: "Please take a photo and read the text from that image!")
     }
     
     @IBOutlet weak var btnCameraOutlet: UIButton!
@@ -790,6 +827,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
         effectView.addSubview(activityIndicator)
         effectView.addSubview(strLabel)
         view.addSubview(effectView)
+        view.isUserInteractionEnabled = false
     }
 
     var imageLoadFromInter:UIImage? = UIImage()
@@ -895,7 +933,9 @@ extension ViewController: G8TesseractDelegate {
     //Get text from image
     func scanImage(myImage:UIImage) {
         
-        let tesseract = G8Tesseract(language: "eng")
+        let tesseract = G8Tesseract(language: "eng+rus", configDictionary: nil, configFileNames: nil, cachesRelatedDataPath: "foo/bar", engineMode: .tesseractOnly)
+        //        let tesseract = G8Tesseract(language: "eng")
+        
         
         
         tesseract?.delegate = self
@@ -1099,29 +1139,47 @@ extension ViewController: URLSessionTaskDelegate , URLSessionDownloadDelegate{
         let backgroundSessionConfiguration = URLSessionConfiguration.background(withIdentifier: "DownloadTessdata")
         backgroundSession = Foundation.URLSession(configuration: backgroundSessionConfiguration, delegate: self, delegateQueue: OperationQueue.main)
         
-//            for index  in 0 ..< urlDownload.count {
-                downloadTask = backgroundSession.downloadTask(with: urlDownload[0])
+                downloadTask = backgroundSession.downloadTask(with: urlDownload)
                 downloadTask.resume()
-//        }
+        
     }
 
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
         let fileManager = FileManager()
         let paths = Bundle.main.path(forResource: "tessdata", ofType: nil)
+        
+        let cachePath = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).last
+        let cacheData = cachePath! + "/foo/bar"
+        print(cacheData)
+//        cacheData = "file://" + cacheData
+        
+        if !fileManager.fileExists(atPath: cacheData) {
+            do{
+             try fileManager.createDirectory(atPath: cacheData, withIntermediateDirectories: true, attributes: nil)
+                
+            }catch {
+                print("Lỗi tạo caches!")
+            }
+        }
+        let pathDic = URL.init(string: cacheData)
+        
+       
         let tmpPath = URL.init(string: paths!)
         
-        let desPath = tmpPath?.appendingPathComponent(listName[i])
-    
-        i += 1
-        print(i)
-        let des = desPath?.absoluteString
+        let desPath = tmpPath?.appendingPathComponent(listName)
+        let desPath1 = pathDic?.appendingPathComponent(listName)
+            let des = desPath?.absoluteString
+        let des1 = desPath1?.absoluteString
         let tmpPath1 = "file://" + des!
+        let tmpPath2 = "file://" + des1!
         print("tmpPath1: \(tmpPath1)")
         let pathFinal = URL.init(string: tmpPath1)
+        let pathFinal1 = URL.init(string: tmpPath2)
+        print(pathFinal1)
         print("pathFinal\(pathFinal)")
         let destinationURLForFile = URL(fileURLWithPath: paths!)
          print("destinationURLForFile: \(destinationURLForFile)")
-
+        
         print(location)
         if fileManager.fileExists(atPath: location.absoluteString) {
             print("Exitst")
@@ -1134,9 +1192,33 @@ extension ViewController: URLSessionTaskDelegate , URLSessionDownloadDelegate{
             
                 do{
                    print("Location: \(location)")
-                    print("aaaa")
-                    try fileManager.moveItem(at: location, to: pathFinal!)
-//                    try fileManager.copyItem(at: location, to: pathFinal!)
+                    let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+                    let tem = path + "/test"
+//                    let documentDirectory = URL(fileURLWithPath: path)
+                    if !fileManager.fileExists(atPath: tem) {
+                        do{
+                            try fileManager.createDirectory(atPath: tem, withIntermediateDirectories: true, attributes: nil)
+                            
+                        }catch {
+                            print("Lỗi tạo tem!")
+                        }
+                    }
+                    
+                    let originPath = URL.init(string: tem)?.appendingPathComponent("/tessdata.zip")
+                    if fileManager.fileExists(atPath: (originPath?.absoluteString)!) {
+                       try fileManager.removeItem(at: originPath!)
+                    }
+                      let tem2 = "file://" + (originPath?.absoluteString)!
+                    let urlTem2 = URL.init(string: tem2)
+                     try fileManager.moveItem(at: location, to: urlTem2!)
+                  
+                    let unzipDirectory = try Zip.quickUnzipFile(originPath!) // Unzip
+                    print(unzipDirectory)
+                    print("Move success!")
+                    try fileManager.moveItem(at: unzipDirectory, to: pathFinal1!)
+                    
+                   print(pathFinal1)
+                    
                 }catch {
                     print(error.localizedDescription)
                 }
@@ -1151,10 +1233,11 @@ extension ViewController: URLSessionTaskDelegate , URLSessionDownloadDelegate{
     
     
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
-    
+
+        
 //        let percent = Int(Float(totalBytesWritten)/Float(totalBytesExpectedToWrite ) * 100)
 //        showActivityIndicator("Loading \(percent) %")
-         showActivityIndicator("Loading .....")
+         showActivityIndicator("    Loading .....")
     }
     
     func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
@@ -1163,10 +1246,10 @@ extension ViewController: URLSessionTaskDelegate , URLSessionDownloadDelegate{
             print(error?.localizedDescription)
         }else{
             print("Task finished !")
-//                        readDirectory()
         }
         
         effectView.removeFromSuperview()
+        view.isUserInteractionEnabled = true
     }
 }
 

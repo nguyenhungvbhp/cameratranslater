@@ -148,6 +148,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
     var progressLabel: UILabel?
     var viewDownload:UIView?
     
+    //https://www.dropbox.com/sh/pw2o2caf7h8fou5/AACrFleQjxfCVPCBtSg0eKwQa?dl=0
     let urlDownload = URL(string: "https://www.dropbox.com/sh/pw2o2caf7h8fou5/AACrFleQjxfCVPCBtSg0eKwQa?dl=1")!
 
     
@@ -159,7 +160,6 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//           startDownload()
         //TODO: check network
         reachability.whenReachable = { _ in
             DispatchQueue.main.async {
@@ -242,11 +242,24 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
         if lauchedBefore {
             print("Not first time!")
         } else {
-            startDownload()
-            print("First time, setting userDefault")
-            UserDefaults.standard.set(true, forKey: "isSecondTime")
+            //If connect internet then download tessdata
+            if Reachability.isConnectedToNetwork() {
+                print("Connect Internet")
+                let queueDowload =  DispatchQueue.init(label: "download")
+                queueDowload.async {
+                    UserDefaults.standard.set(true, forKey: "isSecondTime")
+                    self.startDownload()
+                    print("First time, setting userDefault")
+                    
+                }
+            }else{
+                print("Can not connect")
+            }
+           
         }
     }
+    
+    
     
     
     //TODO: function check network
@@ -404,22 +417,16 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
         addView()
     }
     
-    func readText() {
-//      let urlString = "http://www.translate.google.com/translate_tts?tl=en&q=Hello"
-//        let reqURL = NSURL(fileURLWithPath: <#T##String#>)
-    }
     
     @IBOutlet weak var btnSoundFromOutlet: UIButton!
 
     @IBAction func btnSoundFromAction(_ sender: Any) {
         print("Click button sound")
 
-        let read = ReadText()
-        read.btnPlayTapped()
         if txtFromOutlet.text.isEmpty {
             return
         }
-//        textToSpeech(languageCode: settingApp.shared.getsourceid(), text: txtFromOutlet.text)
+        textToSpeech(languageCode: settingApp.shared.getsourceid(), text: txtFromOutlet.text)
         
         
     }
@@ -902,7 +909,7 @@ extension ViewController: G8TesseractDelegate {
     //Get text from image
     func scanImage(myImage:UIImage) {
         
-        let tesseract = G8Tesseract(language: "eng+rus", configDictionary: nil, configFileNames: nil, cachesRelatedDataPath: "foo/bar", engineMode: .tesseractOnly)
+        let tesseract = G8Tesseract(language: "eng+rus+vie+jpn", configDictionary: nil, configFileNames: nil, cachesRelatedDataPath: "foo/bar", engineMode: .tesseractOnly)
         //        let tesseract = G8Tesseract(language: "eng")
         
         
@@ -1206,7 +1213,8 @@ extension ViewController: URLSessionTaskDelegate , URLSessionDownloadDelegate{
         
 //        let percent = Int(Float(totalBytesWritten)/Float(totalBytesExpectedToWrite ) * 100)
 //        showActivityIndicator("Loading \(percent) %")
-         showActivityIndicator("    Loading .....")
+//         showActivityIndicator("    Loading .....")
+        print("Loading")
     }
     
     func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {

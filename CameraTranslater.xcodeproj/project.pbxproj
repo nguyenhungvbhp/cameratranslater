@@ -17,8 +17,6 @@
 		9050FF101F1DFD25006D009C /* MyWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9050FF0F1F1DFD25006D009C /* MyWord.swift */; };
 		90631E921F2052AF00C3A54D /* GRDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90631E8C1F204A7C00C3A54D /* GRDB.framework */; };
 		906AF1901F43743B00E0414D /* dbCameraTranslater.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 906AF18F1F4373FC00E0414D /* dbCameraTranslater.sqlite */; };
-		906AF1941F437AD500E0414D /* libGoogle_TTS_ByShamsu_Universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 906AF1931F437AD500E0414D /* libGoogle_TTS_ByShamsu_Universal.a */; };
-		906AF1991F437EED00E0414D /* libGoogle_TTS_ByShamsu_Universal.a in Resources */ = {isa = PBXBuildFile; fileRef = 906AF1931F437AD500E0414D /* libGoogle_TTS_ByShamsu_Universal.a */; };
 		90785A551F2B28C40059DA3A /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90785A541F2B28C40059DA3A /* WebViewController.swift */; };
 		908C8A881F1337910049FF8A /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908C8A871F1337910049FF8A /* UIViewExtensions.swift */; };
 		908FF26D1F0CA7AE002D1AC8 /* PEPhotoCropEditor.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 908FF26C1F0CA7AE002D1AC8 /* PEPhotoCropEditor.bundle */; };
@@ -28,11 +26,6 @@
 		90C4373D1F0B3B8500FD7E83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90C4373B1F0B3B8500FD7E83 /* LaunchScreen.storyboard */; };
 		90C4374D1F0B3E7900FD7E83 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C4374C1F0B3E7900FD7E83 /* HistoryViewController.swift */; };
 		90C437531F0B419C00FD7E83 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90C437521F0B419C00FD7E83 /* TesseractOCR.framework */; };
-		90CAFB421F43E12500C9527B /* SpeakGoogle.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CAFB411F43E12500C9527B /* SpeakGoogle.m */; };
-		90CAFB441F43E64300C9527B /* GoogleTTSAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CAFB431F43E64300C9527B /* GoogleTTSAPI.m */; };
-		90CAFB471F43E67A00C9527B /* Base64 in Resources */ = {isa = PBXBuildFile; fileRef = 90CAFB461F43E67A00C9527B /* Base64 */; };
-		90CAFB4A1F43E72E00C9527B /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CAFB491F43E72E00C9527B /* Base64.m */; };
-		90CAFB4D1F43F49500C9527B /* ReadText.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CAFB4C1F43F49500C9527B /* ReadText.m */; };
 		90D29D951F2C295100BD1199 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D29D941F2C295100BD1199 /* Reachability.swift */; };
 		90E495F11F0EA109005E8362 /* LangConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E495F01F0EA109005E8362 /* LangConstants.swift */; };
 		90E645F31F1CABA60066F27E /* WordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E645F21F1CABA60066F27E /* WordTableViewCell.swift */; };
@@ -54,8 +47,6 @@
 		90631F841F209CE500C3A54D /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		90631F861F209F7D00C3A54D /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		906AF18F1F4373FC00E0414D /* dbCameraTranslater.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = dbCameraTranslater.sqlite; sourceTree = "<group>"; };
-		906AF1921F437AD500E0414D /* Google_TTS_BySham.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Google_TTS_BySham.h; sourceTree = "<group>"; };
-		906AF1931F437AD500E0414D /* libGoogle_TTS_ByShamsu_Universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogle_TTS_ByShamsu_Universal.a; sourceTree = "<group>"; };
 		906AF1981F437B7A00E0414D /* CameraTranslater-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CameraTranslater-Bridging-Header.h"; sourceTree = "<group>"; };
 		90785A541F2B28C40059DA3A /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		908C8A871F1337910049FF8A /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
@@ -68,15 +59,6 @@
 		90C4373E1F0B3B8500FD7E83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90C4374C1F0B3E7900FD7E83 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		90C437521F0B419C00FD7E83 /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TesseractOCR.framework; path = "../../../Library/Developer/Xcode/DerivedData/CameraTranslater-bnxtudranzmipxapgroxoiarlurh/Build/Products/Debug-iphoneos/TesseractOCRiOS/TesseractOCR.framework"; sourceTree = "<group>"; };
-		90CAFB401F43E12500C9527B /* SpeakGoogle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakGoogle.h; sourceTree = "<group>"; };
-		90CAFB411F43E12500C9527B /* SpeakGoogle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakGoogle.m; sourceTree = "<group>"; };
-		90CAFB431F43E64300C9527B /* GoogleTTSAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleTTSAPI.m; sourceTree = "<group>"; };
-		90CAFB451F43E64B00C9527B /* GoogleTTSAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoogleTTSAPI.h; sourceTree = "<group>"; };
-		90CAFB461F43E67A00C9527B /* Base64 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base64; sourceTree = "<group>"; };
-		90CAFB481F43E72400C9527B /* Base64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
-		90CAFB491F43E72E00C9527B /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
-		90CAFB4B1F43F49500C9527B /* ReadText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadText.h; sourceTree = "<group>"; };
-		90CAFB4C1F43F49500C9527B /* ReadText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadText.m; sourceTree = "<group>"; };
 		90D29D941F2C295100BD1199 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		90E495F01F0EA109005E8362 /* LangConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LangConstants.swift; sourceTree = "<group>"; };
 		90E645F21F1CABA60066F27E /* WordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordTableViewCell.swift; sourceTree = "<group>"; };
@@ -94,7 +76,6 @@
 			files = (
 				90631E921F2052AF00C3A54D /* GRDB.framework in Frameworks */,
 				90C437531F0B419C00FD7E83 /* TesseractOCR.framework in Frameworks */,
-				906AF1941F437AD500E0414D /* libGoogle_TTS_ByShamsu_Universal.a in Frameworks */,
 				8ACD7066E2932020E6467815 /* Pods_CameraTranslater.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,15 +122,6 @@
 			name = Data;
 			sourceTree = "<group>";
 		};
-		906AF1911F437ACA00E0414D /* libs */ = {
-			isa = PBXGroup;
-			children = (
-				906AF1921F437AD500E0414D /* Google_TTS_BySham.h */,
-				906AF1931F437AD500E0414D /* libGoogle_TTS_ByShamsu_Universal.a */,
-			);
-			name = libs;
-			sourceTree = "<group>";
-		};
 		90A4A5E81F2AD40B000CFDFD /* CustomButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,7 +133,6 @@
 		90C437261F0B3B8500FD7E83 = {
 			isa = PBXGroup;
 			children = (
-				906AF1911F437ACA00E0414D /* libs */,
 				90D29D931F2C28C600BD1199 /* Connect */,
 				90A4A5E81F2AD40B000CFDFD /* CustomButton */,
 				90631F131F2064A300C3A54D /* Data */,
@@ -184,11 +155,6 @@
 		90C437311F0B3B8500FD7E83 /* CameraTranslater */ = {
 			isa = PBXGroup;
 			children = (
-				90CAFB491F43E72E00C9527B /* Base64.m */,
-				90CAFB481F43E72400C9527B /* Base64.h */,
-				90CAFB461F43E67A00C9527B /* Base64 */,
-				90CAFB451F43E64B00C9527B /* GoogleTTSAPI.h */,
-				90CAFB431F43E64300C9527B /* GoogleTTSAPI.m */,
 				906AF1981F437B7A00E0414D /* CameraTranslater-Bridging-Header.h */,
 				90284C081F384D6C00EFCC1B /* tessdata */,
 				90284C031F384D1600EFCC1B /* Main.storyboard */,
@@ -208,10 +174,6 @@
 				9050FF0F1F1DFD25006D009C /* MyWord.swift */,
 				901F7AA51F225F950095021B /* Utility.swift */,
 				90785A541F2B28C40059DA3A /* WebViewController.swift */,
-				90CAFB401F43E12500C9527B /* SpeakGoogle.h */,
-				90CAFB411F43E12500C9527B /* SpeakGoogle.m */,
-				90CAFB4B1F43F49500C9527B /* ReadText.h */,
-				90CAFB4C1F43F49500C9527B /* ReadText.m */,
 			);
 			path = CameraTranslater;
 			sourceTree = "<group>";
@@ -289,10 +251,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				906AF1991F437EED00E0414D /* libGoogle_TTS_ByShamsu_Universal.a in Resources */,
 				906AF1901F43743B00E0414D /* dbCameraTranslater.sqlite in Resources */,
 				9015B4FA1F42AB62006B4418 /* tessdata in Resources */,
-				90CAFB471F43E67A00C9527B /* Base64 in Resources */,
 				90C4373D1F0B3B8500FD7E83 /* LaunchScreen.storyboard in Resources */,
 				90284C051F384D1600EFCC1B /* Main.storyboard in Resources */,
 				90991EFE1F0C080800D74D2A /* Assets.xcassets in Resources */,
@@ -377,15 +337,11 @@
 				90284C071F384D2100EFCC1B /* SettingsViewController.swift in Sources */,
 				90D29D951F2C295100BD1199 /* Reachability.swift in Sources */,
 				9050FF101F1DFD25006D009C /* MyWord.swift in Sources */,
-				90CAFB421F43E12500C9527B /* SpeakGoogle.m in Sources */,
-				90CAFB441F43E64300C9527B /* GoogleTTSAPI.m in Sources */,
-				90CAFB4D1F43F49500C9527B /* ReadText.m in Sources */,
 				901F7AA61F225F950095021B /* Utility.swift in Sources */,
 				90C4374D1F0B3E7900FD7E83 /* HistoryViewController.swift in Sources */,
 				90785A551F2B28C40059DA3A /* WebViewController.swift in Sources */,
 				901C6E051F1EFED600AEEAB1 /* DataBaseHelper.swift in Sources */,
 				90284C021F384CB500EFCC1B /* ViewController.swift in Sources */,
-				90CAFB4A1F43E72E00C9527B /* Base64.m in Sources */,
 				90E495F11F0EA109005E8362 /* LangConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,46 +19,62 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CameraTranslater/ViewController.swift"
-            timestampString = "524520259.155238"
+            filePath = "CameraTranslater/SpeakGoogle.m"
+            timestampString = "524543074.091667"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1208"
-            endingLineNumber = "1208"
-            landmarkName = "urlSession(_:downloadTask:didFinishDownloadingTo:)"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "-speakGoogle"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CameraTranslater.ViewController.urlSession (__ObjC.URLSession, downloadTask : __ObjC.URLSessionDownloadTask, didFinishDownloadingTo : Foundation.URL) -&gt; ()"
-                  moduleName = "CameraTranslater"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/manhhung/Desktop/iOS%20Swift/CameraTranslater/CameraTranslater/ViewController.swift"
-                  timestampString = "524520259.61859"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1208"
-                  endingLineNumber = "1208"
-                  offsetFromSymbolStart = "7444">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CameraTranslater.ViewController.urlSession (__ObjC.URLSession, downloadTask : __ObjC.URLSessionDownloadTask, didFinishDownloadingTo : Foundation.URL) -&gt; ()"
-                  moduleName = "CameraTranslater"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/manhhung/Desktop/iOS%20Swift/CameraTranslater/CameraTranslater/ViewController.swift"
-                  timestampString = "524520259.620452"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "1208"
-                  endingLineNumber = "1208"
-                  offsetFromSymbolStart = "12704">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CameraTranslater/ReadText.m"
+            timestampString = "524548662.650918"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "-btnPlayTapped"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CameraTranslater/ReadText.m"
+            timestampString = "524548662.650918"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "-fileURLWithFileName:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CameraTranslater/ReadText.m"
+            timestampString = "524548640.678448"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "-playAudioFromURL:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

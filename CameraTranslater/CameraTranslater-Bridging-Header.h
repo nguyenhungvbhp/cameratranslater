@@ -3,3 +3,6 @@
 //
 
 #import "Google_TTS_BySham.h"
+#import "SpeakGoogle.h"
+#import "GoogleTTSAPI.h"
+#import "ReadText.h"

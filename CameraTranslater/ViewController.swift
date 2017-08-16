@@ -159,7 +159,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
     
     override func viewDidLoad() {
         super.viewDidLoad()
-           startDownload()
+//           startDownload()
         //TODO: check network
         reachability.whenReachable = { _ in
             DispatchQueue.main.async {
@@ -404,54 +404,23 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
         addView()
     }
     
-//    func text() {
-//        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true);
-//        let documentsDirectory = paths.first
-////        let path = [documentsDirectory stringByAppendingPathComponent:@"file.mp3"];
-//        let path = documentsDirectory?.appending("file.mp3")
-//        
-//        let text = "Anh yêu em"; //@"You are one chromosome away from being a potato.";
-////        NSString *urlString = [NSString stringWithFormat:@"http://www.translate.google.com/translate_tts?tl=vie&q=%@",text];
-//        let urlString = "http://www.translate.google.com/translate_tts?tl=vie&q=" + text
-////        NSURL *url = [NSURL URLWithString:[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-//        let url = NSURL(fileURLWithPath: urlString.addingPercentEscapes(using: .utf8)!)
-////        let request = [[NSMutableURLRequest alloc] initWithURL:url] ;
-//        let request = NSMutableURLRequest.init(url: url as URL)
-//        request.setValue("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:2.0.1) Gecko/20100101 Firefox/4.0.1", forHTTPHeaderField: "User-Agent")
-////        [request setValue:@"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:2.0.1) Gecko/20100101 Firefox/4.0.1" forHTTPHeaderField:@"User-Agent"];
-//        let response = nil;
-//        let error = nil;
-//        let data = [NSURLConnection sendSynchronousRequest:request
-//        returningResponse:&response
-//        error:&error];
-//        [data writeToFile:path atomically:YES];
-//        
-//        SystemSoundID soundID;
-//        NSURL *url2 = [NSURL fileURLWithPath:path];
-//        
-//        AudioServicesCreateSystemSoundID((__bridge CFURLRef), <#T##outSystemSoundID: UnsafeMutablePointer<SystemSoundID>##UnsafeMutablePointer<SystemSoundID>#>)
-//        AudioServicesPlaySystemSound (soundID);
-//    }
+    func readText() {
+//      let urlString = "http://www.translate.google.com/translate_tts?tl=en&q=Hello"
+//        let reqURL = NSURL(fileURLWithPath: <#T##String#>)
+    }
     
     @IBOutlet weak var btnSoundFromOutlet: UIButton!
 
     @IBAction func btnSoundFromAction(_ sender: Any) {
         print("Click button sound")
-        let google_TTS_BySham: Google_TTS_BySham = Google_TTS_BySham()
-        google_TTS_BySham.speak("Hello")
 
+        let read = ReadText()
+        read.btnPlayTapped()
         if txtFromOutlet.text.isEmpty {
             return
         }
 //        textToSpeech(languageCode: settingApp.shared.getsourceid(), text: txtFromOutlet.text)
         
-//        @property (nonatomic,strong)Google_TTS_BySham *google_TTS_BySham;
-//        
-//        self.google_TTS_BySham = [[Google_TTS_BySham alloc] init];
-//        [self.google_TTS_BySham speak:@"This is a text to speech sample application By Sham"];
-        
-//        let google_TTS_BySham: Google_TTS_BySham = Google_TTS_BySham.init()
-//        google_TTS_BySham.speak("Anh yêu em")
         
     }
     

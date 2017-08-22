@@ -10,6 +10,83 @@ import Foundation
 
 public class LangConstants {
     
+    static let nameDownload =
+        [ "Afrikaans",      "Azerbaijani",          "Belarusian",             "Bengali",   "Bulgarian",   "Catalan-Valencian",
+          "Czech",          "Chinese - Simplified", "Chinese - Traditional",  "Cherokee",  "Danish",      "German",
+          "Greek - Modern", "English",              "French",                 "Hindi",    "Indonesian",  "Italian",
+          "Japanese",       "Korean",               "Portuguese",             "Russian",  "Thai",        "Vietnamese"
+    ]
+
+    
+    static var arrDownload:[Bool] =
+    [
+        false, false, false, false, false, false,
+        false, false, false, false, false, false,
+        false, true,  false, false, false, false,
+        false, false, false, false, false, false
+    ]
+    
+    static var arrCodeLanguge: [String] =
+    [
+     "afr",     "aze",     "bel",      "ben",   "bul",  "cat",
+     "ces",     "chi_sim", "chi_tra",  "chr",   "dan",  "deu",
+     "ell",     "eng",     "fra",      "hin",   "ind",  "ita",
+     "jpn",     "kor",     "por",      "rus",   "tha",  "vie"
+    ]
+    
+    //lưu url để tải các file
+    static let arrURL:[URL] = [
+       
+       URL.init(string: "https://www.dropbox.com/sh/p4gudlqi0yxie47/AADbsWDXWAmCGMzLstrqsLt_a?dl=1")!,//1
+        
+       URL.init(string: "https://www.dropbox.com/sh/9szqspbu2mdo35j/AAAT4ccW1hBDxToL-aiWuviEa?dl=1")!,//2
+        
+       URL.init(string: "https://www.dropbox.com/sh/jnp5xpv139q0pef/AAA_G2tn_gq1acadNq7V0LfSa?dl=1")!,//3
+        
+       URL.init(string: "https://www.dropbox.com/sh/xhnvsnm5lswnly8/AABqhSQcsjA45rsG61odPq6Na?dl=1")!,//4
+        
+       URL.init(string: "https://www.dropbox.com/sh/418hvdxzusdlfh5/AACKeScKkYD0hfJBsTV8Mn-Za?dl=1")!,//5
+        
+       URL.init(string: "https://www.dropbox.com/sh/vs1db8p1aj5xjwz/AACsVElqZ0gBX_opy_wnJipJa?dl=1")!,//6
+        
+       URL.init(string: "https://www.dropbox.com/sh/k696cxposf1t4yt/AAAGur1ytuDwndkOmLi1PvDMa?dl=1")!,//7
+        
+       URL.init(string: "https://www.dropbox.com/sh/98zusif2religi2/AADWpXGJ9-oizM7jQQ3lFaAla?dl=1")!,//8
+        
+       URL.init(string: "https://www.dropbox.com/sh/ihq6wipzpttr2qa/AADlfvxH4sivTaGEcY2PbCZXa?dl=1")!,//9
+        
+       URL.init(string: "https://www.dropbox.com/sh/ce7n3sgqq5y7aov/AAAbDGx69sK0HdLn9UYa2_v-a?dl=1")!,//10
+        
+       URL.init(string: "https://www.dropbox.com/sh/p2bwa7zdlfmqbpf/AAAUTBxqriOeuXpml_OyHyxCa?dl=1")!,//11
+        
+       URL.init(string: "https://www.dropbox.com/sh/cz8yzq7y7ho748f/AADLpRWTFW7sRRAW7xUq58vSa?dl=1")!,//12
+        
+       URL.init(string: "https://www.dropbox.com/sh/pxris1wguhkluj7/AADNAZtbtyxsBD-Syrtk3hzHa?dl=1")!,//13
+        
+       URL.init(string: "https://www.dropbox.com/sh/vr6gq6r8tsro9km/AABMcnDZr2qvoCaLmL-mLX-Ta?dl=1")!,//14
+        
+       URL.init(string: "https://www.dropbox.com/sh/idkqb5u1zxldg96/AAAhyMH1wZskMxG-pfvm8UzAa?dl=1")!,//15
+        
+       URL.init(string: "https://www.dropbox.com/sh/03g7za87l39y3wv/AACVtZx7VQ0pOe6jYz73wZ-na?dl=1")!,//16
+        
+       URL.init(string: "https://www.dropbox.com/sh/erly6o4m66yb6s7/AADwote9B4Mhj6bpvVJNiEC6a?dl=1")!,//17
+        
+       URL.init(string: "https://www.dropbox.com/sh/dh6bt29rr2uruad/AAAMgPNzUPY4VfwtjeV-KaFla?dl=1")!,//18
+        
+       URL.init(string: "https://www.dropbox.com/sh/k6s6lt7xyaysj19/AAB6IFDlO5e9mRZ2zYrPHhqNa?dl=1")!, //19
+        
+       URL.init(string: "https://www.dropbox.com/sh/9ga0ow5c6e9p56y/AADnwpIQ_EOINxIRJqhn7NOUa?dl=1")!,//20
+        
+       URL.init(string: "https://www.dropbox.com/sh/upqyokzbx87uztq/AAA0E3yd7vPhW6TbGXLwoMIqa?dl=1")!,//21
+        
+       URL.init(string: "https://www.dropbox.com/sh/wzt344hb9ks1cqw/AAAHtIdbQ6lvUb-Vl5CkDEUra?dl=1")!,//22
+        
+       URL.init(string: "https://www.dropbox.com/sh/pntcrqdxr62giy4/AACVr11moXxfq_7DyFC9uSKQa?dl=1")!,//23
+        
+       URL.init(string: "https://www.dropbox.com/sh/2j0gkppxm0jmkgj/AAANWOhP6Ii7HnvqwNJz7qs2a?dl=1")!//24
+    ]
+
+    
     static let arrLang = ["Afrikaans", "Albanian",
     "Amharic", "Arabic", "Armenian",
     "Azerbaijani", "Basque", "Belarusian",

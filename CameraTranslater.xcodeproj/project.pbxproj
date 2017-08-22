@@ -8,16 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		8ACD7066E2932020E6467815 /* Pods_CameraTranslater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB1C5D9018DAA015948029CC /* Pods_CameraTranslater.framework */; };
+		9008669D1F4CB0A8003610FE /* MyDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9008669C1F4CB0A8003610FE /* MyDownload.swift */; };
+		9008669F1F4CB1F4003610FE /* dbCameraTranslater.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 9008669E1F4CB1EB003610FE /* dbCameraTranslater.sqlite */; };
 		9015B4FA1F42AB62006B4418 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 90284C081F384D6C00EFCC1B /* tessdata */; };
 		901C6E051F1EFED600AEEAB1 /* DataBaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901C6E041F1EFED600AEEAB1 /* DataBaseHelper.swift */; };
 		901F7AA61F225F950095021B /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901F7AA51F225F950095021B /* Utility.swift */; };
 		90284C021F384CB500EFCC1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90284C011F384CB500EFCC1B /* ViewController.swift */; };
 		90284C051F384D1600EFCC1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90284C031F384D1600EFCC1B /* Main.storyboard */; };
 		90284C071F384D2100EFCC1B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90284C061F384D2100EFCC1B /* SettingsViewController.swift */; };
+		9040E9281F4C22DC00C48603 /* SupportLanguagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9040E9271F4C22DC00C48603 /* SupportLanguagesViewController.swift */; };
+		9040E92A1F4C22EE00C48603 /* DownloadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9040E9291F4C22EE00C48603 /* DownloadCell.swift */; };
+		9040E92C1F4C22F600C48603 /* Unity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9040E92B1F4C22F600C48603 /* Unity.swift */; };
 		9050FF101F1DFD25006D009C /* MyWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9050FF0F1F1DFD25006D009C /* MyWord.swift */; };
 		90631E921F2052AF00C3A54D /* GRDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90631E8C1F204A7C00C3A54D /* GRDB.framework */; };
-		906AF1901F43743B00E0414D /* dbCameraTranslater.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 906AF18F1F4373FC00E0414D /* dbCameraTranslater.sqlite */; };
 		90785A551F2B28C40059DA3A /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90785A541F2B28C40059DA3A /* WebViewController.swift */; };
+		907F45B71F461F28003998A2 /* ReadGoogle.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F45B61F461F28003998A2 /* ReadGoogle.m */; };
+		907F45BF1F4630E6003998A2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90631F801F209CA500C3A54D /* AVFoundation.framework */; };
 		908C8A881F1337910049FF8A /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908C8A871F1337910049FF8A /* UIViewExtensions.swift */; };
 		908FF26D1F0CA7AE002D1AC8 /* PEPhotoCropEditor.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 908FF26C1F0CA7AE002D1AC8 /* PEPhotoCropEditor.bundle */; };
 		90991EFE1F0C080800D74D2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90991EFD1F0C080800D74D2A /* Assets.xcassets */; };
@@ -34,21 +40,29 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9008669C1F4CB0A8003610FE /* MyDownload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDownload.swift; sourceTree = "<group>"; };
+		9008669E1F4CB1EB003610FE /* dbCameraTranslater.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = dbCameraTranslater.sqlite; sourceTree = "<group>"; };
 		901C6E041F1EFED600AEEAB1 /* DataBaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBaseHelper.swift; sourceTree = "<group>"; };
 		901F7AA51F225F950095021B /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		90284C011F384CB500EFCC1B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		90284C041F384D1600EFCC1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		90284C061F384D2100EFCC1B /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		90284C081F384D6C00EFCC1B /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		9040E9271F4C22DC00C48603 /* SupportLanguagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportLanguagesViewController.swift; sourceTree = "<group>"; };
+		9040E9291F4C22EE00C48603 /* DownloadCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadCell.swift; sourceTree = "<group>"; };
+		9040E92B1F4C22F600C48603 /* Unity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Unity.swift; sourceTree = "<group>"; };
 		9050FF0F1F1DFD25006D009C /* MyWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWord.swift; sourceTree = "<group>"; };
 		90631E8C1F204A7C00C3A54D /* GRDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GRDB.framework; path = "../../../Library/Developer/Xcode/DerivedData/CameraTranslater-bnxtudranzmipxapgroxoiarlurh/Build/Products/Debug-iphoneos/GRDB.swift/GRDB.framework"; sourceTree = "<group>"; };
 		90631F801F209CA500C3A54D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		90631F821F209CC400C3A54D /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		90631F841F209CE500C3A54D /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		90631F861F209F7D00C3A54D /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		906AF18F1F4373FC00E0414D /* dbCameraTranslater.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = dbCameraTranslater.sqlite; sourceTree = "<group>"; };
 		906AF1981F437B7A00E0414D /* CameraTranslater-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CameraTranslater-Bridging-Header.h"; sourceTree = "<group>"; };
 		90785A541F2B28C40059DA3A /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		907F45B51F461F28003998A2 /* ReadGoogle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadGoogle.h; sourceTree = "<group>"; };
+		907F45B61F461F28003998A2 /* ReadGoogle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadGoogle.m; sourceTree = "<group>"; };
+		907F45B81F462C34003998A2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		907F45BD1F462E03003998A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		908C8A871F1337910049FF8A /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		908FF26C1F0CA7AE002D1AC8 /* PEPhotoCropEditor.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PEPhotoCropEditor.bundle; sourceTree = "<group>"; };
 		90991EFD1F0C080800D74D2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				907F45BF1F4630E6003998A2 /* AVFoundation.framework in Frameworks */,
 				90631E921F2052AF00C3A54D /* GRDB.framework in Frameworks */,
 				90C437531F0B419C00FD7E83 /* TesseractOCR.framework in Frameworks */,
 				8ACD7066E2932020E6467815 /* Pods_CameraTranslater.framework in Frameworks */,
@@ -95,6 +110,8 @@
 		7B1F7E6F394F4B84FEDB6A3A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				907F45BD1F462E03003998A2 /* Foundation.framework */,
+				907F45B81F462C34003998A2 /* AudioToolbox.framework */,
 				90631F861F209F7D00C3A54D /* libsqlite3.tbd */,
 				90631F841F209CE500C3A54D /* libsqlite3.0.tbd */,
 				90631F821F209CC400C3A54D /* AVKit.framework */,
@@ -104,6 +121,14 @@
 				AB1C5D9018DAA015948029CC /* Pods_CameraTranslater.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9008669B1F4CB095003610FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9008669C1F4CB0A8003610FE /* MyDownload.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		901C6E031F1EFDE500AEEAB1 /* Helper */ = {
@@ -117,7 +142,7 @@
 		90631F131F2064A300C3A54D /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				906AF18F1F4373FC00E0414D /* dbCameraTranslater.sqlite */,
+				9008669E1F4CB1EB003610FE /* dbCameraTranslater.sqlite */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -133,6 +158,7 @@
 		90C437261F0B3B8500FD7E83 = {
 			isa = PBXGroup;
 			children = (
+				9008669B1F4CB095003610FE /* Model */,
 				90D29D931F2C28C600BD1199 /* Connect */,
 				90A4A5E81F2AD40B000CFDFD /* CustomButton */,
 				90631F131F2064A300C3A54D /* Data */,
@@ -155,6 +181,11 @@
 		90C437311F0B3B8500FD7E83 /* CameraTranslater */ = {
 			isa = PBXGroup;
 			children = (
+				9040E92B1F4C22F600C48603 /* Unity.swift */,
+				9040E9291F4C22EE00C48603 /* DownloadCell.swift */,
+				9040E9271F4C22DC00C48603 /* SupportLanguagesViewController.swift */,
+				907F45B51F461F28003998A2 /* ReadGoogle.h */,
+				907F45B61F461F28003998A2 /* ReadGoogle.m */,
 				906AF1981F437B7A00E0414D /* CameraTranslater-Bridging-Header.h */,
 				90284C081F384D6C00EFCC1B /* tessdata */,
 				90284C031F384D1600EFCC1B /* Main.storyboard */,
@@ -251,7 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				906AF1901F43743B00E0414D /* dbCameraTranslater.sqlite in Resources */,
+				9008669F1F4CB1F4003610FE /* dbCameraTranslater.sqlite in Resources */,
 				9015B4FA1F42AB62006B4418 /* tessdata in Resources */,
 				90C4373D1F0B3B8500FD7E83 /* LaunchScreen.storyboard in Resources */,
 				90284C051F384D1600EFCC1B /* Main.storyboard in Resources */,
@@ -328,12 +359,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				907F45B71F461F28003998A2 /* ReadGoogle.m in Sources */,
 				90C437331F0B3B8500FD7E83 /* AppDelegate.swift in Sources */,
+				9040E9281F4C22DC00C48603 /* SupportLanguagesViewController.swift in Sources */,
 				908C8A881F1337910049FF8A /* UIViewExtensions.swift in Sources */,
+				9040E92C1F4C22F600C48603 /* Unity.swift in Sources */,
 				90E7465A1F0E38B60083578D /* settingApp.swift in Sources */,
 				90E645F31F1CABA60066F27E /* WordTableViewCell.swift in Sources */,
 				90E7465C1F0E3B650083578D /* Translater.swift in Sources */,
 				90A4A5EA1F2AD486000CFDFD /* BounceButton.swift in Sources */,
+				9008669D1F4CB0A8003610FE /* MyDownload.swift in Sources */,
 				90284C071F384D2100EFCC1B /* SettingsViewController.swift in Sources */,
 				90D29D951F2C295100BD1199 /* Reachability.swift in Sources */,
 				9050FF101F1DFD25006D009C /* MyWord.swift in Sources */,
@@ -343,6 +378,7 @@
 				901C6E051F1EFED600AEEAB1 /* DataBaseHelper.swift in Sources */,
 				90284C021F384CB500EFCC1B /* ViewController.swift in Sources */,
 				90E495F11F0EA109005E8362 /* LangConstants.swift in Sources */,
+				9040E92A1F4C22EE00C48603 /* DownloadCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +508,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/CameraTranslater",
 				);
 				INFOPLIST_FILE = CameraTranslater/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -499,6 +536,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/CameraTranslater",
 				);
 				INFOPLIST_FILE = CameraTranslater/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

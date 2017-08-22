@@ -15,6 +15,8 @@ import GrowingTextView
 import SkyFloatingLabelTextField
 import Toaster
 import Zip
+import AVFoundation
+import Foundation
 
 
 
@@ -149,12 +151,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
     var viewDownload:UIView?
     
     //https://www.dropbox.com/sh/pw2o2caf7h8fou5/AACrFleQjxfCVPCBtSg0eKwQa?dl=0
-    let urlDownload = URL(string: "https://www.dropbox.com/sh/pw2o2caf7h8fou5/AACrFleQjxfCVPCBtSg0eKwQa?dl=1")!
-
-    
-    
-    
-    var listName = "tessdata"
+    let urlDownload = URL(string: "https://www.dropbox.com/sh/ljwr73h88wvfvu9/AAABkCtsdXdbEoxFfUwTWa7oa?dl=1")!
     var downloadTask: URLSessionDownloadTask!
     var backgroundSession: URLSession!
     
@@ -238,25 +235,25 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
             viewActionTop.isHidden = false
         }
         
-        let lauchedBefore = UserDefaults.standard.bool(forKey: "isSecondTime")
-        if lauchedBefore {
-            print("Not first time!")
-        } else {
-            //If connect internet then download tessdata
-            if Reachability.isConnectedToNetwork() {
-                print("Connect Internet")
-                let queueDowload =  DispatchQueue.init(label: "download")
-                queueDowload.async {
-                    UserDefaults.standard.set(true, forKey: "isSecondTime")
-                    self.startDownload()
-                    print("First time, setting userDefault")
-                    
-                }
-            }else{
-                print("Can not connect")
-            }
-           
-        }
+//        let lauchedBefore = UserDefaults.standard.bool(forKey: "isSecondTime")
+//        if lauchedBefore {
+//            print("Not first time!")
+//        } else {
+//            //If connect internet then download tessdata
+//            if Reachability.isConnectedToNetwork() {
+//                print("Connect Internet")
+//                let queueDowload =  DispatchQueue.init(label: "download")
+//                queueDowload.async {
+//                    UserDefaults.standard.set(true, forKey: "isSecondTime")
+//                    self.startDownload()
+//                    print("First time, setting userDefault")
+//                    
+//                }
+//            }else{
+//                print("Can not connect")
+//            }
+//           
+//        }
     }
     
     
@@ -290,7 +287,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        
+       
     }
     
     func runTranslater() {
@@ -419,30 +416,34 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
     
     
     @IBOutlet weak var btnSoundFromOutlet: UIButton!
-
+    var audioPlayer = AVAudioPlayer()
     @IBAction func btnSoundFromAction(_ sender: Any) {
-        print("Click button sound")
-
+    
         if txtFromOutlet.text.isEmpty {
             return
         }
-        textToSpeech(languageCode: settingApp.shared.getsourceid(), text: txtFromOutlet.text)
+        print(txtFromOutlet.text)
+       let speak = ReadGoogle.init()
+       let url =  speak.playSoundSource(txtFromOutlet.text, and: settingApp.shared.getsourceid())
+        do
+        {
+            audioPlayer = try AVAudioPlayer(contentsOf: url!)
+            audioPlayer.prepareToPlay()
+            audioPlayer.volume = 1.0
+            audioPlayer.play()
+        }
+        catch let error as NSError
+        {
+            print(error.localizedDescription)
+        }
+        catch {
+            print("AVAudioPlayer init failed")
+        }
         
         
     }
     
-    //TODO: text to speech with languge and string
-    func textToSpeech(languageCode:String, text:String) {
-        let utterance = AVSpeechUtterance(string: text)
-        utterance.voice = AVSpeechSynthesisVoice(language: languageCode)
-        utterance.rate = 0.3
-        utterance.volume = 1
-        let synthesizer = AVSpeechSynthesizer()
-        synthesizer.speak(utterance)
-        
-        
-        
-    }
+
     
     @IBOutlet weak var btnDocumentOutlet: UIButton!
     @IBAction func btnDocumentAction(_ sender: Any) {
@@ -468,7 +469,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
         
         
         //setting button in alertaction
-        let actionCamera = UIAlertAction(title: "Pick from camera", style: .default) { (action) in
+        let actionCamera = UIAlertAction(title: "Camera", style: .default) { (action) in
             //call function open camera
             print("Gọi hàm chụp ảnh")
             self.openCamera()
@@ -478,7 +479,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
 //        let image1:UIImage =
 //        actionCamera.setValue(image1, forKey: "image")
         
-        let actiongGallery = UIAlertAction(title: "Pick from gallery", style: .default) { (action) in
+        let actiongGallery = UIAlertAction(title: "Gellery", style: .default) { (action) in
             //Gọi hàm lấy ảnh từ gallery
             print("Gọi hàm lấy ảnh từ gallery")
            self.openGallery()
@@ -488,13 +489,20 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
 //        let image2 = #imageLiteral(resourceName: "icon_gallery")
 //        actiongGallery.setValue(image2, forKey: "image")
         
-        let actionWebsite = UIAlertAction(title: "Pick from website", style: .default) { (action) in
+        let actionWebsite = UIAlertAction(title: "Image from website", style: .default) { (action) in
             //Gọi hàm lấy ảnh từ đường dẫn trên trang web
             print("Gọi ham lấy ảnh từ trang web")
             self.showAlertLoadImage()
         }
 //        let image3 = #imageLiteral(resourceName: "iconinternet_32")
 //        actionWebsite.setValue(image3, forKey: "image")
+        
+        let actionLanguages =  UIAlertAction(title: "Support language", style: .default) { (action) in
+            //Gọi hàm lấy ảnh từ đường dẫn trên trang web
+            print("Gọi ham lấy ảnh từ trang web")
+            self.moveToSuportLanguageController()
+        }
+
         
         let actionCancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
             
@@ -512,6 +520,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
         alertAction.addAction(actionCamera)
         alertAction.addAction(actiongGallery)
         alertAction.addAction(actionWebsite)
+        alertAction.addAction(actionLanguages)
         alertAction.addAction(actionCancel)
         
         //show aleraction
@@ -587,11 +596,38 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
     
     }
     
+    func moveToSuportLanguageController()  {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "NgonNgu") as! SupportLanguagesViewController
+        self.present(newViewController, animated: true, completion: nil)
+    }
+    
 
     
     @IBOutlet weak var btnSoundOutlet: UIButton!
     @IBAction func btnSoundAction(_ sender: Any) {
-        textToSpeech(languageCode: settingApp.shared.gettargetid(), text: txtToOutlet.text)
+        
+        if txtToOutlet.text.isEmpty {
+            return
+        }
+        let speak = ReadGoogle.init()
+        let url =  speak.playSoundSource(txtToOutlet.text, and: settingApp.shared.gettargetid())
+        do
+        {
+            audioPlayer = try AVAudioPlayer(contentsOf: url!)
+            audioPlayer.prepareToPlay()
+            audioPlayer.volume = 1.0
+            audioPlayer.play()
+        }
+        catch let error as NSError
+        {
+            print(error.localizedDescription)
+        }
+        catch {
+            print("AVAudioPlayer init failed")
+        }
+        
+
     }
     
     @IBOutlet weak var btnCopyOutlet: UIButton!
@@ -599,7 +635,6 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
         if !txtToOutlet.text.isEmpty {
             UIPasteboard.general.string = txtToOutlet.text
             ToastView.appearance().backgroundColor = UIColor(red: 0, green: 127.0/255, blue: 127/255.0, alpha: 0.8)
-            
             Toast(text: "The document was copied", delay: 0.3, duration: 1).show()
         }
     }
@@ -857,7 +892,6 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
     }
     
 
-
 }
 
 
@@ -909,7 +943,7 @@ extension ViewController: G8TesseractDelegate {
     //Get text from image
     func scanImage(myImage:UIImage) {
         
-        let tesseract = G8Tesseract(language: "eng+rus+vie+jpn", configDictionary: nil, configFileNames: nil, cachesRelatedDataPath: "foo/bar", engineMode: .tesseractOnly)
+        let tesseract = G8Tesseract(language: "eng+vie", configDictionary: nil, configFileNames: nil, cachesRelatedDataPath: "foo/bar", engineMode: .tesseractOnly)
         //        let tesseract = G8Tesseract(language: "eng")
         
         
@@ -1108,8 +1142,10 @@ extension ViewController {
 }
 
 
-extension ViewController: URLSessionTaskDelegate , URLSessionDownloadDelegate{
-    
+/*
+ #MARK: Thực hiện download
+ */
+extension ViewController: URLSessionTaskDelegate , URLSessionDownloadDelegate {
     
     func startDownload()  {
         let backgroundSessionConfiguration = URLSessionConfiguration.background(withIdentifier: "DownloadTessdata")
@@ -1120,15 +1156,14 @@ extension ViewController: URLSessionTaskDelegate , URLSessionDownloadDelegate{
         
     }
 
+    //Kết thúc download
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
         let fileManager = FileManager()
-        let paths = Bundle.main.path(forResource: "tessdata", ofType: nil)
+//        let paths = Bundle.main.path(forResource: "tessdata", ofType: nil)
         
-        let cachePath = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).last
-        let cacheData = cachePath! + "/foo/bar"
-        print(cacheData)
-//        cacheData = "file://" + cacheData
-        
+        // #MARK: Tạo đường directory trên cache
+        let cachePathString = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).last
+        let cacheData = cachePathString! + "/foo/bar/tessdata"
         if !fileManager.fileExists(atPath: cacheData) {
             do{
              try fileManager.createDirectory(atPath: cacheData, withIntermediateDirectories: true, attributes: nil)
@@ -1137,64 +1172,54 @@ extension ViewController: URLSessionTaskDelegate , URLSessionDownloadDelegate{
                 print("Lỗi tạo caches!")
             }
         }
-        let pathDic = URL.init(string: cacheData)
-        
-       
-        let tmpPath = URL.init(string: paths!)
-        
-        let desPath = tmpPath?.appendingPathComponent(listName)
-        let desPath1 = pathDic?.appendingPathComponent(listName)
-            let des = desPath?.absoluteString
-        let des1 = desPath1?.absoluteString
-        let tmpPath1 = "file://" + des!
-        let tmpPath2 = "file://" + des1!
-        print("tmpPath1: \(tmpPath1)")
-        let pathFinal = URL.init(string: tmpPath1)
-        let pathFinal1 = URL.init(string: tmpPath2)
-        print(pathFinal1)
-        print("pathFinal\(pathFinal)")
-        let destinationURLForFile = URL(fileURLWithPath: paths!)
-         print("destinationURLForFile: \(destinationURLForFile)")
+        print(cacheData)
+        let urlCache = URL.init(string: "file://" + cacheData)
+        print(urlCache?.absoluteString)
         
         print(location)
         if fileManager.fileExists(atPath: location.absoluteString) {
             print("Exitst")
-            do{
-                print("Success!")
-            } catch {
-                print("Error file")
-            }
         }else {
             
                 do{
                    print("Location: \(location)")
                     let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
                     let tem = path + "/test"
-//                    let documentDirectory = URL(fileURLWithPath: path)
+
                     if !fileManager.fileExists(atPath: tem) {
                         do{
                             try fileManager.createDirectory(atPath: tem, withIntermediateDirectories: true, attributes: nil)
-                            
-                        }catch {
-                            print("Lỗi tạo tem!")
                         }
                     }
                     
-                    let originPath = URL.init(string: tem)?.appendingPathComponent("/tessdata.zip")
-                    if fileManager.fileExists(atPath: (originPath?.absoluteString)!) {
-                       try fileManager.removeItem(at: originPath!)
+                    //Đường dẫn lưu file zip
+                    let urlZip = URL.init(string: tem)?.appendingPathComponent("/thumuclucfilezip.zip")
+                    if fileManager.fileExists(atPath: (urlZip?.absoluteString)!) {
+                       try fileManager.removeItem(at: urlZip!)
                     }
-                      let tem2 = "file://" + (originPath?.absoluteString)!
-                    let urlTem2 = URL.init(string: tem2)
-                     try fileManager.moveItem(at: location, to: urlTem2!)
-                  
-                    let unzipDirectory = try Zip.quickUnzipFile(originPath!) // Unzip
+                   
+                    let stringZip = "file://" + (urlZip?.absoluteString)!
+                    let urlZipLast = URL.init(string: stringZip) ///aaaa
+                    try fileManager.moveItem(at: location, to: urlZipLast!)
+                
+                    let unzipDirectory = try Zip.quickUnzipFile(urlZip!) // trả về một đường dẫn sau khi unzip
                     print(unzipDirectory)
-                    print("Move success!")
-                    try fileManager.moveItem(at: unzipDirectory, to: pathFinal1!)
                     
-                   print(pathFinal1)
-                    
+                    let stringDirectory = (unzipDirectory.absoluteString)
+                    let index = stringDirectory.index(stringDirectory.startIndex, offsetBy: 7)
+                    let parentPath = stringDirectory.substring(from: index)
+                    print(parentPath)
+                    let listStringSubPath =  getListFile(path: parentPath) //Danh sách các đường dẫn file sau khi tải về
+                    for subPath in listStringSubPath! {
+                        let urlSub = URL.init(string: subPath)
+                         print(urlSub)
+                        let fileSoure = (urlCache?.absoluteString)! + "/" +  (urlSub?.lastPathComponent)!
+                        print(fileSoure)
+                        let urlSource = URL.init(string: fileSoure)
+                        try fileManager.moveItem(at: urlSub!, to: urlSource!)
+                       
+                    }
+                     print("Move success!")
                 }catch {
                     print(error.localizedDescription)
                 }
@@ -1202,21 +1227,15 @@ extension ViewController: URLSessionTaskDelegate , URLSessionDownloadDelegate{
         }
     }
     
-    func contentsOfDirectoryAtPath(path: String) -> [String]? {
-        guard let paths = try? FileManager.default.contentsOfDirectory(atPath: path) else { return nil}
-        return paths.map { aContent in (path as NSString).appendingPathComponent(aContent)}
-    }
     
-    
+    //Trong quá trình download
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
 
         
-//        let percent = Int(Float(totalBytesWritten)/Float(totalBytesExpectedToWrite ) * 100)
-//        showActivityIndicator("Loading \(percent) %")
-//         showActivityIndicator("    Loading .....")
         print("Loading")
     }
     
+    //Kết thúc download
     func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
         downloadTask = nil
         if  error != nil {
@@ -1228,6 +1247,20 @@ extension ViewController: URLSessionTaskDelegate , URLSessionDownloadDelegate{
         effectView.removeFromSuperview()
         view.isUserInteractionEnabled = true
     }
+    
+    //Hàm thực hiện đọc hết đường dẫn con trong 1 folder
+    func getListFile(path: String) -> [String]?{
+        let filemanager:FileManager = FileManager()
+        var arrPath:[String]? = []
+        let files = filemanager.enumerator(atPath: path)
+        while let file = files?.nextObject() {
+            
+            arrPath?.append("file://" + path + "\(file)")
+        }
+        
+        return arrPath
+    }
+    
 }
 
 

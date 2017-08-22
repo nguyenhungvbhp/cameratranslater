@@ -115,4 +115,31 @@ class DataBaseHelper: NSObject {
     }
     
     
+    
+    //TODO: get all list myDownload
+    func getAllDownload(query: String) -> [MyDownload] {
+        var listDownload = [MyDownload]()
+        dbQueue.inDatabase{ db in
+            do {
+                for row in try Row.fetchAll(db, query){
+                    let myDownload = MyDownload()
+                    myDownload._id = row.value(named: "_id") as Int
+                    myDownload.name = row.value(named: "name") as String
+                    myDownload.codeLanguage = row.value(named: "codeLanguage") as String
+                    myDownload.stringURL = row.value(named: "stringURL") as String
+                    myDownload.isDownload = row.value(named: "isDownload") as Int
+                    listDownload.append(myDownload)
+                }
+            }
+            catch {
+                print("Lỗi get all download")
+                print(error.localizedDescription)
+            }
+            
+        }
+        return listDownload
+    }
+
+    
+    
 }

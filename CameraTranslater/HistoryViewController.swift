@@ -18,6 +18,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var myTable: UITableView!
     
+    var listDownload:[MyDownload] = []
     
     var listWord:[MyWord] = []
     var databaseHelper = DataBaseHelper()
@@ -25,6 +26,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidAppear(_ animated: Bool) {
         segmentControllerOutlet.selectedSegmentIndex = 0
         listWord = databaseHelper.getAllHistory(query: "SELECT * FROM dbMyWord")
+        
         myTable.reloadData()
         
     }
@@ -35,6 +37,12 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        listDownload = databaseHelper.getAllDownload(query: "SELECT * FROM dbDownload")
+        for download in listDownload {
+            print(download.name)
+        }
+        
         listWord = databaseHelper.getAllHistory(query: "SELECT * FROM dbMyWord")
         myTable.dataSource = self
         myTable.delegate = self

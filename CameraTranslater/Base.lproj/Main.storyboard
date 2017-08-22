@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LMI-cL-W1Q">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LMI-cL-W1Q">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -355,6 +355,105 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1863.75" y="-35.91549295774648"/>
+        </scene>
+        <!--Support Languages View Controller-->
+        <scene sceneID="4du-OP-efC">
+            <objects>
+                <viewController storyboardIdentifier="NgonNgu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8dt-IA-UyS" customClass="SupportLanguagesViewController" customModule="CameraTranslater" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="61N-3W-uJP"/>
+                        <viewControllerLayoutGuide type="bottom" id="xzy-1e-HN2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="46B-Z8-1Z7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6eH-7C-N1y">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                                <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="h6I-1p-fe8"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Support Languages" id="5Ui-5I-D07">
+                                        <barButtonItem key="leftBarButtonItem" image="delete" id="s0p-aX-5wm">
+                                            <connections>
+                                                <action selector="back:" destination="8dt-IA-UyS" id="0qB-tI-Pnc"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="69" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aP6-vq-2jW">
+                                <rect key="frame" x="0.0" y="60" width="320" height="508"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CELL" rowHeight="69" id="Hvo-Bh-NNF" customClass="DownloadCell" customModule="CameraTranslater" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="69"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CELL" tableViewCell="Hvo-Bh-NNF" id="cQj-AO-Tg8">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="68.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSE-Uh-yh2">
+                                                    <rect key="frame" x="20" y="24" width="56" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8CS-R2-gAs">
+                                                    <rect key="frame" x="260" y="14.5" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="YLC-Zq-ufT"/>
+                                                        <constraint firstAttribute="height" constant="40" id="tMr-pj-5Fm"/>
+                                                    </constraints>
+                                                    <state key="normal" image="icon_download_32"/>
+                                                    <connections>
+                                                        <action selector="actionDownload:" destination="Hvo-Bh-NNF" eventType="touchUpInside" id="fOk-H8-zay"/>
+                                                    </connections>
+                                                </button>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="xsm-AJ-BrC">
+                                                    <rect key="frame" x="260" y="14.5" width="40" height="40"/>
+                                                </activityIndicatorView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xsm-AJ-BrC" firstAttribute="height" secondItem="8CS-R2-gAs" secondAttribute="height" id="6jc-fh-hoC"/>
+                                                <constraint firstItem="8CS-R2-gAs" firstAttribute="centerY" secondItem="cQj-AO-Tg8" secondAttribute="centerY" id="9NX-39-9ns"/>
+                                                <constraint firstItem="gSE-Uh-yh2" firstAttribute="leading" secondItem="cQj-AO-Tg8" secondAttribute="leading" constant="20" id="BqK-Z8-RL4"/>
+                                                <constraint firstItem="xsm-AJ-BrC" firstAttribute="width" secondItem="8CS-R2-gAs" secondAttribute="width" id="GAa-aj-faH"/>
+                                                <constraint firstItem="xsm-AJ-BrC" firstAttribute="centerY" secondItem="8CS-R2-gAs" secondAttribute="centerY" id="Guh-o6-3pm"/>
+                                                <constraint firstItem="xsm-AJ-BrC" firstAttribute="centerX" secondItem="8CS-R2-gAs" secondAttribute="centerX" id="JNt-cO-dMv"/>
+                                                <constraint firstAttribute="trailing" secondItem="8CS-R2-gAs" secondAttribute="trailing" constant="20" id="MTA-Ku-8cq"/>
+                                                <constraint firstItem="gSE-Uh-yh2" firstAttribute="centerY" secondItem="cQj-AO-Tg8" secondAttribute="centerY" id="TGy-8h-FbU"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="buttonDownloadOut" destination="8CS-R2-gAs" id="hsx-Ta-3KA"/>
+                                            <outlet property="indicatorOut" destination="xsm-AJ-BrC" id="bqC-Uf-HGb"/>
+                                            <outlet property="lblLanguage" destination="gSE-Uh-yh2" id="VVv-go-lt7"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aP6-vq-2jW" firstAttribute="top" secondItem="6eH-7C-N1y" secondAttribute="bottom" id="58g-Oi-7gm"/>
+                            <constraint firstItem="aP6-vq-2jW" firstAttribute="leading" secondItem="46B-Z8-1Z7" secondAttribute="leading" id="T4D-gu-RCm"/>
+                            <constraint firstAttribute="trailing" secondItem="6eH-7C-N1y" secondAttribute="trailing" id="c1k-mf-cN1"/>
+                            <constraint firstItem="6eH-7C-N1y" firstAttribute="leading" secondItem="46B-Z8-1Z7" secondAttribute="leading" id="cJG-YI-9TU"/>
+                            <constraint firstItem="xzy-1e-HN2" firstAttribute="top" secondItem="aP6-vq-2jW" secondAttribute="bottom" id="rgT-pt-oEb"/>
+                            <constraint firstAttribute="trailing" secondItem="aP6-vq-2jW" secondAttribute="trailing" id="sF8-fF-Rcg"/>
+                            <constraint firstItem="6eH-7C-N1y" firstAttribute="top" secondItem="46B-Z8-1Z7" secondAttribute="top" id="wQk-Sw-B7m"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tbLanguages" destination="aP6-vq-2jW" id="kgZ-5m-u7I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gKc-4S-GGv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2816.25" y="-38.028169014084504"/>
         </scene>
         <!--My list-->
         <scene sceneID="agx-jx-Qb5">
@@ -744,6 +843,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="delete" width="16" height="16"/>
         <image name="england" width="22" height="22"/>
         <image name="flag_armenia" width="129" height="96"/>
         <image name="flag_burmese" width="129" height="96"/>
@@ -752,6 +852,7 @@
         <image name="icon_copy_44" width="22" height="22"/>
         <image name="icon_delete_36" width="18" height="18"/>
         <image name="icon_document_44" width="22" height="22"/>
+        <image name="icon_download_32" width="16" height="16"/>
         <image name="icon_history_52" width="26" height="26"/>
         <image name="icon_setting_52" width="26" height="26"/>
         <image name="icon_share_44" width="22" height="22"/>

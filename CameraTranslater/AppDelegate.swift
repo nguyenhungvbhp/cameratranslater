@@ -16,14 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         Utility.copyFile(fileName: "dbCameraTranslater.sqlite")
-        let lauchedBefore = UserDefaults.standard.bool(forKey: "isSecondTime")
-        if lauchedBefore {
-            print("Not first time!")
-        } else {
-            Unity.saveUserDefault()
-            UserDefaults.standard.set(true, forKey: "isSecondTime")
-            print("First time, setting userDefault")
-        }
+
         
         return true
     }

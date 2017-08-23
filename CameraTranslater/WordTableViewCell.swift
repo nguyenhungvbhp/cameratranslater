@@ -20,6 +20,7 @@ class WordTableViewCell: UITableViewCell {
     var isSave:Int?
     let dataHelper = DataBaseHelper()
     
+    
     @IBOutlet weak var buttonOutlet: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,6 +43,7 @@ class WordTableViewCell: UITableViewCell {
             buttonOutlet.setImage(UIImage(named: "star"), for: UIControlState.normal)
         }
         dataHelper.updateDataBASE(isSave: isSave!, _id: _id!)
+        
     }
     
     //Hàm set image cho button

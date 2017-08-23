@@ -8,13 +8,11 @@
 
 import UIKit
 import ActionSheetPicker //support show action sheet bottom
-import TesseractOCR//support recognition image text
 import PEPhotoCropEditor//support crop image
 import AVFoundation //support text to speech
 import GrowingTextView
 import SkyFloatingLabelTextField
 import Toaster
-import Zip
 import AVFoundation
 import Foundation
 
@@ -150,10 +148,10 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
     var progressLabel: UILabel?
     var viewDownload:UIView?
     
-    //https://www.dropbox.com/sh/pw2o2caf7h8fou5/AACrFleQjxfCVPCBtSg0eKwQa?dl=0
-    let urlDownload = URL(string: "https://www.dropbox.com/sh/ljwr73h88wvfvu9/AAABkCtsdXdbEoxFfUwTWa7oa?dl=1")!
-    var downloadTask: URLSessionDownloadTask!
-    var backgroundSession: URLSession!
+
+    
+   static var sourceText = ""
+   static var targetText = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -166,7 +164,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
         
         reachability.whenUnreachable = { _ in
             DispatchQueue.main.async {
-//                Toast(text: "Can connect network!", delay: 0.3, duration: 6).show()
+
             }
         }
         
@@ -216,6 +214,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
         txtToOutlet.tag = 0
         textViewSource?.resignFirstResponder()
         textViewSource?.becomeFirstResponder()
+       
     }
     static var myWord:MyWord?
     override func viewWillAppear(_ animated: Bool) {
@@ -227,6 +226,11 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
             txtFromOutlet.text = ViewController.myWord?.source
             txtToOutlet.text = ViewController.myWord?.target
         }
+        
+        if !(ViewController.sourceText.isEmpty) && !(ViewController.targetText.isEmpty) {
+            txtFromOutlet.text = ViewController.sourceText
+            txtToOutlet.text = ViewController.targetText
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -234,26 +238,6 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
             self.navigationController?.setNavigationBarHidden(true, animated: true)
             viewActionTop.isHidden = false
         }
-        
-//        let lauchedBefore = UserDefaults.standard.bool(forKey: "isSecondTime")
-//        if lauchedBefore {
-//            print("Not first time!")
-//        } else {
-//            //If connect internet then download tessdata
-//            if Reachability.isConnectedToNetwork() {
-//                print("Connect Internet")
-//                let queueDowload =  DispatchQueue.init(label: "download")
-//                queueDowload.async {
-//                    UserDefaults.standard.set(true, forKey: "isSecondTime")
-//                    self.startDownload()
-//                    print("First time, setting userDefault")
-//                    
-//                }
-//            }else{
-//                print("Can not connect")
-//            }
-//           
-//        }
     }
     
     
@@ -264,7 +248,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
         let reachability = note.object as! Reachability
         if reachability.isReachable {
             DispatchQueue.main.async {
-                self.setNavigationBar()
+//                self.setNavigationBar()
                 //Connect wifi
                 if reachability.isReachableViaWiFi {
                 
@@ -333,22 +317,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
             }
 
         }
-//        
-//        if isTranslater {
-//            textViewTarget?.text = translater.translater(input: (textViewSource?.text)!)
-//            if (textViewTarget?.text.isEmpty)! {
-//                translaterButton?.alpha = 0.3
-//                translaterButton?.isUserInteractionEnabled = false
-//            }else {
-//                translaterButton?.alpha = 1
-//                translaterButton?.isUserInteractionEnabled = true
-//            }
-//            let range = NSMakeRange((textViewTarget?.text.characters.count)! - 1, 0)
-//            textViewTarget?.scrollRangeToVisible(range)
-//                stopTimer()
-//        }else {
-//            isTranslater = true
-//        }
+
     }
     
     //function start app
@@ -384,8 +353,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
             settingApp.shared.settargetimg(state: LangConstants.arrFlag[index])
             settingApp.shared.settargetname(state: LangConstants.arrLang[index])
             self.positionTarget = LangConstants.arrLang.index(of: settingApp.shared.gettargetname())
-            //dich
-//            print(self.translater.translater(input: self.txtFromOutlet.text))
+        
             if !self.viewContainer1.isHidden {
                 self.txtToOutlet.text = self.translater.translater(input: self.txtFromOutlet.text)
             }else {
@@ -462,7 +430,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
         //setting font and size for title and message
         let titleFont:[String : AnyObject] = [ NSFontAttributeName : UIFont(name: "AmericanTypewriter", size: 18)! ]
         let messageFont:[String : AnyObject] = [ NSFontAttributeName : UIFont(name: "HelveticaNeue-Thin", size: 14)! ]
-        let attributedTitle = NSMutableAttributedString(string: "Image Options", attributes: titleFont)
+        let attributedTitle = NSMutableAttributedString(string: "Image to text", attributes: titleFont)
         let attributedMessage = NSMutableAttributedString(string: "Select an action", attributes: messageFont)
         alertAction.setValue(attributedTitle, forKey: "attributedTitle")
         alertAction.setValue(attributedMessage, forKey: "attributedMessage")
@@ -486,21 +454,17 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
         
             
         }
-//        let image2 = #imageLiteral(resourceName: "icon_gallery")
-//        actiongGallery.setValue(image2, forKey: "image")
         
         let actionWebsite = UIAlertAction(title: "Image from website", style: .default) { (action) in
             //Gọi hàm lấy ảnh từ đường dẫn trên trang web
             print("Gọi ham lấy ảnh từ trang web")
             self.showAlertLoadImage()
         }
-//        let image3 = #imageLiteral(resourceName: "iconinternet_32")
-//        actionWebsite.setValue(image3, forKey: "image")
         
         let actionLanguages =  UIAlertAction(title: "Support language", style: .default) { (action) in
-            //Gọi hàm lấy ảnh từ đường dẫn trên trang web
-            print("Gọi ham lấy ảnh từ trang web")
-            self.moveToSuportLanguageController()
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let supportController = storyBoard.instantiateViewController(withIdentifier: "NgonNgu") as! SupportLanguagesViewController
+            self.present(supportController, animated: true, completion: nil)
         }
 
         
@@ -596,10 +560,11 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
     
     }
     
-    func moveToSuportLanguageController()  {
+    func moveToSuportLanguageController(myImage: UIImage)  {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "NgonNgu") as! SupportLanguagesViewController
-        self.present(newViewController, animated: true, completion: nil)
+        let supportController = storyBoard.instantiateViewController(withIdentifier: "NgonNgu") as! SupportLanguagesViewController
+        supportController.myImage = myImage
+        self.present(supportController, animated: true, completion: nil)
     }
     
 
@@ -691,8 +656,6 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
         settingColorIcon(btn: btnCopyOutlet, imagename: "icon_copy_44")
         settingColorIcon(btn: btnShareOutlet, imagename: "icon_share_44")
         
-//        imgFromOutlet.image = UIImage(named: "england")
-//        imgToOutlet.image = UIImage(named: "vietnam")
         imgToOutlet.clipsToBounds = true
         imgToOutlet.layer.cornerRadius = 9
         imgFromOutlet.clipsToBounds = true
@@ -879,33 +842,24 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
     func clickButtonTranslater() {
         dismissKeyboard()
         hideSubViewViewShowContener()
-//        txtFromOutlet.isUserInteractionEnabled = false
         txtToOutlet.text = textViewTarget?.text
         txtFromOutlet.text = textViewSource?.text
         databaseHelper.insertMyWord(source: (textViewSource?.text)!, target: (textViewTarget?.text)!, positionSource: positionSource!, isSave: 0, positionTarget: positionTarget!)
         
     }
     
-    func tapTextTarget() {
-        print("Tap")
-
-    }
-    
+   
 
 }
 
-
+//Thực hiện crop ảnh và image to text
 extension ViewController: PECropViewControllerDelegate {
     func cropViewController(_ controller: PECropViewController!, didFinishCroppingImage croppedImage: UIImage!) {
         print("crop image")
         controller.dismiss(animated: true, completion: nil)
-        showActivityIndicator("Translating. Please wait!")
-        view.isUserInteractionEnabled = false
-        let queue = DispatchQueue(label: "queue")
-        queue.async {
-             self.scanImage(myImage: croppedImage)
-        }
-//        scanImage(myImage: croppedImage)
+
+        //Chuyển tới chọn ngôn ngữ sau khi đã crop
+         self.moveToSuportLanguageController(myImage: croppedImage)
     }
     func cropViewControllerDidCancel(_ controller: PECropViewController!) {
         controller.dismiss(animated: true, completion: nil)
@@ -933,74 +887,22 @@ extension ViewController: UIImagePickerControllerDelegate {
         
     }
     
-    
-    
-    
 }
 
 
-extension ViewController: G8TesseractDelegate {
-    //Get text from image
-    func scanImage(myImage:UIImage) {
-        
-        let tesseract = G8Tesseract(language: "eng+vie", configDictionary: nil, configFileNames: nil, cachesRelatedDataPath: "foo/bar", engineMode: .tesseractOnly)
-        //        let tesseract = G8Tesseract(language: "eng")
-        
-        
-        
-        tesseract?.delegate = self
-        
-        //Cung cap 3 engine. CubeOnly, xu ly cham nhung chinh xac
-        //TesseractOnly: nhanh nhung do chinh xac thap
-        //TesseractCubeCombined xu ly ca 2 o muc trung binh
-        tesseract?.engineMode  = .tesseractOnly
-        
-        tesseract?.pageSegmentationMode = .auto //Tu nhan khi thay xuong dong
-        
-        //Gioi han thoi gian
-//        tesseract?.maximumRecognitionTime = 60
-//        tesseract?.setVariableValue("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ", forKey: "tessedit_char_whitelist")
-//        tesseract?.setVariableValue(".,:;'?!-", forKey: "tessedit_char_blacklist")
-        
-        tesseract?.image = myImage.g8_blackAndWhite()
-        tesseract?.recognize()
-        let data:String = (tesseract?.recognizedText)!
-        let dataencode = data.data(using: String.Encoding.nonLossyASCII)
-        let endcodevalue = String(data: dataencode!,  encoding: String.Encoding.utf8)
-        print(endcodevalue!)
-        DispatchQueue.main.async {
-             self.edtFromOutlet.text = tesseract?.recognizedText
-            if !self.edtFromOutlet.text.isEmpty {
-                self.edtToOutlet.text = self.translater.translater(input: data)
-            }
-             self.effectView.removeFromSuperview()
-            self.view.isUserInteractionEnabled = true
-        }
-    }
-
-}
 
 extension ViewController{
     
     func keyboardWillShow(notification: NSNotification) {
-//        if ((notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue) != nil {
-//                addView()
-//            hideViewContenerShowSubView()
-//        }
         
     }
     
     func keyboardWillHide(notification: NSNotification) {
-//        if ((notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue) != nil {
-                self.navigationController?.setNavigationBarHidden(false, animated: true)
-                print("Run key")
-//                hideSubViewViewShowContener()
-//        }
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
 }
 
 extension ViewController:UITextViewDelegate {
-    
     
     //ghi đè function lắng nghe sự kiện khi text view thay đổi
     func textViewDidChange(_ textView: UITextView) {
@@ -1078,8 +980,6 @@ extension ViewController: UITextFieldDelegate {
 
 
 extension ViewController {
-
-
     
     func addView() {
         
@@ -1124,10 +1024,6 @@ extension ViewController {
         textViewSource?.tintColor = UIColor.blue
         UITextView.appearance().tintColor = UIColor.blue
         automaticallyAdjustsScrollViewInsets = true
-        let tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.tapTextTarget))
-        tap.numberOfTapsRequired = 1
-        tap.numberOfTouchesRequired = 1
-        textViewTarget?.addGestureRecognizer(tap)
         subViewTarget?.addSubview(textViewTarget!)
         
         translaterButton = BounceButton(frame: CGRect(x: (textViewTarget?.frame.origin.x)! + (textViewTarget?.frame.width)! - 15, y: 0, width: 2/10 * (subViewTarget?.frame.width)!, height: viewActionTop.frame.height * 1.3))
@@ -1142,126 +1038,6 @@ extension ViewController {
 }
 
 
-/*
- #MARK: Thực hiện download
- */
-extension ViewController: URLSessionTaskDelegate , URLSessionDownloadDelegate {
-    
-    func startDownload()  {
-        let backgroundSessionConfiguration = URLSessionConfiguration.background(withIdentifier: "DownloadTessdata")
-        backgroundSession = Foundation.URLSession(configuration: backgroundSessionConfiguration, delegate: self, delegateQueue: OperationQueue.main)
-        
-                downloadTask = backgroundSession.downloadTask(with: urlDownload)
-                downloadTask.resume()
-        
-    }
-
-    //Kết thúc download
-    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
-        let fileManager = FileManager()
-//        let paths = Bundle.main.path(forResource: "tessdata", ofType: nil)
-        
-        // #MARK: Tạo đường directory trên cache
-        let cachePathString = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).last
-        let cacheData = cachePathString! + "/foo/bar/tessdata"
-        if !fileManager.fileExists(atPath: cacheData) {
-            do{
-             try fileManager.createDirectory(atPath: cacheData, withIntermediateDirectories: true, attributes: nil)
-                
-            }catch {
-                print("Lỗi tạo caches!")
-            }
-        }
-        print(cacheData)
-        let urlCache = URL.init(string: "file://" + cacheData)
-        print(urlCache?.absoluteString)
-        
-        print(location)
-        if fileManager.fileExists(atPath: location.absoluteString) {
-            print("Exitst")
-        }else {
-            
-                do{
-                   print("Location: \(location)")
-                    let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-                    let tem = path + "/test"
-
-                    if !fileManager.fileExists(atPath: tem) {
-                        do{
-                            try fileManager.createDirectory(atPath: tem, withIntermediateDirectories: true, attributes: nil)
-                        }
-                    }
-                    
-                    //Đường dẫn lưu file zip
-                    let urlZip = URL.init(string: tem)?.appendingPathComponent("/thumuclucfilezip.zip")
-                    if fileManager.fileExists(atPath: (urlZip?.absoluteString)!) {
-                       try fileManager.removeItem(at: urlZip!)
-                    }
-                   
-                    let stringZip = "file://" + (urlZip?.absoluteString)!
-                    let urlZipLast = URL.init(string: stringZip) ///aaaa
-                    try fileManager.moveItem(at: location, to: urlZipLast!)
-                
-                    let unzipDirectory = try Zip.quickUnzipFile(urlZip!) // trả về một đường dẫn sau khi unzip
-                    print(unzipDirectory)
-                    
-                    let stringDirectory = (unzipDirectory.absoluteString)
-                    let index = stringDirectory.index(stringDirectory.startIndex, offsetBy: 7)
-                    let parentPath = stringDirectory.substring(from: index)
-                    print(parentPath)
-                    let listStringSubPath =  getListFile(path: parentPath) //Danh sách các đường dẫn file sau khi tải về
-                    for subPath in listStringSubPath! {
-                        let urlSub = URL.init(string: subPath)
-                         print(urlSub)
-                        let fileSoure = (urlCache?.absoluteString)! + "/" +  (urlSub?.lastPathComponent)!
-                        print(fileSoure)
-                        let urlSource = URL.init(string: fileSoure)
-                        try fileManager.moveItem(at: urlSub!, to: urlSource!)
-                       
-                    }
-                     print("Move success!")
-                }catch {
-                    print(error.localizedDescription)
-                }
-    
-        }
-    }
-    
-    
-    //Trong quá trình download
-    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
-
-        
-        print("Loading")
-    }
-    
-    //Kết thúc download
-    func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
-        downloadTask = nil
-        if  error != nil {
-            print(error?.localizedDescription)
-        }else{
-            print("Task finished !")
-        }
-        
-        effectView.removeFromSuperview()
-        view.isUserInteractionEnabled = true
-    }
-    
-    //Hàm thực hiện đọc hết đường dẫn con trong 1 folder
-    func getListFile(path: String) -> [String]?{
-        let filemanager:FileManager = FileManager()
-        var arrPath:[String]? = []
-        let files = filemanager.enumerator(atPath: path)
-        while let file = files?.nextObject() {
-            
-            arrPath?.append("file://" + path + "\(file)")
-        }
-        
-        return arrPath
-    }
-    
-}
 
 
 

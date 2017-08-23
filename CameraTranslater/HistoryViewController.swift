@@ -18,8 +18,6 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var myTable: UITableView!
     
-    var listDownload:[MyDownload] = []
-    
     var listWord:[MyWord] = []
     var databaseHelper = DataBaseHelper()
 
@@ -37,11 +35,6 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        listDownload = databaseHelper.getAllDownload(query: "SELECT * FROM dbDownload")
-        for download in listDownload {
-            print(download.name)
-        }
         
         listWord = databaseHelper.getAllHistory(query: "SELECT * FROM dbMyWord")
         myTable.dataSource = self
@@ -62,7 +55,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = myTable.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! WordTableViewCell
-
+        
         cell.textLabel?.numberOfLines = 0
         cell.textLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
         
@@ -79,7 +72,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         let positionTarget = myWord.positionTarget
         cell.imgSourceOutlet.image = UIImage(named: LangConstants.arrFlag[positionSource!])
         cell.imgTargetOutlet.image = UIImage(named: LangConstants.arrFlag[positionTarget!])
-        
+        cell.buttonOutlet.addTarget(Any?.self, action: #selector(yourButtonClicked), for:UIControlEvents.touchUpInside )
         cell._id = myWord._id
         cell.isSave = myWord.isSave
         
@@ -93,12 +86,15 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         cell.contentView.addSubview(whiteRoundedView)
         cell.contentView.sendSubview(toBack: whiteRoundedView)
+        
+        
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 120
-//    }
+    func yourButtonClicked()  {
+         listWord = databaseHelper.getAllHistory(query: "SELECT * FROM dbMyWord")
+
+    }
     
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -130,7 +126,6 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     //Ham set background navigation bar
     func setNavigationBar() {
-        
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 233.0/255.0, green: 233.0/255.0, blue: 233.0/255.0, alpha: 1)
         self.navigationController?.navigationBar.tintColor =  UIColor(red: 0.0/255.0, green: 127.0/255.0, blue: 255.0/255.0, alpha: 1)
         self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.blue]

@@ -9,12 +9,13 @@
 import Foundation
 
 public class LangConstants {
-    
+    /*
     static let nameDownload =
         [ "Afrikaans",      "Azerbaijani",          "Belarusian",             "Bengali",   "Bulgarian",   "Catalan-Valencian",
           "Czech",          "Chinese - Simplified", "Chinese - Traditional",  "Cherokee",  "Danish",      "German",
-          "Greek - Modern", "English",              "French",                 "Hindi",    "Indonesian",  "Italian",
-          "Japanese",       "Korean",               "Portuguese",             "Russian",  "Thai",        "Vietnamese"
+          "Greek - Modern", "English",              "French",                 "Hindi",     "Indonesian",  "Italian",
+          "Japanese",       "Korean",               "Portuguese",             "Russian",   "Thai",        "Vietnamese",
+          "Arabic"
     ]
 
     
@@ -23,7 +24,8 @@ public class LangConstants {
         false, false, false, false, false, false,
         false, false, false, false, false, false,
         false, true,  false, false, false, false,
-        false, false, false, false, false, false
+        false, false, false, false, false, false,
+        false
     ]
     
     static var arrCodeLanguge: [String] =
@@ -31,7 +33,8 @@ public class LangConstants {
      "afr",     "aze",     "bel",      "ben",   "bul",  "cat",
      "ces",     "chi_sim", "chi_tra",  "chr",   "dan",  "deu",
      "ell",     "eng",     "fra",      "hin",   "ind",  "ita",
-     "jpn",     "kor",     "por",      "rus",   "tha",  "vie"
+     "jpn",     "kor",     "por",      "rus",   "tha",  "vie",
+     "ara"
     ]
     
     //lưu url để tải các file
@@ -83,44 +86,30 @@ public class LangConstants {
         
        URL.init(string: "https://www.dropbox.com/sh/pntcrqdxr62giy4/AACVr11moXxfq_7DyFC9uSKQa?dl=1")!,//23
         
-       URL.init(string: "https://www.dropbox.com/sh/2j0gkppxm0jmkgj/AAANWOhP6Ii7HnvqwNJz7qs2a?dl=1")!//24
+       URL.init(string: "https://www.dropbox.com/sh/2j0gkppxm0jmkgj/AAANWOhP6Ii7HnvqwNJz7qs2a?dl=1")!,//24
+        
+       URL.init(string: "https://www.dropbox.com/sh/jpk28ln6laq2nkk/AAC1LZTBzROsDSEhd2DVcuPXa?dl=1")! // 25
     ]
 
-    
-    static let arrLang = ["Afrikaans", "Albanian",
-    "Amharic", "Arabic", "Armenian",
-    "Azerbaijani", "Basque", "Belarusian",
-    "Bengali", "Bosnian", "Bulgarian",
-    "Burmese", "Catalan", "Cebuano",
-    "Chinese", "Corsican", "Croatian", "Czech",
-    "Danish", "Dutch", "English",
-    "Esperanto", "Estonian", "Finnish",
-    "French", "Galician", "Georgian",
-    "German", "Greek", "Gujarati",
-    "Haitian", "Hausa", "Hawaiian",
-    "Hebrew", "Hindi", "Hmong",
-    "Hungarian", "Icelandic", "Igbo",
-    "Indonesian", "Irish", "Italian",
-    "Japanese", "Javanese", "Kannada",
-    "Kazakh", "Khmer", "Korean",
-    "Kurdish", "Kyrgyz", "Lao",
-    "Latin", "Latvian", "Lithuanian",
-    "Luxembourgish", "Macedonian", "Malagasy",
-    "Malay", "Malayalam", "Maltese",
-    "Maori", "Marathi", "Mongolian",
-    "Nepali", "Norwegian", "Nyanja",
-    "Pashto", "Persian", "Polish",
-    "Portuguese", "Punjabi", "Romanian",
-    "Russian", "Samoan", "Scottish Gaelic",
-    "Serbian", "Shona", "Sindhi",
-    "Sinhala", "Slovak", "Slovenian",
-    "Somali", "Southern Sotho", "Spanish",
-    "Sundanese", "Swahili", "Swedish",
-    "Tajik", "Tamil",
-    "Telugu", "Thai", "Turkish",
-    "Ukrainian", "Urdu", "Uzbek",
-    "Vietnamese", "Welsh", "Xhosa",
-    "Yiddish", "Yoruba", "Zulu"
+    */
+    static let arrLang =
+        [   "Afrikaans",     "Albanian",     "Amharic",       "Arabic",     "Armenian",      "Azerbaijani",
+            "Basque",        "Belarusian",   "Bengali",       "Bosnian",    "Bulgarian",     "Burmese",
+            "Catalan",       "Cebuano",      "Chinese",       "Corsican",   "Croatian",      "Czech",
+            "Danish",        "Dutch",        "English",       "Esperanto",  "Estonian",      "Finnish",
+            "French",        "Galician",     "Georgian",      "German",     "Greek",         "Gujarati",
+            "Haitian",       "Hausa",        "Hawaiian",      "Hebrew",     "Hindi",          "Hmong",
+            "Hungarian",     "Icelandic",    "Igbo",          "Indonesian", "Irish",          "Italian",
+            "Japanese",      "Javanese",     "Kannada",       "Kazakh",     "Khmer",          "Korean",
+            "Kurdish",       "Kyrgyz",       "Lao",           "Latin",      "Latvian",        "Lithuanian",
+            "Luxembourgish", "Macedonian",   "Malagasy",      "Malay",      "Malayalam",      "Maltese",
+            "Maori",         "Marathi",      "Mongolian",     "Nepali",     "Norwegian",       "Nyanja",
+            "Pashto",        "Persian",      "Polish",        "Portuguese", "Punjabi",         "Romanian",
+            "Russian",       "Samoan",       "Scottish Gaelic","Serbian",    "Shona",           "Sindhi",
+            "Sinhala",       "Slovak",       "Slovenian",      "Somali",     "Southern Sotho",  "Spanish",
+            "Sundanese",     "Swahili",      "Swedish",        "Tajik",      "Tamil",           "Telugu",
+            "Thai",          "Turkish",      "Ukrainian",      "Urdu",       "Uzbek",           "Vietnamese",
+            "Welsh",         "Xhosa",        "Yiddish",        "Yoruba",     "Zulu"
     ]
     
     static let arrCode = ["af", "sq",

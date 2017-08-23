@@ -9,16 +9,15 @@
 /* Begin PBXBuildFile section */
 		8ACD7066E2932020E6467815 /* Pods_CameraTranslater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB1C5D9018DAA015948029CC /* Pods_CameraTranslater.framework */; };
 		9008669D1F4CB0A8003610FE /* MyDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9008669C1F4CB0A8003610FE /* MyDownload.swift */; };
-		9008669F1F4CB1F4003610FE /* dbCameraTranslater.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 9008669E1F4CB1EB003610FE /* dbCameraTranslater.sqlite */; };
 		9015B4FA1F42AB62006B4418 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 90284C081F384D6C00EFCC1B /* tessdata */; };
 		901C6E051F1EFED600AEEAB1 /* DataBaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901C6E041F1EFED600AEEAB1 /* DataBaseHelper.swift */; };
 		901F7AA61F225F950095021B /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901F7AA51F225F950095021B /* Utility.swift */; };
 		90284C021F384CB500EFCC1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90284C011F384CB500EFCC1B /* ViewController.swift */; };
 		90284C051F384D1600EFCC1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90284C031F384D1600EFCC1B /* Main.storyboard */; };
 		90284C071F384D2100EFCC1B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90284C061F384D2100EFCC1B /* SettingsViewController.swift */; };
+		903081D71F4D3549007F0BC0 /* dbCameraTranslater.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 903081D61F4D3540007F0BC0 /* dbCameraTranslater.sqlite */; };
 		9040E9281F4C22DC00C48603 /* SupportLanguagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9040E9271F4C22DC00C48603 /* SupportLanguagesViewController.swift */; };
 		9040E92A1F4C22EE00C48603 /* DownloadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9040E9291F4C22EE00C48603 /* DownloadCell.swift */; };
-		9040E92C1F4C22F600C48603 /* Unity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9040E92B1F4C22F600C48603 /* Unity.swift */; };
 		9050FF101F1DFD25006D009C /* MyWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9050FF0F1F1DFD25006D009C /* MyWord.swift */; };
 		90631E921F2052AF00C3A54D /* GRDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90631E8C1F204A7C00C3A54D /* GRDB.framework */; };
 		90785A551F2B28C40059DA3A /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90785A541F2B28C40059DA3A /* WebViewController.swift */; };
@@ -41,16 +40,15 @@
 
 /* Begin PBXFileReference section */
 		9008669C1F4CB0A8003610FE /* MyDownload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDownload.swift; sourceTree = "<group>"; };
-		9008669E1F4CB1EB003610FE /* dbCameraTranslater.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = dbCameraTranslater.sqlite; sourceTree = "<group>"; };
 		901C6E041F1EFED600AEEAB1 /* DataBaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBaseHelper.swift; sourceTree = "<group>"; };
 		901F7AA51F225F950095021B /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		90284C011F384CB500EFCC1B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		90284C041F384D1600EFCC1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		90284C061F384D2100EFCC1B /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		90284C081F384D6C00EFCC1B /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		903081D61F4D3540007F0BC0 /* dbCameraTranslater.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = dbCameraTranslater.sqlite; sourceTree = "<group>"; };
 		9040E9271F4C22DC00C48603 /* SupportLanguagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupportLanguagesViewController.swift; sourceTree = "<group>"; };
 		9040E9291F4C22EE00C48603 /* DownloadCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadCell.swift; sourceTree = "<group>"; };
-		9040E92B1F4C22F600C48603 /* Unity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Unity.swift; sourceTree = "<group>"; };
 		9050FF0F1F1DFD25006D009C /* MyWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWord.swift; sourceTree = "<group>"; };
 		90631E8C1F204A7C00C3A54D /* GRDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GRDB.framework; path = "../../../Library/Developer/Xcode/DerivedData/CameraTranslater-bnxtudranzmipxapgroxoiarlurh/Build/Products/Debug-iphoneos/GRDB.swift/GRDB.framework"; sourceTree = "<group>"; };
 		90631F801F209CA500C3A54D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -142,7 +140,7 @@
 		90631F131F2064A300C3A54D /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				9008669E1F4CB1EB003610FE /* dbCameraTranslater.sqlite */,
+				903081D61F4D3540007F0BC0 /* dbCameraTranslater.sqlite */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -181,7 +179,6 @@
 		90C437311F0B3B8500FD7E83 /* CameraTranslater */ = {
 			isa = PBXGroup;
 			children = (
-				9040E92B1F4C22F600C48603 /* Unity.swift */,
 				9040E9291F4C22EE00C48603 /* DownloadCell.swift */,
 				9040E9271F4C22DC00C48603 /* SupportLanguagesViewController.swift */,
 				907F45B51F461F28003998A2 /* ReadGoogle.h */,
@@ -282,7 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9008669F1F4CB1F4003610FE /* dbCameraTranslater.sqlite in Resources */,
+				903081D71F4D3549007F0BC0 /* dbCameraTranslater.sqlite in Resources */,
 				9015B4FA1F42AB62006B4418 /* tessdata in Resources */,
 				90C4373D1F0B3B8500FD7E83 /* LaunchScreen.storyboard in Resources */,
 				90284C051F384D1600EFCC1B /* Main.storyboard in Resources */,
@@ -363,7 +360,6 @@
 				90C437331F0B3B8500FD7E83 /* AppDelegate.swift in Sources */,
 				9040E9281F4C22DC00C48603 /* SupportLanguagesViewController.swift in Sources */,
 				908C8A881F1337910049FF8A /* UIViewExtensions.swift in Sources */,
-				9040E92C1F4C22F600C48603 /* Unity.swift in Sources */,
 				90E7465A1F0E38B60083578D /* settingApp.swift in Sources */,
 				90E645F31F1CABA60066F27E /* WordTableViewCell.swift in Sources */,
 				90E7465C1F0E3B650083578D /* Translater.swift in Sources */,

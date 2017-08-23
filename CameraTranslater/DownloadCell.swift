@@ -13,21 +13,22 @@ import Toaster
 
 class DownloadCell: UITableViewCell {
     
-//    let urlDownload = URL(string: "https://www.dropbox.com/sh/ljwr73h88wvfvu9/AAABkCtsdXdbEoxFfUwTWa7oa?dl=1")!
+
     var downloadTask: URLSessionDownloadTask!
     var backgroundSession: URLSession!
     var urlDownload: URL?
     var identifier:String?
     
-//    @IBOutlet weak var lblLanguages: UILabel!
-//    @IBOutlet weak var buttonDownloadOutlet: UIButton!
-//    @IBOutlet weak var indicator: UIActivityIndicatorView!
+
+    
     
     @IBOutlet weak var lblLanguage: UILabel!
     @IBOutlet weak var buttonDownloadOut: UIButton!
     @IBOutlet weak var indicatorOut: UIActivityIndicatorView!
     
     var indexRow: Int?
+    var _id:Int?
+    let dataHelper = DataBaseHelper()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -41,7 +42,11 @@ class DownloadCell: UITableViewCell {
     
     
     @IBAction func actionDownload(_ sender: UIButton) {
-        print(indexRow)
+        if !Reachability.isConnectedToNetwork() {
+            ToastView.appearance().backgroundColor = UIColor(red: 86.0/255, green: 170.0/255, blue: 255.0/255.0, alpha: 0.8)
+            Toast(text: "Connect internet to download!", delay: 0.3, duration: 1).show()
+            return 
+        }
         print(sender.tag)
         if indexRow == sender.tag {
             buttonDownloadOut.isHidden = true
@@ -68,7 +73,10 @@ class DownloadCell: UITableViewCell {
      */
     extension DownloadCell: URLSessionTaskDelegate , URLSessionDownloadDelegate {
         
+    
+        
         func startDownload()  {
+            
             let backgroundSessionConfiguration = URLSessionConfiguration.background(withIdentifier: identifier!)
             backgroundSession = Foundation.URLSession(configuration: backgroundSessionConfiguration, delegate: self, delegateQueue: OperationQueue.main)
             
@@ -78,6 +86,14 @@ class DownloadCell: UITableViewCell {
             downloadTask = backgroundSession.downloadTask(with: urlDownload!)
             downloadTask.resume()
             
+            
+        }
+        
+        
+        func cancelDownload() {
+            if downloadTask != nil {
+                downloadTask.cancel()
+            }
         }
         
         //Kết thúc download
@@ -126,15 +142,18 @@ class DownloadCell: UITableViewCell {
                     let stringZip = "file://" + (urlZip?.absoluteString)!
                     let urlZipLast = URL.init(string: stringZip) ///aaaa
                     try fileManager.moveItem(at: location, to: urlZipLast!)
-                    print(urlZipLast?.absoluteString)
-                    
-                    //urlZipLast CẦN XÓA
-//                    if fileManager.fileExists(atPath: (urlZip?.absoluteString)!) {
-//                        try fileManager.removeItem(at: urlZip!)
-//                    }
+                   
                     
                     let unzipDirectory = try Zip.quickUnzipFile(urlZip!) // trả về một đường dẫn sau khi unzip
                     print(unzipDirectory)
+                    
+                    print(urlZipLast?.absoluteString)
+                    let zipLast = cutString(string: (urlZipLast?.absoluteString)!)
+                    print(zipLast)
+                    //urlZipLast CẦN XÓA
+                    if fileManager.fileExists(atPath: (urlZip?.absoluteString)!) {
+                        try fileManager.removeItem(atPath: zipLast)
+                    }
                     
                     let stringDirectory = (unzipDirectory.absoluteString)
                     let index = stringDirectory.index(stringDirectory.startIndex, offsetBy: 7)
@@ -146,7 +165,13 @@ class DownloadCell: UITableViewCell {
                         print(urlSub)
                         let fileSoure = (urlCache?.absoluteString)! + "/" +  (urlSub?.lastPathComponent)!
                         print(fileSoure)
+                        let cutFileSource = cutString(string: fileSoure)
+                        print(cutFileSource)
                         let urlSource = URL.init(string: fileSoure)
+                        if fileManager.fileExists(atPath: cutFileSource) {
+                            print("File exists. Remove")
+                            try fileManager.removeItem(atPath: cutFileSource)
+                        }
                         try fileManager.moveItem(at: urlSub!, to: urlSource!)
                         
                     }
@@ -158,16 +183,16 @@ class DownloadCell: UITableViewCell {
             }
         }
         
+        //Hàm cắt bỏ file://
+        func cutString(string: String) -> String {
+            let index = string.index(string.startIndex, offsetBy: 7)
+            return string.substring(from: index)
+        }
+        
         
         //Trong quá trình download
         func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
             
-            var a = Float(totalBytesWritten)
-            var b = Float(totalBytesExpectedToWrite)
-          
-            
-            
-//            print("Loading")
         }
         
         //Kết thúc download
@@ -178,7 +203,7 @@ class DownloadCell: UITableViewCell {
             if  error != nil {
                 print(error?.localizedDescription)
                 ToastView.appearance().backgroundColor = UIColor(red: 191.0/255, green: 0.0/255, blue: 0.0/255.0, alpha: 0.8)
-                let textnotice = "Download fail " + lblLanguage.text!
+                let textnotice = "Download " + lblLanguage.text! + " fail!"
                 Toast(text: textnotice, delay: 0.3, duration: 1).show()
 
             }else{
@@ -186,17 +211,16 @@ class DownloadCell: UITableViewCell {
                 indicatorOut.stopAnimating()
                 indicatorOut.hidesWhenStopped = true
                 buttonDownloadOut.isHidden = false
-                settingColorIcon(btn: buttonDownloadOut, imagename: "icon_done_32")
+                settingColorIcon(btn: buttonDownloadOut, imagename: "icon_done_44")
                 print(indexRow)
-                LangConstants.arrDownload[indexRow!] = true
-                Unity.saveUserDefault()
-                print(Unity.getUserDefault())
                 buttonDownloadOut.isUserInteractionEnabled = false
                 
                 ToastView.appearance().backgroundColor = UIColor(red: 86.0/255, green: 170.0/255, blue: 255.0/255.0, alpha: 0.8)
                 let textnotice = "Download success " + lblLanguage.text!
                 Toast(text: textnotice, delay: 0.3, duration: 1).show()
-
+                dataHelper.updateDownloaded(_id: _id!)
+                
+                SupportLanguagesViewController.listDownload = dataHelper.getAllDownload(query: "SELECT * FROM dbDownload")
                 
             }
             

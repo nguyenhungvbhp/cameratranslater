@@ -14,4 +14,5 @@ class MyDownload: NSObject {
     var isDownload:    Int?
     var codeLanguage:  String?
     var stringURL:     String?
+    var indexSetup:    Int?
 }

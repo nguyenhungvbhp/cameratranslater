@@ -128,6 +128,7 @@ class DataBaseHelper: NSObject {
                     myDownload.codeLanguage = row.value(named: "codeLanguage") as String
                     myDownload.stringURL = row.value(named: "stringURL") as String
                     myDownload.isDownload = row.value(named: "isDownload") as Int
+                    myDownload.indexSetup = row.value(named: "indexSetup") as Int
                     listDownload.append(myDownload)
                 }
             }
@@ -141,5 +142,20 @@ class DataBaseHelper: NSObject {
     }
 
     
+    //TODO: update downloaded
+    func updateDownloaded(_id:Int) {
+        dbQueue.inDatabase{ db in
+            do{
+                let goal = 1
+                let stringUpdate = "UPDATE dbDownload SET isDownload = \(goal) WHERE _id = \(_id)"
+                try db.execute(stringUpdate)
+                
+            }
+            catch{
+                print("Error update row")
+                print(error.localizedDescription)
+            }
+        }
+    }
     
 }

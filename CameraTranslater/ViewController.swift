@@ -230,6 +230,8 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
         if !(ViewController.sourceText.isEmpty) && !(ViewController.targetText.isEmpty) {
             txtFromOutlet.text = ViewController.sourceText
             txtToOutlet.text = ViewController.targetText
+        }else{
+            
         }
     }
     
@@ -247,6 +249,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
     func internetChange(note: Notification) {
         let reachability = note.object as! Reachability
         if reachability.isReachable {
+            setNavigationBar()
             DispatchQueue.main.async {
 //                self.setNavigationBar()
                 //Connect wifi
@@ -355,8 +358,15 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
             self.positionTarget = LangConstants.arrLang.index(of: settingApp.shared.gettargetname())
         
             if !self.viewContainer1.isHidden {
-                self.txtToOutlet.text = self.translater.translater(input: self.txtFromOutlet.text)
+                let queue = DispatchQueue(label: "diss")
+                queue.async {
+                    DispatchQueue.main.sync {
+                       self.txtToOutlet.text = self.translater.translater(input: self.txtFromOutlet.text)
+                    }
+                 
+                }
             }else {
+            
                 self.textViewTarget?.text = self.translater.translater(input: (self.textViewSource?.text!)!)
             }
         }, cancel: {
@@ -447,7 +457,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
 //        let image1:UIImage =
 //        actionCamera.setValue(image1, forKey: "image")
         
-        let actiongGallery = UIAlertAction(title: "Gellery", style: .default) { (action) in
+        let actiongGallery = UIAlertAction(title: "Gallery", style: .default) { (action) in
             //Gọi hàm lấy ảnh từ gallery
             print("Gọi hàm lấy ảnh từ gallery")
            self.openGallery()
@@ -465,6 +475,12 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let supportController = storyBoard.instantiateViewController(withIdentifier: "NgonNgu") as! SupportLanguagesViewController
             self.present(supportController, animated: true, completion: nil)
+        }
+        
+        let actionDemo =  UIAlertAction(title: "Demo", style: .default) { (action) in
+            //Thực hiện demo image.
+            self.demoImageToText()
+            
         }
 
         
@@ -485,6 +501,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
         alertAction.addAction(actiongGallery)
         alertAction.addAction(actionWebsite)
         alertAction.addAction(actionLanguages)
+        alertAction.addAction(actionDemo)
         alertAction.addAction(actionCancel)
         
         //show aleraction
@@ -565,6 +582,25 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
         let supportController = storyBoard.instantiateViewController(withIdentifier: "NgonNgu") as! SupportLanguagesViewController
         supportController.myImage = myImage
         self.present(supportController, animated: true, completion: nil)
+    }
+    
+ 
+    func demoImageToText() {
+        let myImageDemo = UIImage(named: "demo")
+        if UserDefaults.standard.bool(forKey: "isFirstDemo") {
+             print("Write demo image")
+//             UIImageWriteToSavedPhotosAlbum(myImageDemo!, nil,nil, nil)
+        }else {
+            print("Ahihi")
+            UserDefaults.standard.set(true, forKey: "isFirstDemo")
+            UserDefaults.standard.synchronize()
+            UIImageWriteToSavedPhotosAlbum(myImageDemo!, nil,nil, nil)
+        }
+        
+        ToastView.appearance().backgroundColor = UIColor(red: 0, green: 127.0/255, blue: 127/255.0, alpha: 0.8)
+        Toast(text: "Use quality images that we saved in the gallery", delay: 0.3, duration: 1).show()
+         self.present(picker, animated: true, completion: nil)
+  
     }
     
 

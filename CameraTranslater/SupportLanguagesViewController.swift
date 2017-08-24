@@ -90,10 +90,12 @@ extension SupportLanguagesViewController: UITableViewDelegate {
         if myImage == nil {
             return
         }
+
         showActivityIndicator("Translating. Please wait!")
         supportLanguage = "eng+" +  myDownload.codeLanguage!
-        scanImage(myImage: myImage!)
-
+        DispatchQueue.main.async {
+            self.scanImage(myImage: self.myImage!)
+        }
         
     }
 }
@@ -112,7 +114,7 @@ extension SupportLanguagesViewController: UITableViewDataSource {
         
         if myDownload.isDownload == 1 {
             downloadCell.buttonDownloadOut.isUserInteractionEnabled = false
-            downloadCell.settingColorIcon(btn: downloadCell.buttonDownloadOut, imagename: "icon_done_44")
+            downloadCell.settingColorIconDone(btn: downloadCell.buttonDownloadOut, imagename: "icon_done_44")
         }else {
             downloadCell.buttonDownloadOut.isUserInteractionEnabled = true
             downloadCell.settingColorIcon(btn: downloadCell.buttonDownloadOut, imagename: "icon_download_44")
@@ -183,7 +185,7 @@ extension SupportLanguagesViewController: G8TesseractDelegate {
         tesseract?.pageSegmentationMode = .auto //Tu nhan khi thay xuong dong
         
         //Gioi han thoi gian
-        //tesseract?.maximumRecognitionTime = 60
+        tesseract?.maximumRecognitionTime = 10
         
         tesseract?.image = myImage.g8_blackAndWhite()
         tesseract?.recognize()
@@ -197,7 +199,10 @@ extension SupportLanguagesViewController: G8TesseractDelegate {
                 let translater = Translater()
                 target = translater.translater(input: source)
             }
-            
+            if target == ""{
+                ToastView.appearance().backgroundColor = UIColor(red: 255.0/255, green: 86.0/255, blue: 86/255.0, alpha: 0.8)
+                Toast(text: " Language is not recognized.\n Please select a better image!", delay: 0.3, duration: 1.5).show()
+            }
             print(target)
             print(source)
             ViewController.sourceText = source

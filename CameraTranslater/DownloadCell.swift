@@ -65,6 +65,13 @@ class DownloadCell: UITableViewCell {
         btn.tintColor = UIColor.black
     }
     
+    func settingColorIconDone(btn: UIButton!, imagename: String) {
+        let origImage = UIImage(named: imagename)
+        let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
+        btn.setImage(tintedImage, for: .normal)
+        let colorDone = UIColor(red: 0, green: 127.0/255.0, blue: 1.0, alpha: 1)
+        btn.tintColor = colorDone
+    }
     
 }
 
@@ -211,7 +218,7 @@ class DownloadCell: UITableViewCell {
                 indicatorOut.stopAnimating()
                 indicatorOut.hidesWhenStopped = true
                 buttonDownloadOut.isHidden = false
-                settingColorIcon(btn: buttonDownloadOut, imagename: "icon_done_44")
+                settingColorIconDone(btn: buttonDownloadOut, imagename: "icon_done_44")
                 print(indexRow)
                 buttonDownloadOut.isUserInteractionEnabled = false
                 

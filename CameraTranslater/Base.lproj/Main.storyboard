@@ -81,7 +81,7 @@
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMx-he-kJS" userLabel="btnShare" customClass="BounceButton" customModule="CameraTranslater" customModuleProvider="target">
                                                 <rect key="frame" x="260" y="0.0" width="36" height="49"/>
-                                                <state key="normal" image="icon_share_44"/>
+                                                <state key="normal" image="share_44"/>
                                                 <connections>
                                                     <action selector="btnShareAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wlp-iS-ani"/>
                                                 </connections>
@@ -209,7 +209,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QeN-bb-qIQ" userLabel="btnCamera" customClass="BounceButton" customModule="CameraTranslater" customModuleProvider="target">
                                                 <rect key="frame" x="260" y="0.0" width="36" height="48"/>
-                                                <state key="normal" image="icon_camera_44"/>
+                                                <state key="normal" image="camera_44"/>
                                                 <connections>
                                                     <action selector="btnCameraAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gpc-52-yZ5"/>
                                                 </connections>
@@ -375,7 +375,7 @@
                                     <constraint firstAttribute="height" constant="60" id="h6I-1p-fe8"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem title="Select language" id="5Ui-5I-D07">
+                                    <navigationItem title="Select language image to text" id="5Ui-5I-D07">
                                         <barButtonItem key="leftBarButtonItem" image="delete" id="s0p-aX-5wm">
                                             <connections>
                                                 <action selector="back:" destination="8dt-IA-UyS" id="0qB-tI-Pnc"/>
@@ -770,7 +770,7 @@
         <scene sceneID="ABX-uU-lRp">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="waI-aW-vIF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="icon_camera_52" id="Nyz-97-mUJ"/>
+                    <tabBarItem key="tabBarItem" title="" image="homepage_52" id="Nyz-97-mUJ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GZV-eJ-VKo">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -843,21 +843,21 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera_44" width="22" height="22"/>
         <image name="delete" width="16" height="16"/>
         <image name="england" width="22" height="22"/>
         <image name="flag_armenia" width="129" height="96"/>
         <image name="flag_burmese" width="129" height="96"/>
-        <image name="icon_camera_44" width="22" height="22"/>
-        <image name="icon_camera_52" width="26" height="26"/>
+        <image name="homepage_52" width="26" height="26"/>
         <image name="icon_copy_44" width="22" height="22"/>
         <image name="icon_delete_36" width="18" height="18"/>
         <image name="icon_document_44" width="22" height="22"/>
-        <image name="icon_download_44" width="44" height="44"/>
+        <image name="icon_download_44" width="22" height="22"/>
         <image name="icon_history_52" width="26" height="26"/>
         <image name="icon_setting_52" width="26" height="26"/>
-        <image name="icon_share_44" width="22" height="22"/>
         <image name="icon_sound_44" width="22" height="22"/>
         <image name="icon_switch_64" width="32" height="32"/>
+        <image name="share_44" width="22" height="22"/>
         <image name="star" width="16" height="16"/>
         <image name="vietnam" width="22" height="22"/>
     </resources>

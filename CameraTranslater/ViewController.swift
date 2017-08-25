@@ -589,7 +589,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
         let myImageDemo = UIImage(named: "demo")
         if UserDefaults.standard.bool(forKey: "isFirstDemo") {
              print("Write demo image")
-//             UIImageWriteToSavedPhotosAlbum(myImageDemo!, nil,nil, nil)
+
         }else {
             print("Ahihi")
             UserDefaults.standard.set(true, forKey: "isFirstDemo")
@@ -598,7 +598,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
         }
         
         ToastView.appearance().backgroundColor = UIColor(red: 0, green: 127.0/255, blue: 127/255.0, alpha: 0.8)
-        Toast(text: "Use quality images that we saved in the gallery", delay: 0.3, duration: 1).show()
+        Toast(text: "Use quality images that we saved in the gallery", delay: 0.1, duration: 9).show()
          self.present(picker, animated: true, completion: nil)
   
     }
@@ -682,14 +682,14 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
         
         settingColorIcon(btn: btnDeleteOutlet, imagename: "icon_delete_36")
        
-        settingColorIcon(btn: btnDocumentOutlet, imagename: "icon_document_44")
+        settingColorIcon(btn: btnDocumentOutlet, imagename: "doc_sua")
         settingColorIcon(btn: btnCameraOutlet, imagename: "icon_camera_44")
         
         
-        settingColorIcon(btn: btnSoundFromOutlet, imagename: "icon_sound_44")
-        settingColorIcon(btn: btnSoundOutlet, imagename: "icon_sound_44")
+        settingColorIcon(btn: btnSoundFromOutlet, imagename: "volume_sua")
+        settingColorIcon(btn: btnSoundOutlet, imagename: "volume_sua")
         
-        settingColorIcon(btn: btnCopyOutlet, imagename: "icon_copy_44")
+        settingColorIcon(btn: btnCopyOutlet, imagename: "copy_sua")
         settingColorIcon(btn: btnShareOutlet, imagename: "icon_share_44")
         
         imgToOutlet.clipsToBounds = true

@@ -117,7 +117,8 @@ class DataBaseHelper: NSObject {
     
     
     //TODO: get all list myDownload
-    func getAllDownload(query: String) -> [MyDownload] {
+    func getAllDownload() -> [MyDownload] {
+        let query = "SELECT * FROM dbDownload"
         var listDownload = [MyDownload]()
         dbQueue.inDatabase{ db in
             do {
@@ -143,10 +144,10 @@ class DataBaseHelper: NSObject {
 
     
     //TODO: update downloaded
-    func updateDownloaded(_id:Int) {
+    func updateDownloaded(_id:Int, goal: Int) {
         dbQueue.inDatabase{ db in
             do{
-                let goal = 1
+
                 let stringUpdate = "UPDATE dbDownload SET isDownload = \(goal) WHERE _id = \(_id)"
                 try db.execute(stringUpdate)
                 

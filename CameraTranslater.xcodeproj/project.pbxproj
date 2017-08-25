@@ -23,6 +23,7 @@
 		90785A551F2B28C40059DA3A /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90785A541F2B28C40059DA3A /* WebViewController.swift */; };
 		907F45B71F461F28003998A2 /* ReadGoogle.m in Sources */ = {isa = PBXBuildFile; fileRef = 907F45B61F461F28003998A2 /* ReadGoogle.m */; };
 		907F45BF1F4630E6003998A2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90631F801F209CA500C3A54D /* AVFoundation.framework */; };
+		9082D51C1F4FD52B00CF5AAD /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9082D51B1F4FD52B00CF5AAD /* DownloadManager.swift */; };
 		908C8A881F1337910049FF8A /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908C8A871F1337910049FF8A /* UIViewExtensions.swift */; };
 		908FF26D1F0CA7AE002D1AC8 /* PEPhotoCropEditor.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 908FF26C1F0CA7AE002D1AC8 /* PEPhotoCropEditor.bundle */; };
 		90991EFE1F0C080800D74D2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90991EFD1F0C080800D74D2A /* Assets.xcassets */; };
@@ -61,6 +62,7 @@
 		907F45B61F461F28003998A2 /* ReadGoogle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadGoogle.m; sourceTree = "<group>"; };
 		907F45B81F462C34003998A2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		907F45BD1F462E03003998A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9082D51B1F4FD52B00CF5AAD /* DownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		908C8A871F1337910049FF8A /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		908FF26C1F0CA7AE002D1AC8 /* PEPhotoCropEditor.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PEPhotoCropEditor.bundle; sourceTree = "<group>"; };
 		90991EFD1F0C080800D74D2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				9050FF0F1F1DFD25006D009C /* MyWord.swift */,
 				901F7AA51F225F950095021B /* Utility.swift */,
 				90785A541F2B28C40059DA3A /* WebViewController.swift */,
+				9082D51B1F4FD52B00CF5AAD /* DownloadManager.swift */,
 			);
 			path = CameraTranslater;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				9008669D1F4CB0A8003610FE /* MyDownload.swift in Sources */,
 				90284C071F384D2100EFCC1B /* SettingsViewController.swift in Sources */,
 				90D29D951F2C295100BD1199 /* Reachability.swift in Sources */,
+				9082D51C1F4FD52B00CF5AAD /* DownloadManager.swift in Sources */,
 				9050FF101F1DFD25006D009C /* MyWord.swift in Sources */,
 				901F7AA61F225F950095021B /* Utility.swift in Sources */,
 				90C4374D1F0B3E7900FD7E83 /* HistoryViewController.swift in Sources */,

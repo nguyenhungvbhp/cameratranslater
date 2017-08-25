@@ -11,13 +11,12 @@ import TesseractOCR//support recognition image text
 import Toaster
 
 class SupportLanguagesViewController: UIViewController {
-    var indextTag: Int?
     
-    @IBOutlet weak var tbLanguages: UITableView!
+    @IBOutlet  weak var tbLanguages: UITableView!
     
-    var index: Int?
     var indexRownClicked: Int?
     var isClickRow:[Bool]?
+    var statusButton:[Int]?
     var myImage: UIImage?
     var supportLanguage = "eng"
     
@@ -30,19 +29,25 @@ class SupportLanguagesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+         NotificationCenter.default.addObserver(self, selector: #selector(loadList), name: NSNotification.Name(rawValue: "load"), object: nil)
+        
         if myImage != nil {
             print("Image ok")
         }else {
             print("Pass image fail!")
         }
         indexRownClicked = -1
-        SupportLanguagesViewController.listDownload = databaseHelper.getAllDownload(query: "SELECT * FROM dbDownload")
+        SupportLanguagesViewController.listDownload = databaseHelper.getAllDownload()
         isClickRow = [Bool](repeating: false, count: SupportLanguagesViewController.listDownload.count)
+        statusButton = [Int](repeating: 0, count: SupportLanguagesViewController.listDownload.count)
         tbLanguages.delegate = self
         tbLanguages.dataSource = self
         
-        
-        
+    }
+    
+    func loadList(){
+        //load data here
+        self.tbLanguages.reloadData()
     }
     
     
@@ -72,6 +77,7 @@ extension SupportLanguagesViewController: UITableViewDelegate {
         
         let myDownload = SupportLanguagesViewController.listDownload[indexPath.row]
         let cell = tbLanguages.cellForRow(at: indexPath) as! DownloadCell
+        cell.buttonDownloadOut.tag = 1
         if myDownload.isDownload == 0 {
             //Show alert notice download
             if (isClickRow?[indexPath.row])! {
@@ -80,11 +86,10 @@ extension SupportLanguagesViewController: UITableViewDelegate {
             }
           isClickRow?[indexPath.row] = true
           showAlertDownload( rowClick: indexPath.row, cell: cell)
-          
-           
-            return
+          return
         }
         
+      
         let indexSource = SupportLanguagesViewController.listDownload[indexPath.row].indexSetup
         settingAgain(indexSource: indexSource!)
         if myImage == nil {
@@ -115,29 +120,35 @@ extension SupportLanguagesViewController: UITableViewDataSource {
         if myDownload.isDownload == 1 {
             downloadCell.buttonDownloadOut.isUserInteractionEnabled = false
             downloadCell.settingColorIconDone(btn: downloadCell.buttonDownloadOut, imagename: "icon_done_44")
-        }else {
+            downloadCell.buttonDownloadOut.isHidden = false
+        }else if myDownload.isDownload == 0{
             downloadCell.buttonDownloadOut.isUserInteractionEnabled = true
             downloadCell.settingColorIcon(btn: downloadCell.buttonDownloadOut, imagename: "icon_download_44")
+            downloadCell.buttonDownloadOut.isHidden = false
+        }else {
+            downloadCell.buttonDownloadOut.isHidden = true
+            downloadCell.indicatorOut.startAnimating()
+            downloadCell.indicatorOut.isHidden = false
         }
-        
-        downloadCell.buttonDownloadOut.addTarget(Any?.self, action: #selector(yourButtonClicked), for:UIControlEvents.touchUpInside )
-        downloadCell.indexRow = indexPath.row
         downloadCell.buttonDownloadOut.tag = indexPath.row
+        
+        downloadCell.indexRow = indexPath.row
+//        downloadCell.buttonDownloadOut.addTarget(Any?.self, action: #selector(yourButtonClicked), for:UIControlEvents.touchUpInside )
         downloadCell.lblLanguage.text = myDownload.name
-        downloadCell.urlDownload = URL.init(string: myDownload.stringURL!)
-        downloadCell.indicatorOut.hidesWhenStopped = true
-        downloadCell.identifier = myDownload.codeLanguage
-        downloadCell._id = myDownload._id
+    
+        
         return downloadCell
     }
     
     func yourButtonClicked()  {
-         SupportLanguagesViewController.listDownload = databaseHelper.getAllDownload(query: "SELECT * FROM dbDownload")
+         SupportLanguagesViewController.listDownload = databaseHelper.getAllDownload()
+       
+        
         
     }
     
     func showAlertDownload( rowClick: Int, cell: DownloadCell)  {
-         let myDownload = SupportLanguagesViewController.listDownload[rowClick]
+        let myDownload = SupportLanguagesViewController.listDownload[rowClick]
         let alert = UIAlertController(title: myDownload.name, message: "To recognize \(myDownload.name!). Please download", preferredStyle: .alert)
         let actionDownload = UIAlertAction(title: "OK", style: .default) { (action) in
             if !Reachability.isConnectedToNetwork() {
@@ -145,18 +156,17 @@ extension SupportLanguagesViewController: UITableViewDataSource {
                 Toast(text: "Connect internet to download!", delay: 0.3, duration: 1).show()
                 return
             }
-            cell.indexRow = rowClick
-            cell.buttonDownloadOut.tag = rowClick
-            cell.lblLanguage.text = myDownload.name
-            cell.urlDownload = URL.init(string: myDownload.stringURL!)
-            cell.buttonDownloadOut.isHidden = true
-            cell.indicatorOut.startAnimating()
-            cell.identifier = myDownload.codeLanguage
-            cell._id = myDownload._id
-            cell.startDownload()
+            self.tbLanguages.reloadData()
+            
+            print("Click cell row: ")
+            print(rowClick)
+            let downloadManager = DownloadManager.init(myDownload: myDownload)
+            downloadManager.startDownload()
         }
         
-        let actionCancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let actionCancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+            self.isClickRow?[rowClick] = false
+        }
         
         
         alert.addAction(actionDownload)
@@ -244,4 +254,10 @@ extension SupportLanguagesViewController {
     }
 
 }
+
+
+
+
+
+
 

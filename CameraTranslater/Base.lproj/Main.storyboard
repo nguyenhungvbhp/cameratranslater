@@ -81,21 +81,21 @@
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMx-he-kJS" userLabel="btnShare" customClass="BounceButton" customModule="CameraTranslater" customModuleProvider="target">
                                                 <rect key="frame" x="260" y="0.0" width="36" height="49"/>
-                                                <state key="normal" image="share_44"/>
+                                                <state key="normal" image="icon_share_44"/>
                                                 <connections>
                                                     <action selector="btnShareAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wlp-iS-ani"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7l-mF-yao" userLabel="btnCopy" customClass="BounceButton" customModule="CameraTranslater" customModuleProvider="target">
                                                 <rect key="frame" x="216" y="0.0" width="36" height="49"/>
-                                                <state key="normal" image="icon_copy_44"/>
+                                                <state key="normal" image="copy_sua"/>
                                                 <connections>
                                                     <action selector="btnCopyAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nYq-VT-mze"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50S-wg-Lbg" userLabel="btnSound" customClass="BounceButton" customModule="CameraTranslater" customModuleProvider="target">
                                                 <rect key="frame" x="172" y="0.0" width="36" height="49"/>
-                                                <state key="normal" image="icon_sound_44"/>
+                                                <state key="normal" image="volume_sua"/>
                                                 <connections>
                                                     <action selector="btnSoundAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h7R-SS-vOJ"/>
                                                 </connections>
@@ -209,14 +209,14 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QeN-bb-qIQ" userLabel="btnCamera" customClass="BounceButton" customModule="CameraTranslater" customModuleProvider="target">
                                                 <rect key="frame" x="260" y="0.0" width="36" height="48"/>
-                                                <state key="normal" image="camera_44"/>
+                                                <state key="normal" image="icon_camera_44"/>
                                                 <connections>
                                                     <action selector="btnCameraAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gpc-52-yZ5"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUf-34-hCn" userLabel="btnDocument" customClass="BounceButton" customModule="CameraTranslater" customModuleProvider="target">
                                                 <rect key="frame" x="215" y="0.0" width="37" height="48"/>
-                                                <state key="normal" image="icon_document_44"/>
+                                                <state key="normal" image="doc_sua"/>
                                                 <connections>
                                                     <action selector="btnDocumentAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tS2-np-09g"/>
                                                 </connections>
@@ -247,7 +247,7 @@
                                             </label>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3Q-bU-ZpD" userLabel="btnSound" customClass="BounceButton" customModule="CameraTranslater" customModuleProvider="target">
                                                 <rect key="frame" x="171" y="0.0" width="36" height="48"/>
-                                                <state key="normal" image="icon_sound_44"/>
+                                                <state key="normal" image="volume_sua"/>
                                                 <connections>
                                                     <action selector="btnSoundFromAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B1g-HY-XgX"/>
                                                 </connections>
@@ -409,10 +409,10 @@
                                                     </constraints>
                                                     <state key="normal" image="icon_download_44"/>
                                                     <connections>
-                                                        <action selector="actionDownload:" destination="Hvo-Bh-NNF" eventType="touchUpInside" id="fOk-H8-zay"/>
+                                                        <action selector="actionDownload:" destination="Hvo-Bh-NNF" eventType="touchUpInside" id="7T0-uZ-kkC"/>
                                                     </connections>
                                                 </button>
-                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="xsm-AJ-BrC">
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="xsm-AJ-BrC">
                                                     <rect key="frame" x="268" y="26.5" width="32" height="32"/>
                                                 </activityIndicatorView>
                                             </subviews>
@@ -843,22 +843,22 @@
         </scene>
     </scenes>
     <resources>
-        <image name="camera_44" width="22" height="22"/>
+        <image name="copy_sua" width="22" height="22"/>
         <image name="delete" width="16" height="16"/>
+        <image name="doc_sua" width="22" height="22"/>
         <image name="england" width="22" height="22"/>
         <image name="flag_armenia" width="129" height="96"/>
         <image name="flag_burmese" width="129" height="96"/>
         <image name="homepage_52" width="26" height="26"/>
-        <image name="icon_copy_44" width="22" height="22"/>
+        <image name="icon_camera_44" width="22" height="22"/>
         <image name="icon_delete_36" width="18" height="18"/>
-        <image name="icon_document_44" width="22" height="22"/>
         <image name="icon_download_44" width="22" height="22"/>
         <image name="icon_history_52" width="26" height="26"/>
         <image name="icon_setting_52" width="26" height="26"/>
-        <image name="icon_sound_44" width="22" height="22"/>
+        <image name="icon_share_44" width="22" height="22"/>
         <image name="icon_switch_64" width="32" height="32"/>
-        <image name="share_44" width="22" height="22"/>
         <image name="star" width="16" height="16"/>
         <image name="vietnam" width="22" height="22"/>
+        <image name="volume_sua" width="22" height="22"/>
     </resources>
 </document>

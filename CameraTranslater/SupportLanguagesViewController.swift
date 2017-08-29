@@ -12,6 +12,7 @@ import Toaster
 
 class SupportLanguagesViewController: UIViewController {
     
+    @IBOutlet weak var myNavigationBar: UINavigationBar!
     @IBOutlet  weak var tbLanguages: UITableView!
     
     var indexRownClicked: Int?
@@ -29,11 +30,13 @@ class SupportLanguagesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Hello")
          NotificationCenter.default.addObserver(self, selector: #selector(loadList), name: NSNotification.Name(rawValue: "load"), object: nil)
         
         if myImage != nil {
             print("Image ok")
         }else {
+            myNavigationBar.topItem?.title = "Support Languages"
             print("Pass image fail!")
         }
         indexRownClicked = -1

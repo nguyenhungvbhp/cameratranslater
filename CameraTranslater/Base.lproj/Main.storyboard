@@ -375,7 +375,7 @@
                                     <constraint firstAttribute="height" constant="60" id="h6I-1p-fe8"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem title="Select language image to text" id="5Ui-5I-D07">
+                                    <navigationItem title="Select language of image" id="5Ui-5I-D07">
                                         <barButtonItem key="leftBarButtonItem" image="delete" id="s0p-aX-5wm">
                                             <connections>
                                                 <action selector="back:" destination="8dt-IA-UyS" id="0qB-tI-Pnc"/>
@@ -448,6 +448,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="myNavigationBar" destination="6eH-7C-N1y" id="v4B-gX-Udy"/>
                         <outlet property="tbLanguages" destination="aP6-vq-2jW" id="kgZ-5m-u7I"/>
                     </connections>
                 </viewController>

@@ -141,6 +141,50 @@ class DataBaseHelper: NSObject {
         }
         return listDownload
     }
+    
+    //Hàm lấy tất cả id tại hàng đang thực hiện download
+    func getIDDownloading() -> [Int] {
+        var arrIDDownloading = [Int]()
+         let query = "SELECT dbDownload._id FROM dbDownload WHERE isDownload = 2"
+        dbQueue.inDatabase{ db in
+            do {
+                for row in try Row.fetchAll(db, query){
+    
+                    let iD = row.value(named: "_id") as Int
+                    arrIDDownloading.append(iD)
+                }
+            }
+            catch {
+                print("Lỗi get all ID downloading")
+                print(error.localizedDescription)
+            }
+            
+        }
+        return arrIDDownloading
+    }
+    
+    //Hàm thực hiện chức năng cập nhật các hàng đang downloading thành chưa download
+    func updateIDDownloading() {
+        print("Updatting")
+        let arrDownloading = getIDDownloading()
+        if arrDownloading.count == 0 {
+            print("Cound = 0")
+            return
+        }
+        dbQueue.inDatabase{ db in
+            do{
+                for _id in arrDownloading {
+                    let stringUpdate = "UPDATE dbDownload SET isDownload = 0 WHERE _id = \(_id)"
+                    try db.execute(stringUpdate)
+                }
+                
+            }
+            catch{
+                print("Error update row")
+                print(error.localizedDescription)
+            }
+        }
+    }
 
     
     //TODO: update downloaded

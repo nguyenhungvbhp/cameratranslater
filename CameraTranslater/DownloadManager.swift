@@ -156,19 +156,21 @@ class DownloadManager: NSObject, URLSessionTaskDelegate , URLSessionDownloadDele
     downloadTask = nil
     if  error != nil {
     print(error?.localizedDescription)
-    ToastView.appearance().backgroundColor = UIColor(red: 191.0/255, green: 0.0/255, blue: 0.0/255.0, alpha: 0.8)
-    let textnotice = "Download " + myDownload.name! + " fail!"
-    Toast(text: textnotice, delay: 0.3, duration: 1).show()
-     dataHelper.updateDownloaded(_id: myDownload._id!, goal: 0)
+//    ToastView.appearance().backgroundColor = UIColor(red: 191.0/255, green: 0.0/255, blue: 0.0/255.0, alpha: 0.8)
+//    let textnotice = "Download " + myDownload.name! + " fail!"
+//    Toast(text: textnotice, delay: 0.3, duration: 1).show()
+//     dataHelper.updateDownloaded(_id: myDownload._id!, goal: 0)
     }else{
     print("Task finished !")
         
-        ToastView.appearance().backgroundColor = UIColor(red: 86.0/255, green: 170.0/255, blue: 255.0/255.0, alpha: 0.8)
-        let textnotice = "Download success " + myDownload.name!
-        Toast(text: textnotice, delay: 0.3, duration: 1).show()
-        dataHelper.updateDownloaded(_id: myDownload._id!, goal: 1)
         
-        SupportLanguagesViewController.listDownload = dataHelper.getAllDownload()
+            ToastView.appearance().backgroundColor = UIColor(red: 86.0/255, green: 170.0/255, blue: 255.0/255.0, alpha: 0.8)
+            let textnotice = "Download success " + self.myDownload.name!
+            Toast(text: textnotice, delay: 0.3, duration: 1).show()
+            self.dataHelper.updateDownloaded(_id: self.myDownload._id!, goal: 1)
+
+        
+       SupportLanguagesViewController.listDownload = dataHelper.getAllDownload()
        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
     }
     
@@ -186,6 +188,7 @@ class DownloadManager: NSObject, URLSessionTaskDelegate , URLSessionDownloadDele
     
         return arrPath
     }
+    
     
     
 

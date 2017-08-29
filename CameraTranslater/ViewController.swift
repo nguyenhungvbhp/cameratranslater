@@ -413,6 +413,8 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
         catch let error as NSError
         {
             print(error.localizedDescription)
+            ToastView.appearance().backgroundColor = UIColor(red: 0, green: 127.0/255, blue: 127/255.0, alpha: 0.8)
+            Toast(text: "Unsupport language for pronunciation", delay: 0.3, duration: 1).show()
         }
         catch {
             print("AVAudioPlayer init failed")
@@ -441,7 +443,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
         let titleFont:[String : AnyObject] = [ NSFontAttributeName : UIFont(name: "AmericanTypewriter", size: 18)! ]
         let messageFont:[String : AnyObject] = [ NSFontAttributeName : UIFont(name: "HelveticaNeue-Thin", size: 14)! ]
         let attributedTitle = NSMutableAttributedString(string: "Image to text", attributes: titleFont)
-        let attributedMessage = NSMutableAttributedString(string: "Select an action", attributes: messageFont)
+        let attributedMessage = NSMutableAttributedString(string: "Select an image from", attributes: messageFont)
         alertAction.setValue(attributedTitle, forKey: "attributedTitle")
         alertAction.setValue(attributedMessage, forKey: "attributedMessage")
         
@@ -613,6 +615,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
         }
         let speak = ReadGoogle.init()
         let url =  speak.playSoundSource(txtToOutlet.text, and: settingApp.shared.gettargetid())
+        
         do
         {
             audioPlayer = try AVAudioPlayer(contentsOf: url!)
@@ -623,6 +626,9 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIActionS
         catch let error as NSError
         {
             print(error.localizedDescription)
+            ToastView.appearance().backgroundColor = UIColor(red: 0, green: 127.0/255, blue: 127/255.0, alpha: 0.8)
+            Toast(text: "Unsupport language for pronunciation", delay: 0.3, duration: 1).show()
+            return
         }
         catch {
             print("AVAudioPlayer init failed")
